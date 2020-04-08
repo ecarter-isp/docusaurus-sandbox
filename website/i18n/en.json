@@ -29,6 +29,9 @@
       },
       "doc5": {
         "title": "Fifth Document"
+      },
+      "orbis-api-docs": {
+        "title": "Orbis API Documentation"
       }
     },
     "links": {
@@ -41,6 +44,7 @@
       "Docusaurus": "Docusaurus",
       "First Category": "First Category",
       "Second Category": "Second Category",
+      "API Documentation": "API Documentation",
       "Sample APIs": "Sample APIs"
     }
   },

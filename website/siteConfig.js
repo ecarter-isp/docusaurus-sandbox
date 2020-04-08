@@ -24,10 +24,10 @@ const siteConfig = {
   title: 'Test Site', // Title for your website.
   tagline: 'A website for testing',
   //url: 'https://your-docusaurus-test-site.com', // Your website URL
-  //baseUrl: '/', // Base URL for your project */
+  baseUrl: '/', // Base URL for your project */
 
   url: 'https://ecarter-isp.github.io', // Replace USERNAME with your GitHub username.
-  baseUrl: '/docusaurus-sandbox/', // The name of your GitHub project.
+  //baseUrl: '/docusaurus-sandbox/', // The name of your GitHub project.
   projectName: 'docusaurus-sandbox',  // The name of your GitHub project. Same as above.
   organizationName: 'ecarter-isp', // Your GitHub username.
 
