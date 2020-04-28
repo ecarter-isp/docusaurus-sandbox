@@ -1,7 +1,0 @@
-= This is a sample
-
-Here is some content
-
-== Here is another heading level
-
-
