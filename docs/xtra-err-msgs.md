@@ -48,7 +48,6 @@ The following table lists platform error conditions along with their correspondi
 
 [Back to top of Error Messages](xtra-err-msgs)
 
-
 <!--
 See the 
 [Orbis Error Codes](https://istreamplanet.atlassian.net/wiki/spaces/OD/pages/2215015/Orbis+Error+Codes), 
