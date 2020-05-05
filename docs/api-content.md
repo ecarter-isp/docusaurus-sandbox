@@ -9,294 +9,8 @@ delete, and otherwise manage information about specific types of video assets.
 
 --------
 
-<!--  Structure, then remove this index section.    -->
-
-## Indices
-
-* [v1](#v1)
-
-  * [Create video asset](#1-create-video-asset)
-  * [Publish video asset](#2-publish-video-asset)
-  * [Update video asset](#3-update-video-asset)
-  * [Update isLive status for an asset](#4-update-islive-status-for-an-asset)
-  * [Retrieve published asset by ID](#5-retrieve-published-asset-by-id)
-  * [Retrieve private asset by published ID](#6-retrieve-private-asset-by-published-id)
-  * [Retrieve private asset by ID](#7-retrieve-private-asset-by-id)
-  * [Retrieve published asset by private ID](#8-retrieve-published-asset-by-private-id)
-  * [Search private assets by keyword, date](#9-search-private-assets-by-keyword,-date)
-  * [Search published assets by keyword, date](#10-search-published-assets-by-keyword,-date)
-  * [Search private assets by IDs](#11-search-private-assets-by-ids)
-  * [Retrieve published assets by IDs](#12-retrieve-published-assets-by-ids)
-  * [Retrieve published assets by event IDs](#13-retrieve-published-assets-by-event-ids)
-  * [Search published assets by categories](#14-search-published-assets-by-categories)
-  * [Search private assets by event IDs](#15-search-private-assets-by-event-ids)
-  * [Unpublish an asset](#16-unpublish-an-asset)
-  * [Delete private asset](#17-delete-private-asset)
-  * [Retrieve category keys](#18-retrieve-category-keys)
-  * [Register notification endpoint](#19-register-notification-endpoint)
-  * [Get recommendations](#20-get-recommendations)
-
-* [v1/asset markers](#v1asset-markers)
-
-  * [Creates or updates an asset marker](#1-creates-or-updates-an-asset-marker)
-  * [Delete custom asset markers](#2-delete-custom-asset-markers)
-  * [Retrieve asset markers](#3-retrieve-asset-markers)
-
-* [v2/assets](#v2assets)
-
-  * [Create asset](#1-create-asset)
-  * [Update asset](#2-update-asset)
-  * [Retrieve an asset](#3-retrieve-an-asset)
-  * [Retrieve an asset by provider asset  ID](#4-retrieve-an-asset-by-provider-asset--id)
-  * [Delete asset](#5-delete-asset)
-  * [Patch asset](#6-patch-asset)
-
-* [v2/banners](#v2banners)
-
-  * [Create banner](#1-create-banner)
-  * [Update banner](#2-update-banner)
-  * [Retrieve banner](#3-retrieve-banner)
-  * [List all banners](#4-list-all-banners)
-  * [Delete banner](#5-delete-banner)
-  * [Patch banner](#6-patch-banner)
-
-* [v2/entities](#v2entities)
-
-  * [Retrieve entity resource information](#1-retrieve-entity-resource-information)
-  * [List Entities](#2-list-entities)
-  * [Link entities](#3-link-entities)
-
-* [v2/epg/competitions](#v2epgcompetitions)
-
-  * [Create EPG competition](#1-create-epg-competition)
-  * [Update scheduled competition](#2-update-scheduled-competition)
-  * [Retrieve scheduled game from the EPG](#3-retrieve-scheduled-game-from-the-epg)
-  * [Retrieve scheduled game from the EPG with assets](#4-retrieve-scheduled-game-from-the-epg-with-assets)
-  * [Delete EPG competition](#5-delete-epg-competition)
-  * [Patch EPG competition](#6-patch-epg-competition)
-
-* [v2/epg/episodes](#v2epgepisodes)
-
-  * [Create EPG episode](#1-create-epg-episode)
-  * [Update EPG episode](#2-update-epg-episode)
-  * [Retrieve scheduled show episode from the EPG](#3-retrieve-scheduled-show-episode-from-the-epg)
-  * [Retrieve scheduled show episode from the EPG with assets](#4-retrieve-scheduled-show-episode-from-the-epg-with-assets)
-  * [Delete EPG episode](#5-delete-epg-episode)
-  * [Patch EPG episode](#6-patch-epg-episode)
-
-* [v2/epg/events](#v2epgevents)
-
-  * [Create EPG event](#1-create-epg-event)
-  * [Update scheduled event](#2-update-scheduled-event)
-  * [Retrieve scheduled event from the EPG](#3-retrieve-scheduled-event-from-the-epg)
-  * [Retrieve scheduled event from the EPG with assets](#4-retrieve-scheduled-event-from-the-epg-with-assets)
-  * [Delete EPG event](#5-delete-epg-event)
-  * [Patch EPG event](#6-patch-epg-event)
-
-* [v2/epg/movies](#v2epgmovies)
-
-  * [Create EPG movie](#1-create-epg-movie)
-  * [Update EPG movie](#2-update-epg-movie)
-  * [Retrieve scheduled movie from the EPG](#3-retrieve-scheduled-movie-from-the-epg)
-  * [Retrieve scheduled movie from the EPG with assets](#4-retrieve-scheduled-movie-from-the-epg-with-assets)
-  * [Delete EPG movie](#5-delete-epg-movie)
-  * [Patch EPG movie](#6-patch-epg-movie)
-
-* [v2/epg/stations](#v2epgstations)
-
-  * [Create station](#1-create-station)
-  * [Update station](#2-update-station)
-  * [Retrieve station](#3-retrieve-station)
-  * [List stations](#4-list-stations)
-  * [Delete station and associated schedules](#5-delete-station-and-associated-schedules)
-  * [Patch station](#6-patch-station)
-
-* [v2/epg/teamcompetitions](#v2epgteamcompetitions)
-
-  * [Create EPG team competition](#1-create-epg-team-competition)
-  * [Update scheduled team competition](#2-update-scheduled-team-competition)
-  * [Retrieve scheduled team game from the EPG](#3-retrieve-scheduled-team-game-from-the-epg)
-  * [Delete EPG team competition](#4-delete-epg-team-competition)
-  * [Patch EPG team competition](#5-patch-epg-team-competition)
-
-* [v2/genres](#v2genres)
-
-  * [List genres](#1-list-genres)
-  * [Retrieve genre](#2-retrieve-genre)
-
-* [v2/images](#v2images)
-
-  * [Upload a new image](#1-upload-a-new-image)
-  * [Delete images](#2-delete-images)
-
-* [v2/live/competitions](#v2livecompetitions)
-
-  * [Create live competition](#1-create-live-competition)
-  * [Update live competition](#2-update-live-competition)
-  * [Retrieve live competition](#3-retrieve-live-competition)
-  * [Delete live competition](#4-delete-live-competition)
-  * [Patch live competition](#5-patch-live-competition)
-
-* [v2/live/events](#v2liveevents)
-
-  * [Retrieve live event](#1-retrieve-live-event)
-  * [Create live event](#2-create-live-event)
-  * [Update live event](#3-update-live-event)
-  * [Delete live event](#4-delete-live-event)
-  * [Patch live event](#5-patch-live-event)
-
-* [v2/live/teamCompetitions](#v2liveteamcompetitions)
-
-  * [Create live team competition](#1-create-live-team-competition)
-  * [Update live team competition](#2-update-live-team-competition)
-  * [Retrieve live team competition](#3-retrieve-live-team-competition)
-  * [Delete live team competition](#4-delete-live-team-competition)
-  * [Patch live team competition](#5-patch-live-team-competition)
-
-* [v2/pages](#v2pages)
-
-  * [Retrieve page](#1-retrieve-page)
-  * [Create/Update page](#2-createupdate-page)
-  * [Delete page](#3-delete-page)
-  * [Retrieve a section of a page](#4-retrieve-a-section-of-a-page)
-  * [Create/Update page section](#5-createupdate-page-section)
-  * [Delete page section](#6-delete-page-section)
-
-* [v2/publishing](#v2publishing)
-
-  * [Publish a resource](#1-publish-a-resource)
-  * [Unpublish a resource](#2-unpublish-a-resource)
-  * [Apply draft to resource](#3-apply-draft-to-resource)
-
-* [v2/schedule](#v2schedule)
-
-  * [List scheduled content](#1-list-scheduled-content)
-  * [Black out programs](#2-black-out-programs)
-  * [Audit scheduled content](#3-audit-scheduled-content)
-  * [Audit scheduled content for one station](#4-audit-scheduled-content-for-one-station)
-
-* [v2/search](#v2search)
-
-  * [List matching content](#1-list-matching-content)
-  * [List matching stations](#2-list-matching-stations)
-  * [List resources by matching genreIDs](#3-list-resources-by-matching-genreids)
-
-* [v2/seasons](#v2seasons)
-
-  * [Create a season](#1-create-a-season)
-  * [Update a season](#2-update-a-season)
-  * [Retrieve a season](#3-retrieve-a-season)
-  * [Patch a season](#4-patch-a-season)
-
-* [v2/serviceProviders](#v2serviceproviders)
-
-  * [Get serviceProviders list](#1-get-serviceproviders-list)
-  * [Get serviceProviders by ID *](#2-get-serviceproviders-by-id-*)
-  * [Create serviceProviders](#3-create-serviceproviders)
-  * [Delete serviceProviders](#4-delete-serviceproviders)
-  * [Update serviceProviders by ID *](#5-update-serviceproviders-by-id-*)
-  * [Patch service provider](#6-patch-service-provider)
-  * [Get serviceProviderCategories list](#7-get-serviceprovidercategories-list)
-  * [Get serviceProviderCategories by ID](#8-get-serviceprovidercategories-by-id)
-  * [Create serviceProviderCategories](#9-create-serviceprovidercategories)
-  * [Update serviceProviderCategories by ID](#10-update-serviceprovidercategories-by-id)
-  * [Delete serviceProviderCategories](#11-delete-serviceprovidercategories)
-  * [Patch service provider category](#12-patch-service-provider-category)
-  * [Retrieve whitelisted resources](#13-retrieve-whitelisted-resources)
-  * [Create new whitelisted resource](#14-create-new-whitelisted-resource)
-  * [Update whitelisted resource](#15-update-whitelisted-resource)
-  * [Patch whitelisted](#16-patch-whitelisted)
-
-* [v2/shows](#v2shows)
-
-  * [Create a show](#1-create-a-show)
-  * [Update a show](#2-update-a-show)
-  * [Retrieve a show](#3-retrieve-a-show)
-  * [Patch a show](#4-patch-a-show)
-
-* [v2/validation](#v2validation)
-
-  * [List all custom attributes](#1-list-all-custom-attributes)
-
-* [v2/vod](#v2vod)
-
-  * [List VOD movies and episodes to update](#1-list-vod-movies-and-episodes-to-update)
-
-* [v2/vod/competitions](#v2vodcompetitions)
-
-  * [Create VOD Competition](#1-create-vod-competition)
-  * [Update VOD Competition](#2-update-vod-competition)
-  * [Retrieve game from the on-demand catalog](#3-retrieve-game-from-the-on-demand-catalog)
-  * [Delete VOD competition](#4-delete-vod-competition)
-  * [Patch VOD competition](#5-patch-vod-competition)
-
-* [v2/vod/episodes](#v2vodepisodes)
-
-  * [Create VOD episode](#1-create-vod-episode)
-  * [Update VOD episode](#2-update-vod-episode)
-  * [Retrieve show episode from the on-demand catalog](#3-retrieve-show-episode-from-the-on-demand-catalog)
-  * [Delete VOD episode](#4-delete-vod-episode)
-  * [Patch VOD episode](#5-patch-vod-episode)
-
-* [v2/vod/events](#v2vodevents)
-
-  * [Create VOD event](#1-create-vod-event)
-  * [Update VOD event](#2-update-vod-event)
-  * [Retrieve event from the on-demand catalog](#3-retrieve-event-from-the-on-demand-catalog)
-  * [Delete VOD event](#4-delete-vod-event)
-  * [Patch VOD event](#5-patch-vod-event)
-
-* [v2/vod/movies](#v2vodmovies)
-
-  * [Create VOD movie](#1-create-vod-movie)
-  * [Update VOD movie](#2-update-vod-movie)
-  * [Retrieve movie from the on-demand catalog](#3-retrieve-movie-from-the-on-demand-catalog)
-  * [Delete VOD movie](#4-delete-vod-movie)
-  * [Patch VOD movie](#5-patch-vod-movie)
-
-* [v2/vod/teamcompetitions](#v2vodteamcompetitions)
-
-  * [Create VOD Team Competition](#1-create-vod-team-competition)
-  * [Update VOD Team Competition](#2-update-vod-team-competition)
-  * [Retrieve team game from the on-demand catalog](#3-retrieve-team-game-from-the-on-demand-catalog)
-  * [Delete VOD team competition](#4-delete-vod-team-competition)
-  * [Patch VOD team competition](#5-patch-vod-team-competition)
-
-* [v2/workflow](#v2workflow)
-
-  * [Create a resource based on a gameID](#1-create-a-resource-based-on-a-gameid)
-
-* [v3](#v3)
-
-  * [Retrieve personalized page](#1-retrieve-personalized-page)
-  * [Get personalized section (carousel)](#2-get-personalized-section-(carousel))
-
-* [v4](#v4)
-
-  * [Add page configuration](#1-add-page-configuration)
-  * [Update page configuration](#2-update-page-configuration)
-  * [Delete page configuration](#3-delete-page-configuration)
-  * [Retrieve page configuration](#4-retrieve-page-configuration)
-  * [Retrieve section configuration](#5-retrieve-section-configuration)
-  * [Retrieve page](#6-retrieve-page)
-  * [Add editorial section configuration](#7-add-editorial-section-configuration)
-  * [Add "currently live" section](#8-add-"currently-live"-section)
-  * [Add a "continue watching" section](#9-add-a-"continue-watching"-section)
-  * [Add a "watch later" section](#10-add-a-"watch-later"-section)
-  * [Update editorial section configuration](#11-update-editorial-section-configuration)
-  * [List all sections configured for a tenant](#12-list-all-sections-configured-for-a-tenant)
-  * [List all pages configured for a tenant](#13-list-all-pages-configured-for-a-tenant)
-  * [Delete section configuration](#14-delete-section-configuration)
-  * [Get section](#15-get-section)
-  * [Patch page configuration](#16-patch-page-configuration)
-  * [Patch section configuration](#17-patch-section-configuration)
-
-
---------
-
 
 ## Content - v1
-
 
 
 ### Create video asset
@@ -21722,7 +21436,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create a resource based on a gameID
+### Create a resource based on a gameID
 
 
 Creates a resource based on a VOD team competition.
@@ -21771,8 +21485,7 @@ URL: {{OCMServer}}/ocm/v2/resourceFromGame
 ## v3
 
 
-
-### 1. Retrieve personalized page
+### Retrieve personalized page
 
 
 Returns a page of recommended assets for the calling user.  The response contains the page structure and the first carousel section.
@@ -21887,7 +21600,7 @@ Status: Get personalized page | Code: 200
 
 
 
-### 2. Get personalized section (carousel)
+### Get personalized section (carousel)
 
 
 Retrieves a subsequent section list of recommended assets for the calling user.
@@ -21996,8 +21709,7 @@ Status: Get personalized section | Code: 200
 ## v4
 
 
-
-### 1. Add page configuration
+### Add page configuration
 
 
 Creates a carousel page. 
@@ -22094,7 +21806,7 @@ URL: {{OCMServer}}/ocm/v4/pages/config
 
 
 
-### 2. Update page configuration
+### Update page configuration
 
 
 Updates the specified carousel page configuration. 
@@ -22194,7 +21906,7 @@ URL: {{OCMServer}}/ocm/v4/pages/config/{{pageID}}
 
 
 
-### 3. Delete page configuration
+### Delete page configuration
 
 
 Deletes the specified carousel page configuration.
@@ -22230,7 +21942,7 @@ URL: {{OCMServer}}/ocm/v4/pages/config/{{pageID}}
 
 
 
-### 4. Retrieve page configuration
+### Retrieve page configuration
 
 
 Returns the specified carousel page configuration.
@@ -22266,7 +21978,7 @@ URL: {{OCMServer}}/ocm/v4/pages/config/{{pageID}}
 
 
 
-### 5. Retrieve section configuration
+### Retrieve section configuration
 
 
 Retrieves the specified editorial section configuration for carousels. 
@@ -22300,7 +22012,7 @@ URL: {{OCMServer}}/ocm/v4/sections/config/{{sectionID}}
 
 
 
-### 6. Retrieve page
+### Retrieve page
 
 
 Returns the specified carousel page and displays its first section.
@@ -22334,7 +22046,7 @@ URL: {{OCMServer}}/ocm/v4/pages/{{pageID}}
 
 
 
-### 7. Add editorial section configuration
+### Add editorial section configuration
 
 
 Generates an editorial section for a carousel page configuration.
@@ -22390,7 +22102,7 @@ URL: {{OCMServer}}/ocm/v4/sections/config
 
 
 
-### 8. Add "currently live" section
+### Add "currently live" section
 
 
 Generates an editorial section containing "live" content that is currently (or will soon be) available for viewing.
@@ -22473,7 +22185,7 @@ URL: {{OCMServer}}/ocm/v4/sections/config
 
 
 
-### 9. Add a "continue watching" section
+### Add a "continue watching" section
 
 
 Generates the list of assets that the subscriber has started but not yet finished watching.
@@ -22524,7 +22236,7 @@ URL: {{OCMServer}}/ocm/v4/sections/config
 
 
 
-### 10. Add a "watch later" section
+### Add a "watch later" section
 
 
 Generates the list of assets that the subscriber has added to their "to watch" list.
@@ -22575,7 +22287,7 @@ URL: {{OCMServer}}/ocm/v4/sections/config
 
 
 
-### 11. Update editorial section configuration
+### Update editorial section configuration
 
 
 Updates the specified editorial section configuration for carousels. 
@@ -22634,7 +22346,7 @@ URL: {{OCMServer}}/ocm/v4/sections/config/{{sectionID}}
 
 
 
-### 12. List all sections configured for a tenant
+### List all sections configured for a tenant
 
 
 Retrieves all carousel section configurations for the current tenant.
@@ -22663,7 +22375,7 @@ URL: {{OCMServer}}/ocm/v4/sections/config
 
 
 
-### 13. List all pages configured for a tenant
+### List all pages configured for a tenant
 
 
 Lists all carousel page configurations for the current tenant.
@@ -22692,7 +22404,7 @@ URL: {{OCMServer}}/ocm/v4/pages/config
 
 
 
-### 14. Delete section configuration
+### Delete section configuration
 
 
 Deletes the specified carousel section configuration.
@@ -22728,7 +22440,7 @@ URL: {{OCMServer}}/ocm/v4/sections/config/{{sectionId}}
 
 
 
-### 15. Get section
+### Get section
 
 
 Retrieves and displays the specified carousel section.
@@ -22771,7 +22483,7 @@ URL: {{OCMServer}}/ocm/v4/sections/{{sectionID}}
 
 
 
-### 16. Patch page configuration
+### Patch page configuration
 
 
 Patches the specified page configuration resource.
@@ -22873,7 +22585,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 17. Patch section configuration
+### Patch section configuration
 
 
 Patches the specified section configuration resource.

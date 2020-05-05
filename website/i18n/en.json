@@ -3,49 +3,82 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "A website for testing",
+    "tagline": "... testing iSP Documentation ...",
     "docs": {
-      "api-doc1": {
-        "title": "List all country codes"
+      "api-accounts": {
+        "title": "Accounts",
+        "sidebar_label": "Accounts"
       },
-      "api-doc2": {
-        "title": "API Title"
+      "api-application": {
+        "title": "Application",
+        "sidebar_label": "Application"
       },
-      "doc1": {
-        "title": "Latin-ish",
-        "sidebar_label": "Example Page"
+      "api-billing": {
+        "title": "Billing",
+        "sidebar_label": "Billing"
       },
-      "doc2": {
-        "title": "document number 2"
+      "api-content-reporting": {
+        "title": "Content Reporting",
+        "sidebar_label": "Content Reporting"
       },
-      "doc3": {
-        "title": "This is document number 3"
+      "api-content": {
+        "title": "Content",
+        "sidebar_label": "Content"
       },
-      "doc9": {
-        "title": "This is Doc 9"
+      "api-entitlements": {
+        "title": "Entitlements",
+        "sidebar_label": "Entitlements"
       },
-      "doc4": {
-        "title": "Other Document"
+      "api-experience": {
+        "title": "Experience",
+        "sidebar_label": "Experience"
       },
-      "doc5": {
-        "title": "Fifth Document"
+      "api-geography": {
+        "title": "Geography",
+        "sidebar_label": "Geography"
       },
-      "orbis-api-docs": {
-        "title": "Orbis API Documentation"
+      "api-sports": {
+        "title": "Sports - v1",
+        "sidebar_label": "Sports"
+      },
+      "guide-content-curation": {
+        "title": "Content Curation"
+      },
+      "guide-portal-admin": {
+        "title": "Administration",
+        "sidebar_label": "Administration"
+      },
+      "paper-doc4": {
+        "title": "A White Paper"
+      },
+      "paper-doc5": {
+        "title": "YAWP - Yet Another White Paper"
+      },
+      "paper-e-search": {
+        "title": "Elastic Search in Orbis"
+      },
+      "test-output": {
+        "title": "epgManifest v1.0"
+      },
+      "xtra-err-msgs": {
+        "title": "Orbis Error Codes and Messages",
+        "sidebar_label": "Error Messages"
+      },
+      "xtra-glossary": {
+        "title": "Glossary"
       }
     },
     "links": {
-      "Docs": "Docs",
-      "API": "API",
+      "Guides": "Guides",
+      "APIs": "APIs",
       "Help": "Help",
-      "Blog": "Blog"
+      "Portal": "Portal"
     },
     "categories": {
-      "Docusaurus": "Docusaurus",
-      "First Category": "First Category",
-      "Second Category": "Second Category",
-      "API Documentation": "API Documentation",
-      "Sample APIs": "Sample APIs"
+      "Portal Guides": "Portal Guides",
+      "APIs": "APIs",
+      "White Papers": "White Papers",
+      "Extras": "Extras"
     }
   },
   "pages-strings": {

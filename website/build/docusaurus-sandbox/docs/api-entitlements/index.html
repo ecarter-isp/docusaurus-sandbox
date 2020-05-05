@@ -1,0 +1,2344 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Entitlements · iStreamPlanet Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="These endpoints allow applications to manage relationships between asset packages, "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Entitlements · iStreamPlanet Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/"/><meta property="og:description" content="These endpoints allow applications to manage relationships between asset packages, "/><meta property="og:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/iSPblack.png" alt="iStreamPlanet Docs"/><h2 class="headerTitleWithLogo">iStreamPlanet Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/guide-portal-admin" target="_self">Guides</a></li><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/api-entitlements" target="_self">APIs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="https://isp.orbis-portal.stage.dtc.istreamplanet.net" target="_self">Portal</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>APIs</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Portal Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/guide-portal-admin">Administration</a></li><li class="navListItem"><a class="navItem" href="/docs/guide-content-curation">Content Curation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">APIs<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api-accounts">Accounts</a></li><li class="navListItem"><a class="navItem" href="/docs/api-application">Application</a></li><li class="navListItem"><a class="navItem" href="/docs/api-billing">Billing</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content-reporting">Content Reporting</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content">Content</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api-entitlements">Entitlements</a></li><li class="navListItem"><a class="navItem" href="/docs/test-output">epgManifest v1.0</a></li><li class="navListItem"><a class="navItem" href="/docs/api-experience">Experience</a></li><li class="navListItem"><a class="navItem" href="/docs/api-geography">Geography</a></li><li class="navListItem"><a class="navItem" href="/docs/api-sports">Sports</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">White Papers<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/paper-e-search">Elastic Search in Orbis</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc4">A White Paper</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc5">YAWP - Yet Another White Paper</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Extras<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/xtra-err-msgs">Error Messages</a></li><li class="navListItem"><a class="navItem" href="/docs/xtra-glossary">Glossary</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Entitlements</h1></header><article><div><span><p>These endpoints allow applications to manage relationships between asset packages,
+subscriptions, billing plans, and their entitlement tokens.
+To access a video asset, an account must have an entitlement token which is specific to that asset.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="entitlements---v1"></a><a href="#entitlements---v1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entitlements - v1</h2>
+<h3><a class="anchor" aria-hidden="true" id="add-a-package"></a><a href="#add-a-package" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a package</h3>
+<p>Defines a group of video assets as a package for sale to fans.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters"></a><a href="#body-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>package</code></td><td></td><td>object</td><td>required</td><td>Package definition (container).</td></tr>
+<tr><td>id</td><td><code>package</code></td><td>string</td><td>required</td><td>Unique package identifier.</td></tr>
+<tr><td>name</td><td><code>package</code></td><td>string</td><td>required</td><td>Package name.</td></tr>
+<tr><td>description</td><td><code>package</code></td><td>string</td><td>required</td><td>Package description.</td></tr>
+<tr><td>assetIDs</td><td><code>package</code></td><td>string list</td><td>required</td><td>List of asset IDs associated with this package.</td></tr>
+<tr><td>billingPlanIDs</td><td><code>package</code></td><td>string list</td><td>required</td><td>List of billing plan IDs associated with this package.</td></tr>
+<tr><td>regionWhitelist</td><td><code>package</code></td><td>string list</td><td>optional</td><td>List of region IDs for locations where this package can be viewed.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: POST
+Type: RAW
+URL: {{OEMServer}}/oem/v1/user/packages/
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+  <span class="hljs-string">"package"</span>: {
+    <span class="hljs-string">"id"</span>: <span class="hljs-string">"{{package1ID}}"</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"{{packageName}}"</span>,
+    <span class="hljs-string">"description"</span>: <span class="hljs-string">"{{packageDescription}}"</span>,
+    <span class="hljs-string">"assetIDs"</span>: [<span class="hljs-string">"{{asset1ID}},{{asset2ID}}"</span>],
+    <span class="hljs-string">"billingPlanIDs"</span>: [<span class="hljs-string">"{{billingPlan1ID}}"</span>],
+    <span class="hljs-string">"regionWhitelist"</span>: [<span class="hljs-string">"{{region1ID}}"</span>]
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="add-a-free-package"></a><a href="#add-a-free-package" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a free package</h3>
+<p>Defines a group of video assets as a <strong>free</strong> package made available to fans without purchase.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-1"></a><a href="#body-parameters-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>package</code></td><td></td><td>object</td><td>required</td><td>Package definition (container).</td></tr>
+<tr><td>id</td><td><code>package</code></td><td>string</td><td>required</td><td>Unique free package identifier.</td></tr>
+<tr><td>name</td><td><code>package</code></td><td>string</td><td>required</td><td>Package name.</td></tr>
+<tr><td>description</td><td><code>package</code></td><td>string</td><td>required</td><td>Package description.</td></tr>
+<tr><td>assetIDs</td><td><code>package</code></td><td>string list</td><td>required</td><td>List of asset IDs associated with this free package.</td></tr>
+<tr><td>bypassEntitlementCheck</td><td><code>package</code></td><td>boolean</td><td>required</td><td>Flag to bypass entitlement authorization check. Must be set to <em>true</em>.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: POST
+Type: RAW
+URL: {{OEMServer}}/oem/v1/user/packages/
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+  <span class="hljs-string">"package"</span>: {
+    <span class="hljs-string">"id"</span>: <span class="hljs-string">"{{freePackageID}}"</span>,
+    <span class="hljs-string">"name"</span>: <span class="hljs-string">"{{packageName}}"</span>,
+    <span class="hljs-string">"description"</span>: <span class="hljs-string">"{{packageDescription}}"</span>,
+    <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">"assetIDs"</span>: [<span class="hljs-string">"{{freeAsset1ID}}"</span>, <span class="hljs-string">"{{freeAsset2ID}}"</span>]
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="update-a-package"></a><a href="#update-a-package" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a package</h3>
+<p>Updates the specified package of video assets. This endpoint may be used to add a new asset to an existing package.
+Any parameters not listed in the body remain unchanged.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters"></a><a href="#path-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>package1ID</td><td>string</td><td>required</td><td>ID of the package to be updated.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-2"></a><a href="#body-parameters-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>package</code></td><td></td><td>object</td><td>required</td><td>Package definition (container).</td></tr>
+<tr><td>id</td><td><code>package</code></td><td>string</td><td>required</td><td>Unique package identifier.</td></tr>
+<tr><td>name</td><td><code>package</code></td><td>string</td><td>optional</td><td>Package name.</td></tr>
+<tr><td>description</td><td><code>package</code></td><td>string</td><td>optional</td><td>Package description.</td></tr>
+<tr><td>assetIDs</td><td><code>package</code></td><td>string list</td><td>optional</td><td>List of asset IDs associated with this package.</td></tr>
+<tr><td>bypassEntitlementCheck</td><td><code>package</code></td><td>boolean list</td><td>optional</td><td>Flag to bypass entitlement authorization. Default is <em>false</em>. Set to <em>true</em> for free packages.</td></tr>
+<tr><td>regionWhitelist</td><td><code>package</code></td><td>string list</td><td>optional</td><td>List of region IDs where this package can be viewed.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: RAW
+URL: {{OEMServer}}/oem/v1/user/packages/{{package1ID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+  <span class="hljs-string">"package"</span>: {
+        <span class="hljs-string">"id"</span>: <span class="hljs-string">"{{package1ID}}"</span>,
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"{{packageName}}"</span>,
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"{{packageDescription}}"</span>,
+        <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">"assetIDs"</span>: [
+            <span class="hljs-string">"{{asset1ID}}"</span>,
+            <span class="hljs-string">"{{asset2ID}}"</span>
+        ],
+        <span class="hljs-string">"regionWhitelist"</span>: [
+            <span class="hljs-string">"{{region1ID}}"</span>
+        ]
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-package-information"></a><a href="#retrieve-package-information" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve package information</h3>
+<p>Returns information for the specified package, including productIDs.</p>
+<p><br></p>
+<p>Currently, a productID is calculated on the fly using packageID_billingPlanID.
+A productID is not calculated on all package search calls.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-1"></a><a href="#path-parameters-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>package1ID</td><td>string</td><td>required</td><td>ID of the package to be retrieved.</td></tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/user/packages/{{package1ID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>excludeFields</td><td></td><td>Omit the specified fields. Currently, the only valid value is <em>assetids</em>.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Retrieve package information | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"5f536774-f666-4929-be6c-6028b31046b5"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2019-12-13T00:01:06.253239722Z"</span>,
+    <span class="hljs-string">"package"</span>: {
+        <span class="hljs-string">"id"</span>: <span class="hljs-string">"d2595580-3935-11e8-b85b-c9864ba6c1ca3"</span>,
+        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Argentina Test"</span>,
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"Argentina Test"</span>,
+        <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">"billingPlanIDs"</span>: [
+            <span class="hljs-string">"616ARS-Monthly-FreeTrial"</span>,
+            <span class="hljs-string">"15DayFreeTrialMonthly_004"</span>
+        ],
+        <span class="hljs-string">"productIDs"</span>: {
+            <span class="hljs-string">"15DayFreeTrialMonthly_004"</span>: <span class="hljs-string">"29b8c4d1-6f90-4e4d-843e-50b2c8528bde"</span>
+        },
+        <span class="hljs-string">"customData"</span>: {
+            <span class="hljs-string">"testfield"</span>: <span class="hljs-string">"TestCustomData"</span>
+        },
+        <span class="hljs-string">"createdTimestamp"</span>: <span class="hljs-string">"2018-06-01T18:25:58Z"</span>,
+        <span class="hljs-string">"modifiedTimestamp"</span>: <span class="hljs-string">"2018-06-01T18:25:58Z"</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-all-packages"></a><a href="#list-all-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List all packages</h3>
+<p>Returns a list of all packages in a paginated result set.</p>
+<p>All query parameters are optional unless otherwise indicated.</p>
+<p><br></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/user/packages
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>count</td><td>200</td><td>Maximum number of items returned for the search; used for pagination. Default is 20.</td></tr>
+<tr><td>skip</td><td>0</td><td>Number of items to skip at the start of the returned result set; used for pagination. Default is 0.</td></tr>
+<tr><td>sort</td><td>name</td><td>Sorts the list of packages by the specified field.</td></tr>
+<tr><td>excludeFields</td><td>assetids</td><td>Omit the specified fields. Currently, the only valid value is <em>assetids</em>.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get packages with count and skip | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"0d3f46a1-966e-49d2-84cd-c1755f19f7fc"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2018-05-17T17:02:10.755842287Z"</span>,
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"zl73kex42t3gj5tuqf6i"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"jyq1ybbkb1s30t0sfbak"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"ja2edjk4dmolxgowp4i3"</span>
+            ]
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"nanh8lrxpps8rpmu9cpk"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"yxa9vcmnq02jb8b5ymae"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"ja2edjk4dmolxgowp4i3"</span>
+            ]
+        }
+    ],
+    <span class="hljs-string">"metadata"</span>: {
+        <span class="hljs-string">"count"</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-string">"skip"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">147</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-all-subscription-packages"></a><a href="#list-all-subscription-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List all subscription packages</h3>
+<p>Returns a list of all packages that are subscriptions in a paginated result set.</p>
+<p>All query parameters are optional unless otherwise indicated.</p>
+<p><br></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/user/packages
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>subscriptions</td><td></td><td>Selects subscription packages only. No value is required.</td></tr>
+<tr><td>count</td><td>20</td><td>Maximum number of items returned for the search; used for pagination. Default is 20.</td></tr>
+<tr><td>skip</td><td>0</td><td>Number of items to skip at the start of the returned result set; used for pagination. Default is 0.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get subscription packages | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"a129a14c-8290-4a38-a9b3-740373ecf5e6"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2018-05-17T17:57:49.646033046Z"</span>,
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"7d6eb650-2e27-11e8-93ef-dd9abf020151"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Otters"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Oregon City Otters boys curling team\n\n"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"0b987d709cbb2b9bccef857bc5630c3e"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"\u0001\t"</span>,
+                <span class="hljs-string">"Cascadia Curling - Silver"</span>,
+                <span class="hljs-string">"Cascadia Curling - Gold"</span>
+            ]
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"5a0e8710-376b-11e8-a5b7-83983f3c2ccc"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Bobcats"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Bremerton Bobcats girls curling team\n\n"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"0b987d709cbb2b9bccef857bc5630c3e"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"Cascadia Curling - Silver"</span>,
+                <span class="hljs-string">"Cascadia Curling - Gold"</span>,
+                <span class="hljs-string">"       "</span>
+            ]
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"5c6f0c50-376b-11e8-a5b7-83983f3c2ccc"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Orcas"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Olympia Orcas girls curling team\n\n"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"0b987d709cbb2b9bccef857bc5630c3e"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"Cascadia Curling - Silver"</span>,
+                <span class="hljs-string">"Cascadia Curling - Gold"</span>,
+                <span class="hljs-string">"       "</span>
+            ]
+        }
+    ],
+    <span class="hljs-string">"metadata"</span>: {
+        <span class="hljs-string">"count"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-string">"skip"</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">22</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-packages-for-billing-plans"></a><a href="#list-packages-for-billing-plans" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List packages for billing plans</h3>
+<p>Returns all packages associated with the specified billing plan(s) in a paginated result set.</p>
+<p>All query parameters are optional unless otherwise indicated.</p>
+<p><br></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/user/packages
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>billingPlanIDs</td><td>{{billingPlan1ID}}</td><td>Comma-separated list of one or more billing plan IDs.</td></tr>
+<tr><td>skip</td><td></td><td>Number of items to skip at the start of the returned result set; used for pagination. Default is 0.</td></tr>
+<tr><td>count</td><td></td><td>Maximum number of items returned for the search; used for pagination. Default is 20.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get packages for a billing plan, return 2 out of 6 total | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"7770c01c-159b-4fdd-a052-40f5436c79cf"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2018-05-17T16:58:30.7837668Z"</span>,
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"akv8dqdjbpps8xp1h6st"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"pees2xmdbkeugg6expxu"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"ja2edjk4dmolxgowp4i3"</span>
+            ]
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"zl73kex42t3gj5tuqf6i"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"jyq1ybbkb1s30t0sfbak"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"ja2edjk4dmolxgowp4i3"</span>
+            ]
+        }
+    ],
+    <span class="hljs-string">"metadata"</span>: {
+        <span class="hljs-string">"count"</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-string">"skip"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">6</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-packages-with-custom-data"></a><a href="#list-packages-with-custom-data" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List packages with custom data</h3>
+<p>Returns a list of all packages with the specified custom data.</p>
+<p>All query parameters are optional unless otherwise noted.</p>
+<p><br></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/user/packages
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>customData.Sport</td><td>Basketball</td><td>Required. Custom data being requested.</td></tr>
+<tr><td>skip</td><td></td><td>Number of items to skip at the start of the returned result set; used for pagination. Default is 0.</td></tr>
+<tr><td>count</td><td></td><td>Maximum number of items returned for the search; used for pagination. Default is 20.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get package by custom data | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"356212e0-9144-4f5f-b407-a8898835f8da"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2018-05-17T17:07:22.021637228Z"</span>,
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"sn74mnaawdpt1wqnsh1x"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Chile Oro"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Chile Oro"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"t65mjh715wmekjj42iz1"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"48drivy04dq26c3o8d9w"</span>
+            ],
+            <span class="hljs-string">"customData"</span>: {
+                <span class="hljs-string">"League"</span>: <span class="hljs-string">"NBA"</span>,
+                <span class="hljs-string">"Sport"</span>: <span class="hljs-string">"Basketball"</span>
+            }
+        }
+    ],
+    <span class="hljs-string">"metadata"</span>: {
+        <span class="hljs-string">"count"</span>: <span class="hljs-number">20</span>,
+        <span class="hljs-string">"skip"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">1</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-user-packages-and-entitlements-for-assets-admin"></a><a href="#list-user-packages-and-entitlements-for-assets-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List user packages and entitlements for assets (admin)</h3>
+<p>Returns a list of packages and entitlements for the provided asset IDs for the specified user.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-2"></a><a href="#path-parameters-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>userid</td><td>string</td><td>required</td><td>ID of the target user account.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-3"></a><a href="#body-parameters-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetIDs</td><td>string list</td><td>optional</td><td>List of asset IDs.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: POST
+Type: RAW
+URL: {{OEMServer}}/oem/v1/admin/entitlements/{{userid}}/assets
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"assetIDs"</span>: [
+        <span class="hljs-string">"{{videoAsset1ID}}"</span>,
+        <span class="hljs-string">"{{videoAsset2ID}}"</span>,
+        <span class="hljs-string">"{{videoAsset3ID}}"</span>
+    ]
+}
+</code></pre>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Empty list of packages and entitlements | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"b52cdf9c-b4a3-4178-b04b-8837fcbd8d71"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2019-12-13T00:13:52.318481578Z"</span>,
+    <span class="hljs-string">"assetPackages"</span>: [],
+    <span class="hljs-string">"packages"</span>: [],
+    <span class="hljs-string">"billingPlans"</span>: []
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="delete-a-package"></a><a href="#delete-a-package" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a package</h3>
+<p>Deletes the specified package, making it unavailable for purchase (or for viewing, if the package is free).</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-3"></a><a href="#path-parameters-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>package1ID</td><td>string</td><td>required</td><td>ID of the package to be deleted.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses"></a><a href="#error-responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to delete the target package.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: Target package not found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: DELETE
+Type: FORMDATA
+URL: {{OEMServer}}/oem/v1/user/packages/{{package1ID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Admin unpublishes a pulished asset immediately | Code: 200</p>
+<pre><code class="hljs css language-js">{<span class="hljs-string">"requestID"</span>:<span class="hljs-string">"a4724e1d-600d-4462-89ee-96f008f3e6d0"</span>,<span class="hljs-string">"timestamp"</span>:<span class="hljs-string">"2017-11-30T21:47:51.955779914Z"</span>,<span class="hljs-string">"message"</span>:<span class="hljs-string">"Asset ID 43435875 was successfully deleted."</span>}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="grant-an-entitlement"></a><a href="#grant-an-entitlement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Grant an entitlement</h3>
+<p>Grants a package entitlement to the current subscriber. Normally, this happens automatically as a result of a purchase. This endpoint is intended for use by customer support tools.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-4"></a><a href="#body-parameters-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>entitlement</code></td><td></td><td>object</td><td>required</td><td>Entitlement definition (container).</td></tr>
+<tr><td>packageID</td><td><code>entitlement</code></td><td>string</td><td>required</td><td>Unique package identifier.</td></tr>
+<tr><td>uid</td><td><code>entitlement</code></td><td>string</td><td>required</td><td>Unique user account ID.</td></tr>
+<tr><td>startDate</td><td><code>entitlement</code></td><td>string</td><td>required</td><td>Start date timestamp for user's entitlement to the package.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: POST
+Type: RAW
+URL: {{OEMServer}}/oem/v1/admin/entitlements/
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+  <span class="hljs-string">"entitlement"</span>: {
+    <span class="hljs-string">"packageID"</span>: <span class="hljs-string">"{{package1ID}}"</span>,
+    <span class="hljs-string">"uid"</span>: <span class="hljs-string">"{{userid}}"</span>,
+    <span class="hljs-string">"startDate"</span>: <span class="hljs-string">"2018-02-01T01:00:00Z"</span>
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="update-entitlements-with-token"></a><a href="#update-entitlements-with-token" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update entitlements with token</h3>
+<p>Grants package entitlements to a subscriber based on the contents of a JWT provided in the body of the request.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-5"></a><a href="#body-parameters-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>entitlementToken</code></td><td>string</td><td>required</td><td>JWT containing the user ID and entitlements</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: RAW
+URL: {{OEMServer}}/oem/v1/entitlements/token
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+  <span class="hljs-string">"entitlementToken"</span>: <span class="hljs-string">"JWT goes here"</span>,
+  <span class="hljs-string">"provider"</span>: <span class="hljs-string">"{{tenantName}}"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="update-a-user-entitlement-admin"></a><a href="#update-a-user-entitlement-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a user entitlement (admin)</h3>
+<p>Updates a subscription entitlement.</p>
+<p>Use this endpoint to extend the end date of an entitlement. Normally this happens automatically as monthly subscription payments are credited. This endpoint is intended for use by customer support tools.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-4"></a><a href="#path-parameters-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>userid</td><td>string</td><td>required</td><td>ID of the target user account.</td></tr>
+<tr><td>package1ID</td><td>string</td><td>required</td><td>ID of the package to be updated.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-6"></a><a href="#body-parameters-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>entitlement</code></td><td></td><td>object</td><td>required</td><td>Entitlement definition (container).</td></tr>
+<tr><td>packageID</td><td><code>entitlement</code></td><td>string</td><td>required</td><td>Unique package identifier.</td></tr>
+<tr><td>uid</td><td><code>entitlement</code></td><td>string</td><td>required</td><td>Unique user account ID.</td></tr>
+<tr><td>startDate</td><td><code>entitlement</code></td><td>string</td><td>required</td><td>Start date for user's entitlement to the package; in timestamp format.</td></tr>
+<tr><td>endDate</td><td><code>entitlement</code></td><td>string</td><td>required</td><td>End date for user's entitlement to the package; in timestamp format.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: RAW
+URL: {{OEMServer}}/oem/v1/admin/entitlements/{{userid}}/{{package1ID}}/
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+  <span class="hljs-string">"entitlement"</span>: {
+    <span class="hljs-string">"packageID"</span>: <span class="hljs-string">"{{package1ID}}"</span>,
+    <span class="hljs-string">"uid"</span>: <span class="hljs-string">"{{userid}}"</span>,
+    <span class="hljs-string">"startDate"</span>: <span class="hljs-string">"2018-02-01T01:00:00Z"</span>,
+    <span class="hljs-string">"endDate"</span>: <span class="hljs-string">"2019-02-01T01:00:00Z"</span>
+  }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-all-entitlements"></a><a href="#list-all-entitlements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List all entitlements</h3>
+<p>Returns all the entitlements for the logged-in user.</p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/entitlements
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="list-all-entitlements-for-a-user-admin"></a><a href="#list-all-entitlements-for-a-user-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List all entitlements for a user (admin)</h3>
+<p>Returns all the entitlements for the specified user. Requires administrative privileges.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-5"></a><a href="#path-parameters-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>userid</td><td>string</td><td>required</td><td>ID of the target user account.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/admin/entitlements/{{userid}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="grant-asset-entitlements-for-a-user-admin"></a><a href="#grant-asset-entitlements-for-a-user-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Grant asset entitlements for a user (admin)</h3>
+<p>Grants entitlements to the target list of asset IDs for the specified subscriber.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-6"></a><a href="#path-parameters-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>userid</td><td>string</td><td>required</td><td>ID of the target subscriber account.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-7"></a><a href="#body-parameters-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetIDs</td><td>string list</td><td>optional</td><td>List of asset IDs.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: POST
+Type: RAW
+URL: {{OEMServer}}/oem/v1/admin/entitlements/{{userid}}/assets
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"assetIDs"</span>: [
+        <span class="hljs-string">"{{asset1ID}}"</span>,
+        <span class="hljs-string">"{{asset2ID}}"</span>
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-entitlements-for-user-and-assets"></a><a href="#list-entitlements-for-user-and-assets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List entitlements for user and assets</h3>
+<p>Retrieves the calling user's entitlement and package information for a set of specified asset IDs.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-7"></a><a href="#path-parameters-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetIDs</td><td>string</td><td>optional</td><td>Comma-seperated list of asset IDs for which you'd like the package information.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="response-object"></a><a href="#response-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Object</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><code>assetPackages</code></td><td></td><td>array</td><td>optional</td><td>List of packages associated with the requested asset IDs. Can be empty.</td></tr>
+<tr><td>assetID</td><td>assetPackages</td><td>optional</td><td>required</td><td>One of the requested asset IDs.</td></tr>
+<tr><td>packageIDs</td><td>assetPackages</td><td>string</td><td>required</td><td>Array of package IDs that contain the related asset ID.</td></tr>
+<tr><td>packages</td><td></td><td>array</td><td>required</td><td>List of full package objects from the <code>assetPackages</code> list.</td></tr>
+<tr><td>products</td><td></td><td>array</td><td>required</td><td>List of full product objects for products that contain the packages in the <code>assetPackages</code> field.</td></tr>
+<tr><td>billingplans</td><td></td><td>array</td><td>required</td><td>List of billing plan objects associated with the products in the <code>products</code> fields.</td></tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/entitlements/assets
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetIDs</td><td>{{asset1ID}},{{asset2ID}}</td><td>List of asset IDs separated by commas. <em>Required.</em></td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: List entitlements for user and assets | Code: 0</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"71670ecc-4d47-413b-936f-a883b9d62429"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2019-12-19T23:52:16.719601971Z"</span>,
+    <span class="hljs-string">"assetPackages"</span>: [
+        {
+            <span class="hljs-string">"assetID"</span>: <span class="hljs-string">"eb63bc9d-d71f-4e2d-be72-bbfcaf22e410"</span>,
+            <span class="hljs-string">"packageIDs"</span>: [
+                <span class="hljs-string">"0mf3nhpxb3lbkbj8xa2f2roqu"</span>,
+                <span class="hljs-string">"00ae74f0-8882-11e9-a443-233a0f5b042f"</span>
+            ]
+        }
+    ],
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"0mf3nhpxb3lbkbj8xa2f2roqu"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Girls Youth Soccer "</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Girls Youth Soccer Games 11"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"latestandgreatstbilling"</span>
+            ],
+            <span class="hljs-string">"productIDs"</span>: {
+                <span class="hljs-string">"latestandgreatstbilling"</span>: <span class="hljs-string">"82710733-f741-453b-986f-37e30b7fd020"</span>
+            },
+            <span class="hljs-string">"customData"</span>: {
+                <span class="hljs-string">"currency"</span>: <span class="hljs-string">"2333 f . af kafkekjfekakd"</span>,
+                <span class="hljs-string">"league"</span>: <span class="hljs-string">"2233"</span>,
+                <span class="hljs-string">"mediumDescription"</span>: <span class="hljs-string">"22"</span>,
+                <span class="hljs-string">"productPrice"</span>: <span class="hljs-string">"2223"</span>,
+                <span class="hljs-string">"sport"</span>: <span class="hljs-string">"true"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"```kk`k`k"</span>
+            },
+            <span class="hljs-string">"owned"</span>: <span class="hljs-literal">true</span>
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"00ae74f0-8882-11e9-a443-233a0f5b042f"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Jun6Package"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"TESTBP_2776"</span>,
+                <span class="hljs-string">"billing_all_access"</span>
+            ],
+            <span class="hljs-string">"productIDs"</span>: {
+                <span class="hljs-string">"TESTBP_2776"</span>: <span class="hljs-string">"91c7833c-bbf3-4b40-b4fe-ac64af8bd9f9"</span>,
+                <span class="hljs-string">"billing_all_access"</span>: <span class="hljs-string">"47afab5e-4d5c-4a49-a416-ccd8873b04f8"</span>
+            },
+            <span class="hljs-string">"customData"</span>: {
+                <span class="hljs-string">"currency"</span>: <span class="hljs-string">"fkfjeifiej 3i3ijfjf"</span>,
+                <span class="hljs-string">"league"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"dfafef"</span>,
+                <span class="hljs-string">"longDescription"</span>: <span class="hljs-string">"afadafdff"</span>,
+                <span class="hljs-string">"mediumDescription"</span>: <span class="hljs-string">"afdaf"</span>,
+                <span class="hljs-string">"productDescription"</span>: <span class="hljs-string">"afafaf"</span>,
+                <span class="hljs-string">"productName"</span>: <span class="hljs-string">"sdf"</span>,
+                <span class="hljs-string">"productPrice"</span>: <span class="hljs-string">"2223"</span>,
+                <span class="hljs-string">"shortDescription"</span>: <span class="hljs-string">"affada"</span>,
+                <span class="hljs-string">"skuNumber"</span>: <span class="hljs-string">"1233"</span>,
+                <span class="hljs-string">"skuType"</span>: <span class="hljs-string">"2232111"</span>,
+                <span class="hljs-string">"sport"</span>: <span class="hljs-string">"faf"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"sss"</span>
+            },
+            <span class="hljs-string">"owned"</span>: <span class="hljs-literal">false</span>
+        }
+    ],
+    <span class="hljs-string">"billingPlans"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"TESTBP_2776"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"s111111111111111"</span>,
+            <span class="hljs-string">"recurrence"</span>: <span class="hljs-string">"1y"</span>,
+            <span class="hljs-string">"prices"</span>: {
+                <span class="hljs-string">"Amazon"</span>: {
+                    <span class="hljs-string">"CAD"</span>: <span class="hljs-number">0.02</span>
+                },
+                <span class="hljs-string">"Apple"</span>: {
+                    <span class="hljs-string">"CAD"</span>: <span class="hljs-number">1.49</span>,
+                    <span class="hljs-string">"USD"</span>: <span class="hljs-number">3.99</span>
+                }
+            },
+            <span class="hljs-string">"trialperiod"</span>: {
+                <span class="hljs-string">"cycleLength"</span>: <span class="hljs-string">"3d"</span>,
+                <span class="hljs-string">"cycles"</span>: <span class="hljs-number">1</span>
+            },
+            <span class="hljs-string">"customData"</span>: {}
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"billing_all_access"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Monthly All Access Season "</span>,
+            <span class="hljs-string">"recurrence"</span>: <span class="hljs-string">"1M"</span>,
+            <span class="hljs-string">"prices"</span>: {
+                <span class="hljs-string">"Amazon"</span>: {
+                    <span class="hljs-string">"BRL"</span>: <span class="hljs-number">1</span>,
+                    <span class="hljs-string">"CAD"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"USD"</span>: <span class="hljs-number">0</span>
+                },
+                <span class="hljs-string">"Apple"</span>: {
+                    <span class="hljs-string">"BRL"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"CAD"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"USD"</span>: <span class="hljs-number">0</span>
+                },
+                <span class="hljs-string">"Google"</span>: {
+                    <span class="hljs-string">"BRL"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"CAD"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"USD"</span>: <span class="hljs-number">0</span>
+                },
+                <span class="hljs-string">"Roku"</span>: {
+                    <span class="hljs-string">"BRL"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"CAD"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"USD"</span>: <span class="hljs-number">0</span>
+                },
+                <span class="hljs-string">"Vindicia"</span>: {
+                    <span class="hljs-string">"BRL"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"CAD"</span>: <span class="hljs-number">0</span>,
+                    <span class="hljs-string">"USD"</span>: <span class="hljs-number">0</span>
+                }
+            },
+            <span class="hljs-string">"trialperiod"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">"customData"</span>: {}
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"latestandgreatstbilling"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"latestandgreatstbilling"</span>,
+            <span class="hljs-string">"recurrence"</span>: <span class="hljs-string">"1M"</span>,
+            <span class="hljs-string">"prices"</span>: {
+                <span class="hljs-string">"Vindicia"</span>: {
+                    <span class="hljs-string">"USD"</span>: <span class="hljs-number">1.11</span>
+                }
+            },
+            <span class="hljs-string">"trialperiod"</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">"customData"</span>: {}
+        }
+    ],
+    <span class="hljs-string">"Products"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"91c7833c-bbf3-4b40-b4fe-ac64af8bd9f9"</span>,
+            <span class="hljs-string">"packageID"</span>: <span class="hljs-string">"00ae74f0-8882-11e9-a443-233a0f5b042f"</span>,
+            <span class="hljs-string">"billingPlanID"</span>: <span class="hljs-string">"TESTBP_2776"</span>,
+            <span class="hljs-string">"name"</span>: {
+                <span class="hljs-string">"en"</span>: <span class="hljs-string">"test empty"</span>
+            },
+            <span class="hljs-string">"shortDesc"</span>: {
+                <span class="hljs-string">"en"</span>: <span class="hljs-string">"test empty"</span>
+            },
+            <span class="hljs-string">"longDesc"</span>: {
+                <span class="hljs-string">"en"</span>: <span class="hljs-string">"test empty"</span>
+            },
+            <span class="hljs-string">"storeData"</span>: {
+                <span class="hljs-string">"Apple"</span>: {
+                    <span class="hljs-string">"storeProductID"</span>: <span class="hljs-string">"TEST_Trial_Delete_This"</span>,
+                    <span class="hljs-string">"customData"</span>: {}
+                }
+            },
+            <span class="hljs-string">"version"</span>: <span class="hljs-number">1</span>,
+            <span class="hljs-string">"created"</span>: <span class="hljs-string">"2019-10-06T11:35:54.701Z"</span>,
+            <span class="hljs-string">"modified"</span>: <span class="hljs-string">"2019-10-06T11:35:54.701Z"</span>
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"47afab5e-4d5c-4a49-a416-ccd8873b04f8"</span>,
+            <span class="hljs-string">"packageID"</span>: <span class="hljs-string">"00ae74f0-8882-11e9-a443-233a0f5b042f"</span>,
+            <span class="hljs-string">"billingPlanID"</span>: <span class="hljs-string">"billing_all_access"</span>,
+            <span class="hljs-string">"name"</span>: {
+                <span class="hljs-string">"en"</span>: <span class="hljs-string">"asdfsdfsdf"</span>
+            },
+            <span class="hljs-string">"shortDesc"</span>: {
+                <span class="hljs-string">"en"</span>: <span class="hljs-string">"asdfsdfsdf"</span>
+            },
+            <span class="hljs-string">"longDesc"</span>: {
+                <span class="hljs-string">"en"</span>: <span class="hljs-string">"asdfsdfsdfasd"</span>
+            },
+            <span class="hljs-string">"storeData"</span>: {
+                <span class="hljs-string">"Apple"</span>: {
+                    <span class="hljs-string">"storeProductID"</span>: <span class="hljs-string">"DTV_TEST_CLAIREADDITION_006666"</span>,
+                    <span class="hljs-string">"customData"</span>: {}
+                }
+            },
+            <span class="hljs-string">"version"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-string">"created"</span>: <span class="hljs-string">"2019-10-06T11:41:23.038Z"</span>,
+            <span class="hljs-string">"modified"</span>: <span class="hljs-string">"2019-10-29T19:06:18.392Z"</span>
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"82710733-f741-453b-986f-37e30b7fd020"</span>,
+            <span class="hljs-string">"packageID"</span>: <span class="hljs-string">"0mf3nhpxb3lbkbj8xa2f2roqu"</span>,
+            <span class="hljs-string">"billingPlanID"</span>: <span class="hljs-string">"latestandgreatstbilling"</span>,
+            <span class="hljs-string">"name"</span>: {
+                <span class="hljs-string">"en"</span>: <span class="hljs-string">"latestandgreatestproduct"</span>
+            },
+            <span class="hljs-string">"shortDesc"</span>: {
+                <span class="hljs-string">"en"</span>: <span class="hljs-string">"latestandgreatestproduct"</span>
+            },
+            <span class="hljs-string">"longDesc"</span>: {
+                <span class="hljs-string">"en"</span>: <span class="hljs-string">"latestandgreatestproduct"</span>
+            },
+            <span class="hljs-string">"storeData"</span>: {
+                <span class="hljs-string">"Amazon"</span>: {
+                    <span class="hljs-string">"storeProductID"</span>: <span class="hljs-string">"3"</span>,
+                    <span class="hljs-string">"customData"</span>: {}
+                },
+                <span class="hljs-string">"Apple"</span>: {
+                    <span class="hljs-string">"storeProductID"</span>: <span class="hljs-string">"latestandgreatestproduct"</span>,
+                    <span class="hljs-string">"customData"</span>: {
+                        <span class="hljs-string">"latestandgreatestproduct"</span>: <span class="hljs-string">"1"</span>
+                    }
+                },
+                <span class="hljs-string">"Google"</span>: {
+                    <span class="hljs-string">"storeProductID"</span>: <span class="hljs-string">"1"</span>,
+                    <span class="hljs-string">"customData"</span>: {}
+                },
+                <span class="hljs-string">"Roku"</span>: {
+                    <span class="hljs-string">"storeProductID"</span>: <span class="hljs-string">"5"</span>,
+                    <span class="hljs-string">"customData"</span>: {}
+                },
+                <span class="hljs-string">"Vindicia"</span>: {
+                    <span class="hljs-string">"storeProductID"</span>: <span class="hljs-string">"2"</span>,
+                    <span class="hljs-string">"customData"</span>: {}
+                }
+            },
+            <span class="hljs-string">"version"</span>: <span class="hljs-number">2</span>,
+            <span class="hljs-string">"created"</span>: <span class="hljs-string">"2018-12-19T00:56:27.014Z"</span>,
+            <span class="hljs-string">"modified"</span>: <span class="hljs-string">"2019-12-09T23:47:30.261Z"</span>
+        }
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-entitlements-for-user-and-package-admin"></a><a href="#list-entitlements-for-user-and-package-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List entitlements for user and package (admin)</h3>
+<p>Returns entitlement information for the specified user and package.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-8"></a><a href="#path-parameters-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>userid</td><td>string</td><td>required</td><td>ID of the target subscriber account.</td></tr>
+<tr><td>package1ID</td><td>string</td><td>required</td><td>ID of the target package.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/admin/entitlements/{{userid}}/{{package1ID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="request-an-entitlement-token-admin"></a><a href="#request-an-entitlement-token-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request an entitlement token (admin)</h3>
+<p>Requests a CDN or DRM token to playback a video asset. The requested token type is returned if the subscriber is entitled to the asset.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-9"></a><a href="#path-parameters-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>userid</td><td>string</td><td>required</td><td>ID of the target subscriber account.</td></tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-8"></a><a href="#body-parameters-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetID</td><td></td><td>string</td><td>required</td><td>Asset ID requested.</td></tr>
+<tr><td>playbackUrl</td><td></td><td>string</td><td>required</td><td>Playback URL for this asset ID.</td></tr>
+<tr><td><code>capabilities</code></td><td></td><td>object</td><td>optional</td><td>An optional parameter for reporting device capabilities that might affect video playback.</td></tr>
+<tr><td>widevineSecurityLevel</td><td><code>capabilities</code></td><td>string</td><td>optional</td><td>The level of the Widevine DRM implementation on the device. Value may be: <strong>L1</strong> \</td><td><strong>L3</strong>.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: POST
+Type: RAW
+URL: {{OEMServer}}/oem/v1/user/accounts/{{userid}}/entitlement
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>tokentype</td><td>turner-akamai</td><td>Type of CDN or DRM token required.  Currently supported values are:</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>turner-akamai</strong>  (Akamai CDN for Turner Broadcasting)</li>
+<li><strong>none</strong> (entitlement check with no CDN or DRM protection)</li>
+</ul>
+<p>Values to be supported in an upcoming release:</p>
+<ul>
+<li><strong>akamai</strong> (Akamai CDN)</li>
+<li><strong>isp-atlas</strong> (Atlas DRM) |</li>
+</ul>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"assetID"</span>: <span class="hljs-string">"{{asset1ID}}"</span>,
+    <span class="hljs-string">"playbackUrl"</span>: <span class="hljs-string">"http://www.some.akamai.com/dir/dir2/dir3/dir4/master.m3u8"</span>,
+    <span class="hljs-string">"capabilities"</span>: {
+        <span class="hljs-string">"widevineSecurityLevel"</span>: <span class="hljs-string">"L1"</span>
+    }
+}
+</code></pre>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Request Entitlement Token | Code: 201</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"74f8e59e-0ef8-4cc5-a741-128c56cdeb15"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2017-12-01T20:48:20.148472263Z"</span>,
+    <span class="hljs-string">"entitled"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">"assetID"</span>: <span class="hljs-string">"f329c36a-d280-11e7-883c-37316ed34246"</span>,
+    <span class="hljs-string">"entitlementToken"</span>: <span class="hljs-string">"{{entitlementToken}}"</span>,
+    <span class="hljs-string">"tokenType"</span>: <span class="hljs-string">"turner-akamai"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="delete-an-entitlement-admin"></a><a href="#delete-an-entitlement-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete an entitlement (admin)</h3>
+<p>Removes the entitlement to the specified package for the target user.</p>
+<p>This normally happens automatically when a subscription expires. This endpoint is intended for use by customer support tools.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-10"></a><a href="#path-parameters-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>userid</td><td>string</td><td>required</td><td>ID of the target user account.</td></tr>
+<tr><td>package1ID</td><td>string</td><td>required</td><td>ID of the target package.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-1"></a><a href="#error-responses-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to remove the specified package for the target user.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: No matching package IDs found.</td></tr>
+<tr><td>404</td><td>1041</td><td><em>Not Found</em>: No matching user ID found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: DELETE
+Type: FORMDATA
+URL: {{OEMServer}}/oem/v1/admin/entitlements/{{userid}}/{{package1ID}}/
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Admin unpublishes a pulished asset immediately | Code: 200</p>
+<pre><code class="hljs css language-js">{<span class="hljs-string">"requestID"</span>:<span class="hljs-string">"a4724e1d-600d-4462-89ee-96f008f3e6d0"</span>,<span class="hljs-string">"timestamp"</span>:<span class="hljs-string">"2017-11-30T21:47:51.955779914Z"</span>,<span class="hljs-string">"message"</span>:<span class="hljs-string">"Asset ID 43435875 was successfully deleted."</span>}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="add-assets-to-packages"></a><a href="#add-assets-to-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add assets to packages</h3>
+<p>Adds one or more assets to one or more packages.</p>
+<p><br></p>
+<p>Attempts to add all of the listed asset IDs to all of the specified package IDs.
+Returns <code>200</code> whether the listed asset IDs are already present or not;
+duplicate asset IDs are ignored.</p>
+<p><br></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-9"></a><a href="#body-parameters-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>packageIDs</td><td>List of one or more package IDs to update.</td></tr>
+<tr><td>assetIDs</td><td>List of one or more asset IDs to add.</td></tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-2"></a><a href="#error-responses-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to add the specified asset IDs to the target packages.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: No matching package IDs found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: RAW
+URL: {{OEMServer}}/oem/v1/packages/assets
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Accept</td><td>application/json</td><td></td></tr>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"packageIDs"</span>: [
+        <span class="hljs-string">"{{package1ID}}"</span>
+    ],
+    <span class="hljs-string">"assetIDs"</span>: [
+        <span class="hljs-string">"{{asset1ID}}"</span>,
+        <span class="hljs-string">"{{asset2ID}}"</span>
+    ]
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="remove-assets-from-packages"></a><a href="#remove-assets-from-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Remove assets from packages</h3>
+<p>Attempts to remove all of the listed asset IDs from all of the specified package IDs.</p>
+<p>Returns <code>200</code> whether the listed asset IDs are present or not.</p>
+<p><br></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-10"></a><a href="#body-parameters-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>packageIDs</td><td>List of one or more package IDs to update.</td></tr>
+<tr><td>assetIDs</td><td>List of one or more asset IDs to remove from the packages.</td></tr>
+</tbody>
+</table>
+<p><br></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-3"></a><a href="#error-responses-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to remove the specified asset IDs from the target packages.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: No matching package IDs found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: DELETE
+Type: RAW
+URL: {{OEMServer}}/oem/v1/packages/assets
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Accept</td><td>application/json</td><td></td></tr>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"packageIDs"</span>: [ <span class="hljs-string">"{{package1ID}}"</span> ],
+    <span class="hljs-string">"assetIDs"</span>:   [ <span class="hljs-string">"{{asset1ID}}"</span> ]
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="package-graphs---v1"></a><a href="#package-graphs---v1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Package Graphs - v1</h2>
+<p>Endpoints that deal with package relationships (Packages of Packages).</p>
+<p><br></p>
+<h3><a class="anchor" aria-hidden="true" id="add-a-child-package"></a><a href="#add-a-child-package" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add a child package</h3>
+<p>Adds a child package to a package.</p>
+<p>The parent and child packages must already exist.
+If a user is entitled to a package, the user is also entitled to any child packages of that package.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-11"></a><a href="#path-parameters-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>parentPackageID</td><td>string</td><td>required</td><td>ID for the parent package.</td></tr>
+<tr><td>childPackageID</td><td>string</td><td>required</td><td>ID for the child package to be added.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-4"></a><a href="#error-responses-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to write or update the target package.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: Target package not found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: FORMDATA
+URL: {{OEMServer}}/oem/v1/packages/{{parentPackageID}}/child/{{childPackageID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td></td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3><a class="anchor" aria-hidden="true" id="get-all-parent-packages"></a><a href="#get-all-parent-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get all parent packages</h3>
+<p>Retrieves any parent packages for the specified (child) package.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-12"></a><a href="#path-parameters-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>childPackageID</td><td>string</td><td>required</td><td>ID for the specified child package.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-5"></a><a href="#error-responses-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1003</td><td><em>Forbidden</em>: Caller not authorized to read the requested resource.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: Target package not found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/packages/{{childPackageID}}/parents/
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="get-all-child-packages"></a><a href="#get-all-child-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get all child packages</h3>
+<p>Retrieves any child packages for the specified (parent) package.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-13"></a><a href="#path-parameters-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>parentPackageID</td><td>string</td><td>required</td><td>ID for the specified parent package.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-6"></a><a href="#error-responses-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1003</td><td><em>Forbidden</em>: Caller not authorized to read the requested resource.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: Target package not found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v1/packages/{{parentPackageID}}/children/
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="remove-a-child-package"></a><a href="#remove-a-child-package" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Remove a child package</h3>
+<p>Removes a child package from a package.</p>
+<blockquote>
+<p><strong>NOTE:</strong>
+This action does not delete the child package, it only removes the relationship between the specified packages.
+This call reports success as long as the child and parent packages both exist.</p>
+</blockquote>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-14"></a><a href="#path-parameters-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>parentPackageID</td><td>string</td><td>required</td><td>ID for the parent package.</td></tr>
+<tr><td>childPackageID</td><td>string</td><td>required</td><td>ID for the child package.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-7"></a><a href="#error-responses-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to remove the specified package relationship.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: No matching package found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: DELETE
+Type: FORMDATA
+URL: {{OEMServer}}/oem/v1/packages/{{parentPackageID}}/child/{{childPackageID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td></td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="entitlements---v2"></a><a href="#entitlements---v2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Entitlements - v2</h2>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-package"></a><a href="#retrieve-package" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve package</h3>
+<p>Returns information about the specified package, including any associated products, billing plans, or entitlements.</p>
+<p>Currently, the productID is calculated on the fly using packageID_billingPlanID.  However, the productID is not calculated on all package search calls.</p>
+<p>All query parameters are optional unless otherwise noted.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-15"></a><a href="#path-parameters-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>packageID</td><td>string</td><td>required</td><td>ID of the target package.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v2/packages/{{packageID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>include</td><td>billingplans,entitlements,products</td><td>List of associated items to include: <em>products, billingplans, entitlements</em>.</td></tr>
+<tr><td>excludeFields</td><td>assetids</td><td>Omit the specified fields. Currently, the only valid value is <em>assetids</em>.</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-packages-for-billing-plans"></a><a href="#retrieve-packages-for-billing-plans" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve packages for billing plans</h3>
+<p>Returns all packages associated with one or more specified billing plans. The packages are returned in a paginated result set.</p>
+<p>All query parameters are optional unless otherwise noted.</p>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v2/packages
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>billingPlanIDs</td><td>{{billingPlan1ID}}</td><td>Comma-separated list of one or more billing plan IDs.</td></tr>
+<tr><td>include</td><td>billingplans,entitlements,products</td><td>List of associated items to include: <em>products, billingplans, entitlements</em>.</td></tr>
+<tr><td>skip</td><td>0</td><td>Number of returned items to skip from the beginning. Default is 0.</td></tr>
+<tr><td>count</td><td>10</td><td>Maximum number of items to return per call. Default is 20.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get packages for a billing plan, return 2 out of 6 total | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"7770c01c-159b-4fdd-a052-40f5436c79cf"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2018-05-17T16:58:30.7837668Z"</span>,
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"akv8dqdjbpps8xp1h6st"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"pees2xmdbkeugg6expxu"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"ja2edjk4dmolxgowp4i3"</span>
+            ]
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"zl73kex42t3gj5tuqf6i"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Argentina Oro"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"jyq1ybbkb1s30t0sfbak"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"ja2edjk4dmolxgowp4i3"</span>
+            ]
+        }
+    ],
+    <span class="hljs-string">"metadata"</span>: {
+        <span class="hljs-string">"count"</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-string">"skip"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">6</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-packages"></a><a href="#list-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List packages</h3>
+<p>Lists all available packages in a paginated result set.</p>
+<p>All query parameters are optional unless otherwise noted.</p>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v2/packages
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>count</td><td>10</td><td>Maximum number of items to return per call. Default is 20.</td></tr>
+<tr><td>skip</td><td>0</td><td>Number of returned items to skip from the beginning. Default is 0.</td></tr>
+<tr><td>sort</td><td>name</td><td>Sorts the packages on the specified field.</td></tr>
+<tr><td>include</td><td>billingplans,entitlements,products</td><td>List of associated items to include: <em>products, billingplans, entitlements</em>.</td></tr>
+<tr><td>excludeFields</td><td>assetids</td><td>Omit the specified fields. Currently, the only valid value is <em>assetids</em>.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: List packages (count 3, skip 5) | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"5db5a3fb-cb58-40b7-9f25-9f8b88d816a7"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2020-04-02T22:02:06.625094595Z"</span>,
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"pGw1oiAESOKy6gOl"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"2 RunScope Test Package"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"A second package for test purposes with updated description"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"createdTimestamp"</span>: <span class="hljs-string">"2020-03-04T06:59:35Z"</span>,
+            <span class="hljs-string">"modifiedTimestamp"</span>: <span class="hljs-string">"2020-03-04T06:59:44.687Z"</span>
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"7d7450a0-8b66-11e8-bfbe-0da88ea9287d"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"2018 Int'l Field Hockey Pass"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Watch live and on-demand."</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"de674067cd47a311b0abb40e60090d5f"</span>,
+                <span class="hljs-string">"f75d9b6a5c435e61c58a7f3536c67202"</span>,
+                <span class="hljs-string">"a2c3a628836026c057148347505f7698"</span>,
+                <span class="hljs-string">"99338cc10c3653a9e35d0bac8e948c9e"</span>,
+                <span class="hljs-string">"865f008923cef3c7399f75195afbc0ff"</span>,
+                <span class="hljs-string">"a8c42cce811af96e996a1ec62a740770"</span>,
+                <span class="hljs-string">"85ea7b2d7201f0904b808b788d5b5b80"</span>,
+                <span class="hljs-string">"94a65242d307934961b3f4d34fe140ab"</span>,
+                <span class="hljs-string">"e308b389f155114716c9edf2e56f23af"</span>,
+                <span class="hljs-string">"507e3514061341b802d99263ee556858"</span>,
+                <span class="hljs-string">"e4052386ab441c685ac6b8d17a89f2a5"</span>,
+                <span class="hljs-string">"2ac3d3fdcdb7d9504dd3149f947cc385"</span>,
+                <span class="hljs-string">"35bda70cf5909fe389ac90fbb3a20a83"</span>,
+                <span class="hljs-string">"3c1386e7fc1527520faf38b10af5ff6f"</span>,
+                <span class="hljs-string">"d10b80b4cf3925ffc0f8c02d945173b7"</span>,
+                <span class="hljs-string">"a3aeff4b590cba4f57ac150796f7d7b9"</span>,
+                <span class="hljs-string">"3ce42eeeb90bd2a3a5de36cec647200a"</span>,
+                <span class="hljs-string">"c63dec13582a54be680f287d1f4ecc00"</span>,
+                <span class="hljs-string">"bef31c326c3e62f349a82d9999c816ec"</span>,
+                <span class="hljs-string">"1cda5cada12c121aa645e412b93132af"</span>,
+                <span class="hljs-string">"8fd58a985eea0d094905c11100c995c9"</span>,
+                <span class="hljs-string">"c323e7d44d435d369485b659fd653344"</span>,
+                <span class="hljs-string">"3953f2aafa18dede90da2fb133f082a3"</span>,
+                <span class="hljs-string">"bf325cb63157e2e7871dcd851f324a21"</span>,
+                <span class="hljs-string">"b36fc067c71b79d0fd14881cccdaf4fb"</span>,
+                <span class="hljs-string">"bb116160bfc6fa42704f35e8f2a2785c"</span>,
+                <span class="hljs-string">"5f0aaf78a5e8deff2d9e0d5b52565e11"</span>,
+                <span class="hljs-string">"05761ed6289ccec25b91dfe7c06bce67"</span>,
+                <span class="hljs-string">"c167afc3a95035f14f255e2125042722"</span>,
+                <span class="hljs-string">"52bfb3e1d900fb91880abd6adb7630bc"</span>,
+                <span class="hljs-string">"6a1b47ab726956bbb745e121a3c96c5c"</span>,
+                <span class="hljs-string">"968cf0489a1a5104547f745b9efc736b"</span>,
+                <span class="hljs-string">"1aaba57acd95c13d19ef5c155b5211b8"</span>,
+                <span class="hljs-string">"41ce74aff0d164da2db7e4b0fae4526e"</span>,
+                <span class="hljs-string">"1e07a42ff512bf8a2b7b57df72a4511e"</span>,
+                <span class="hljs-string">"ae56bdd233611a61c0daebae94aab01b"</span>,
+                <span class="hljs-string">"e125871203b8862537df49dcff57f44f"</span>,
+                <span class="hljs-string">"f09b0c45bd291be869a667080f81f990"</span>,
+                <span class="hljs-string">"4cb172e6229433857fb980ad0a0fa9c8"</span>,
+                <span class="hljs-string">"2030d1a0eb627bc74145fffd0ee90197"</span>,
+                <span class="hljs-string">"35e67dcebc96bcf3c4595dea43b2085b"</span>,
+                <span class="hljs-string">"af94588c2e2c45dfb12efda2fe1d0081"</span>,
+                <span class="hljs-string">"aa55483bcd44806d45755ab81b03a110"</span>,
+                <span class="hljs-string">"34d9171f04fc80b06ebf9dc7f0b2b626"</span>,
+                <span class="hljs-string">"3278df02b5706a2efbe3c346ee6aa70a"</span>,
+                <span class="hljs-string">"287427561d4e28f18dbccbb95c7540a0"</span>,
+                <span class="hljs-string">"87562042c1019c64511ade75ab6d8c01"</span>,
+                <span class="hljs-string">"6421543647b3809725a482be33e6d597"</span>,
+                <span class="hljs-string">"46359cab4eeaf59e1e3d1c9336fa7b84"</span>,
+                <span class="hljs-string">"128df442a94368064f076b051ca22426"</span>,
+                <span class="hljs-string">"371e6d71d79941579312e32c9d16e339"</span>,
+                <span class="hljs-string">"7058108e9e235755ecd52b5d935a0bab"</span>,
+                <span class="hljs-string">"528ed5f14d90d960c351cedcb29f519f"</span>,
+                <span class="hljs-string">"94b92fcc7e71eb87557c90e7f6b33036"</span>,
+                <span class="hljs-string">"894be99c589aaa2af4f53b6155336bec"</span>,
+                <span class="hljs-string">"9f540c1b5ab25cea991cddfcd4dd849c"</span>,
+                <span class="hljs-string">"e32f99413c9bf0e82b8d0c571dcf6500"</span>,
+                <span class="hljs-string">"8888388c72f0c1dbf15cb1fc1ac3361a"</span>,
+                <span class="hljs-string">"c607046ced8dc3381af3e42cc9d42ac7"</span>,
+                <span class="hljs-string">"bbccc29513d9542a9c26c95f676b4eee"</span>,
+                <span class="hljs-string">"cfde9748322c58e07131320066c2e262"</span>,
+                <span class="hljs-string">"25db0724b0f549e1d3478ab7d24f88cf"</span>,
+                <span class="hljs-string">"38c99de98508b415e05e61c345a38d28"</span>,
+                <span class="hljs-string">"6829c39c2e81898a9a6ca3f9be87ab7b"</span>,
+                <span class="hljs-string">"3e8a32c52a97e3fd1925a0db9088a9fa"</span>,
+                <span class="hljs-string">"83e81b71fdf34e8805b1ca7cc6b7ff9a"</span>,
+                <span class="hljs-string">"de9446b5bf34ec1464612e43423f431c"</span>,
+                <span class="hljs-string">"c563cb8b377b98f75ddadf39a316d8f8"</span>,
+                <span class="hljs-string">"8fd7b58d542404b307a389f37e1f35d3"</span>,
+                <span class="hljs-string">"f52926acb3cd2779481ac8cb749a5b9a"</span>,
+                <span class="hljs-string">"cf967fac9697c6493964a80c52351133"</span>,
+                <span class="hljs-string">"3d2db507ec6d00838a346f476e1711ff"</span>,
+                <span class="hljs-string">"dc2acf6ef49fa080dff1c3a866a5ccbd"</span>,
+                <span class="hljs-string">"7663cc4c6a6a1d79e19bc47e85ca4c76"</span>,
+                <span class="hljs-string">"18746245d0a48be9c646eb81fe0f831d"</span>,
+                <span class="hljs-string">"98d784cccb64d0188e856fc1f2444c55"</span>,
+                <span class="hljs-string">"5a87cf1ccd63f7cca0abdaefcf2ca0ba"</span>,
+                <span class="hljs-string">"084ad1490f597c4f33794258b795e171"</span>,
+                <span class="hljs-string">"4e61ec6f93e2df62d5f2a294839ddd2d"</span>,
+                <span class="hljs-string">"c6dfaf5116dd92b2145f73c385ab9036"</span>,
+                <span class="hljs-string">"5197d55eac1e331e95fbc18b372488b8"</span>,
+                <span class="hljs-string">"2b7e29ca94c17824394ae3cee33c9460"</span>,
+                <span class="hljs-string">"14afaeff6a85d9855755798175a27bb6"</span>,
+                <span class="hljs-string">"dee3fec22c1f348b9d37778d58d73d87"</span>,
+                <span class="hljs-string">"409fc0d3361710e0ec1c6d52e20e7819"</span>,
+                <span class="hljs-string">"eddcd8ab77a9c3d8272c76aed300a56d"</span>,
+                <span class="hljs-string">"57ba586645a290026eea1d1c8ee74f06"</span>,
+                <span class="hljs-string">"25687d9a881c43931289a42ea3c5b31e"</span>,
+                <span class="hljs-string">"b3042917ed81309ac1b1002bba8580bf"</span>,
+                <span class="hljs-string">"c4583723cc815d616d4c309cb7bc4d3d"</span>,
+                <span class="hljs-string">"f4ba06a5584b9aee411d2f377de59080"</span>,
+                <span class="hljs-string">"b3ad5aa5dfa2afd3185f2c3545d6c688"</span>,
+                <span class="hljs-string">"81532072317c681a30f1911b0c7006fa"</span>,
+                <span class="hljs-string">"e28a518abd7eb8b33171f1131a0b4256"</span>,
+                <span class="hljs-string">"e135112cc2cc90f69f1b9d2374fe0c39"</span>,
+                <span class="hljs-string">"b520ddc6822555495e5b1b71a73c3995"</span>,
+                <span class="hljs-string">"d91a3ff97e857811d242215dabdaca86"</span>,
+                <span class="hljs-string">"45aec7269839ca0611bfd1d025fda1f2"</span>,
+                <span class="hljs-string">"fc9736cde42dc2eb98f83f21c50b00b7"</span>,
+                <span class="hljs-string">"5c2e8edaf915d624d4bd80b063eebfe2"</span>,
+                <span class="hljs-string">"c45f59e2bf92f83475b53614b44a505b"</span>,
+                <span class="hljs-string">"e919c0d45883ecc8b1cb59045e02af12"</span>,
+                <span class="hljs-string">"c595e7cef54ecfe2f1bc15c05ca00acc"</span>,
+                <span class="hljs-string">"b561a150f98a83b7c11ed0ad37ce9919"</span>,
+                <span class="hljs-string">"fa49476fc47ff4eef7b564c6533a2e12"</span>,
+                <span class="hljs-string">"060fa8563190bd7f7df6afe2eae2fccd"</span>,
+                <span class="hljs-string">"dff30066eda9a8268951223005270b3b"</span>,
+                <span class="hljs-string">"bbb4fed9066c73f2b356eff49b628112"</span>,
+                <span class="hljs-string">"7024b6cea62a6785e24cc9b80d260df2"</span>,
+                <span class="hljs-string">"578d3208453b259ff0b8616e8a19fe62"</span>,
+                <span class="hljs-string">"25412ff92307e30ef3943da8ba8347ed"</span>,
+                <span class="hljs-string">"9e664104be07da49aaefbed8d81c31ff"</span>,
+                <span class="hljs-string">"19c162e744bbd92a903c7276f8e04995"</span>,
+                <span class="hljs-string">"9bacaef424c08095d6ffa6e86114518a"</span>,
+                <span class="hljs-string">"62108e1c0bad43e60a132f76dafe833c"</span>,
+                <span class="hljs-string">"7ce544cc37c707fd74b9a282257c04ca"</span>,
+                <span class="hljs-string">"b8cd4ba865595731ac5dbed7dadfe22b"</span>,
+                <span class="hljs-string">"428e4dbfe0630e3f5cf3851bda12f09f"</span>,
+                <span class="hljs-string">"ff91c0a400c8d9cde83b5ef57e1d5c2b"</span>,
+                <span class="hljs-string">"a76ef5ca0bc51f9fd42cef830cf7ed38"</span>,
+                <span class="hljs-string">"1c1817698c4259585af57b47de500824"</span>,
+                <span class="hljs-string">"91e7565619a6d7e6d20a3853a8abb64a"</span>,
+                <span class="hljs-string">"30504d5883b5f83862e1f50550452222"</span>,
+                <span class="hljs-string">"f2012ca1d1412bd155e2f890c8a59059"</span>,
+                <span class="hljs-string">"f0a2ddc2c5b5cd182ce72f6bcae099bd"</span>,
+                <span class="hljs-string">"6beac0af43c824b801902a91d77aa811"</span>,
+                <span class="hljs-string">"c6abe4679d0f5f2ffb4d1ba7b01aa8e6"</span>,
+                <span class="hljs-string">"c9bb80dde137ca9b483885ad72ad39c7"</span>,
+                <span class="hljs-string">"f14d6c25cd5bc3c62f36a8bbacd47e9f"</span>,
+                <span class="hljs-string">"ca6b8b59ad064742e48efd73ed90f936"</span>,
+                <span class="hljs-string">"89d687235b3804f4b7fc6c77e51765ac"</span>,
+                <span class="hljs-string">"d494e01eb51a631ef131526fd03912ea"</span>,
+                <span class="hljs-string">"c4aab7aef6580150292421dee283b58d"</span>,
+                <span class="hljs-string">"713c360f9447adea5abbcd401b53d737"</span>,
+                <span class="hljs-string">"9ec1d5e587d7363bb0a3234949357e46"</span>,
+                <span class="hljs-string">"db40010682dbfb9ea18b1d1f08fc45fb"</span>,
+                <span class="hljs-string">"48d710892f269754c593f64045f5c634"</span>,
+                <span class="hljs-string">"c25e58c25645b296fc4ca892ef487ffd"</span>,
+                <span class="hljs-string">"d5e89e3a1ba07cdf0b2211234304b3eb"</span>,
+                <span class="hljs-string">"97c767941b0684d4533f825786d364cd"</span>,
+                <span class="hljs-string">"faa87094cb7d70eeeca8671a585e78ce"</span>,
+                <span class="hljs-string">"e32ffc3d8247ced5b2028370f53f9df0"</span>,
+                <span class="hljs-string">"cc717a67895bdbdc400f1625c58d1709"</span>,
+                <span class="hljs-string">"d321cb0cc085ee51a29bc64376e3ac37"</span>,
+                <span class="hljs-string">"6b08bd96cecfa864af5fdd2b7510ac85"</span>,
+                <span class="hljs-string">"f19124b46df4c082a7c80ddfb572d431"</span>,
+                <span class="hljs-string">"f3e232f11d0f52b24ca66d3ab3842b47"</span>,
+                <span class="hljs-string">"a5ba20d81ce949d6bd5adae75d25a776"</span>,
+                <span class="hljs-string">"9ffea2f74a603cd20eccaec0c530ad83"</span>,
+                <span class="hljs-string">"b7430cf5063bf03e26edce7eb3ef8b39"</span>,
+                <span class="hljs-string">"32436c9a1cb076d66b355fdbf378983f"</span>,
+                <span class="hljs-string">"c6415ef1d32d98253c717a3de2d78d07"</span>,
+                <span class="hljs-string">"59e32d9fc19d13d6047bdeffa90dcae4"</span>,
+                <span class="hljs-string">"5a4e6476daae52653838677e125b1b5e"</span>,
+                <span class="hljs-string">"443a6e5ebc5e0b3ced4c80d5c03d9838"</span>,
+                <span class="hljs-string">"c873f7d9a806435d5e8c5868944e0cbc"</span>,
+                <span class="hljs-string">"f0f34fb9e9e7d8971d3f0b61d96925e8"</span>,
+                <span class="hljs-string">"b678b54fe9cbafbda1f5fed8ef19f384"</span>,
+                <span class="hljs-string">"a8ccbd4c20dfbb1b3bd1deceb1501397"</span>,
+                <span class="hljs-string">"df1bc325aa2541d1c2a5664fd062101e"</span>,
+                <span class="hljs-string">"b7feaff33126f743c6fee1dbe5692554"</span>,
+                <span class="hljs-string">"1295c9ffe31d3d48d86ca29b2975e3f9"</span>,
+                <span class="hljs-string">"d399f155c546515fc508794cf5c09c43"</span>,
+                <span class="hljs-string">"ac3238dffc24000f0fa1950c9164ddcb"</span>,
+                <span class="hljs-string">"1141e84735546f9e7cc0c81d8f0bcc4d"</span>,
+                <span class="hljs-string">"86c6d2ae31893582db1b6f45dc242caa"</span>,
+                <span class="hljs-string">"5421b2e20c15bfe16a38e6ad4b7714f0"</span>,
+                <span class="hljs-string">"7ab11dfbd4ffb48e63eae2512614e6f8"</span>,
+                <span class="hljs-string">"a8a969807473183222050fcab66a3354"</span>,
+                <span class="hljs-string">"6838ced76b5ab01cf815094c793dbc2f"</span>,
+                <span class="hljs-string">"db916370ae6cb9f4d9222218c529777a"</span>,
+                <span class="hljs-string">"8763c7a6b9edf650b982c76879e23347"</span>,
+                <span class="hljs-string">"3c07760b67baaa8d3552b34d4ec152f3"</span>,
+                <span class="hljs-string">"fe30261544ca242d3b9ebce76093821a"</span>,
+                <span class="hljs-string">"d242556f69ac739449dd0efbcb5bc90c"</span>,
+                <span class="hljs-string">"7615ba4f8a3d13ed56cf8f5513342685"</span>,
+                <span class="hljs-string">"8b76770e3e791e97a2f52591db870475"</span>,
+                <span class="hljs-string">"80275f0d-752e-4426-8338-65a88e340e34"</span>,
+                <span class="hljs-string">"452c8e8f-5ecb-4f8e-b1a4-6c00b44ff916"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"FreeBillingPlanTest"</span>
+            ],
+            <span class="hljs-string">"productIDs"</span>: [
+                <span class="hljs-string">"f4ebba6c-6da5-4c94-b78c-a3aecad1a62b"</span>
+            ],
+            <span class="hljs-string">"customData"</span>: {
+                <span class="hljs-string">"currency"</span>: <span class="hljs-string">"USD"</span>,
+                <span class="hljs-string">"league"</span>: <span class="hljs-string">"FIH"</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"41"</span>,
+                <span class="hljs-string">"longDescription"</span>: <span class="hljs-string">"Watch every 2018 Men’s World Cup, Women’s World Cup and Women’s Champions Trophy match live and on-demand through December 2018. Stream on all supported devices any time. Available in US only."</span>,
+                <span class="hljs-string">"mediumDescription"</span>: <span class="hljs-string">"Watch live and on-demand through December 2018. Stream on all supported devices any time. Available in US only. "</span>,
+                <span class="hljs-string">"productDescription"</span>: <span class="hljs-string">"Watch live and on-demand."</span>,
+                <span class="hljs-string">"productName"</span>: <span class="hljs-string">"2018 Int'l Field Hockey Pass"</span>,
+                <span class="hljs-string">"productPrice"</span>: <span class="hljs-string">"9.99"</span>,
+                <span class="hljs-string">"shortDescription"</span>: <span class="hljs-string">"Watch live and on-demand."</span>,
+                <span class="hljs-string">"skuNumber"</span>: <span class="hljs-string">"fh_fih_annual_999_18"</span>,
+                <span class="hljs-string">"skuType"</span>: <span class="hljs-string">""</span>
+            },
+            <span class="hljs-string">"createdTimestamp"</span>: <span class="hljs-string">"2019-03-01T00:20:58Z"</span>,
+            <span class="hljs-string">"modifiedTimestamp"</span>: <span class="hljs-string">"2020-03-27T22:34:16.677Z"</span>
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"20190226_testpackage"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"20190226 Test Package"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Girls Youth Soccer Games 1"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"233f82625c0e1aa0e28b74fbd01f951c"</span>,
+                <span class="hljs-string">"2f1003d57cc3432c8d61333115332486"</span>,
+                <span class="hljs-string">"111c5f32-e277-4c1e-a48a-979d6d95c39c"</span>,
+                <span class="hljs-string">"f0647151-3c28-44bf-8cb5-0c4b68c7b8d7"</span>,
+                <span class="hljs-string">"invalid-asset-ID"</span>,
+                <span class="hljs-string">"d6f969a1-8649-4a66-b342-1b911a8bd9f2"</span>,
+                <span class="hljs-string">"8b76770e3e791e97a2f52591db870475"</span>,
+                <span class="hljs-string">"6440cf15-f9af-408e-9002-933f5d33d3c8"</span>,
+                <span class="hljs-string">"7615ba4f8a3d13ed56cf8f5513342685"</span>,
+                <span class="hljs-string">"86c0c197b4a8182c9b335415cd9cd9e1"</span>,
+                <span class="hljs-string">"0a9314c34cbb3d789ea0dcdbc60332b5"</span>,
+                <span class="hljs-string">"d746994450158e3aa76df761cd11a470"</span>,
+                <span class="hljs-string">"2c2a921e030e138e1a59693fa86d2c92"</span>,
+                <span class="hljs-string">"8d721c7de628453265f62c702f5f9990"</span>,
+                <span class="hljs-string">"d3692dc1-b18f-4ba4-9528-154421d1c9c7"</span>,
+                <span class="hljs-string">"b3468ec8d44a8e2372dcb1c979fc8d39"</span>,
+                <span class="hljs-string">"30164bc7-2d78-40e6-976b-bdf36d32c8f5"</span>,
+                <span class="hljs-string">"4917928935588a51707cc35d94dcee8d"</span>,
+                <span class="hljs-string">"80275f0d-752e-4426-8338-65a88e340e34"</span>,
+                <span class="hljs-string">"8957b7fb-0a99-4c5e-bae8-4a08709aa377"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"afafafeif93389384274928492392922"</span>
+            ],
+            <span class="hljs-string">"productIDs"</span>: [
+                <span class="hljs-string">"837e6e14-0f4d-4cb2-9c80-51a673dce22b"</span>
+            ],
+            <span class="hljs-string">"regionWhitelist"</span>: [
+                <span class="hljs-string">"ngldkk1p1sbjzg27spjz"</span>,
+                <span class="hljs-string">"7a94ea90-bb8e-11e8-a6ac-2522b9238b35"</span>,
+                <span class="hljs-string">"74568a50-1291-4643-b27d-052e249a4a13"</span>
+            ],
+            <span class="hljs-string">"createdTimestamp"</span>: <span class="hljs-string">"2019-02-27T00:02:08Z"</span>,
+            <span class="hljs-string">"modifiedTimestamp"</span>: <span class="hljs-string">"2019-10-28T23:20:40.533Z"</span>
+        }
+    ],
+    <span class="hljs-string">"metadata"</span>: {
+        <span class="hljs-string">"count"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">84</span>,
+        <span class="hljs-string">"skip"</span>: <span class="hljs-number">5</span>
+    }
+}
+</code></pre>
+<p>Status: Include All Entitled Info | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"5a2be7ea-1c45-4a37-a9ad-49ff9acbf765"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2019-03-21T22:16:01.638958047Z"</span>,
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"7d7450a0-8b66-11e8-bfbe-0da88ea9287d"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"2018 Int'l Field Hockey Pass"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Watch live and on-demand."</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"FreeBillingPlanTest"</span>
+            ],
+            <span class="hljs-string">"productIDs"</span>: [
+                <span class="hljs-string">"f4ebba6c-6da5-4c94-b78c-a3aecad1a62b"</span>
+            ],
+            <span class="hljs-string">"customData"</span>: {
+                <span class="hljs-string">"currency"</span>: <span class="hljs-string">"USD"</span>,
+                <span class="hljs-string">"league"</span>: <span class="hljs-string">"FIH"</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"41"</span>,
+                <span class="hljs-string">"longDescription"</span>: <span class="hljs-string">"Watch every 2018 Men’s World Cup, Women’s World Cup and Women’s Champions Trophy match live and on-demand through December 2018. Stream on all supported devices any time. Available in US only."</span>,
+                <span class="hljs-string">"mediumDescription"</span>: <span class="hljs-string">"Watch live and on-demand through December 2018. Stream on all supported devices any time. Available in US only. "</span>,
+                <span class="hljs-string">"productDescription"</span>: <span class="hljs-string">"Watch live and on-demand."</span>,
+                <span class="hljs-string">"productName"</span>: <span class="hljs-string">"2018 Int'l Field Hockey Pass"</span>,
+                <span class="hljs-string">"productPrice"</span>: <span class="hljs-string">"9.99"</span>,
+                <span class="hljs-string">"shortDescription"</span>: <span class="hljs-string">"Watch live and on-demand."</span>,
+                <span class="hljs-string">"skuNumber"</span>: <span class="hljs-string">"fh_fih_annual_999_18"</span>,
+                <span class="hljs-string">"skuType"</span>: <span class="hljs-string">""</span>
+            },
+            <span class="hljs-string">"createdTimestamp"</span>: <span class="hljs-string">"2019-03-01T00:20:58Z"</span>,
+            <span class="hljs-string">"modifiedTimestamp"</span>: <span class="hljs-string">"2019-03-01T00:20:58.745Z"</span>
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"20190226_testpackage"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"20190226 Test Package"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Girls Youth Soccer Games 1"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"regionWhitelist"</span>: [
+                <span class="hljs-string">"ngldkk1p1sbjzg27spjz"</span>
+            ],
+            <span class="hljs-string">"createdTimestamp"</span>: <span class="hljs-string">"2019-02-27T00:02:08Z"</span>,
+            <span class="hljs-string">"modifiedTimestamp"</span>: <span class="hljs-string">"2019-03-19T23:47:05.45Z"</span>
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"package_all_access"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"All Access Season Pass"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"All Access Season Pass"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"asdf3"</span>,
+                <span class="hljs-string">"15DayFreeTrialMonthly_001"</span>,
+                <span class="hljs-string">"15DayFreeTrialMonthly_003"</span>
+            ],
+            <span class="hljs-string">"productIDs"</span>: [
+                <span class="hljs-string">"b2c534b7-3174-41ca-a069-96a091353d0e"</span>,
+                <span class="hljs-string">"d9ce9481-71d2-40de-b295-cf0eefef7d6e"</span>,
+                <span class="hljs-string">"0bb31ba1-ed8f-4470-b3ef-6975d8d074fe"</span>
+            ],
+            <span class="hljs-string">"createdTimestamp"</span>: <span class="hljs-string">"2018-06-08T22:45:37Z"</span>,
+            <span class="hljs-string">"modifiedTimestamp"</span>: <span class="hljs-string">"2018-08-28T18:44:21.137Z"</span>
+        }
+    ],
+    <span class="hljs-string">"entitled"</span>: [
+        <span class="hljs-string">"7d7450a0-8b66-11e8-bfbe-0da88ea9287d"</span>,
+        <span class="hljs-string">"20190226_testpackage"</span>,
+        <span class="hljs-string">"package_all_access"</span>
+    ],
+    <span class="hljs-string">"metadata"</span>: {
+        <span class="hljs-string">"count"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">64</span>,
+        <span class="hljs-string">"skip"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-string">"entitlementsAvailable"</span>: <span class="hljs-literal">true</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-subscription-packages"></a><a href="#list-subscription-packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List subscription packages</h3>
+<p>Lists all subscription packages in a paginated result set.</p>
+<p>All query parameters are optional unless otherwise noted.</p>
+<p><br></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v2/packages
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>subscriptions</td><td></td><td>Required.  Select subscription packages only.  This key requires no value.</td></tr>
+<tr><td>include</td><td>billingplans,entitlements,products</td><td>List of associated items to include: <em>products, billingplans, entitlements</em>.</td></tr>
+<tr><td>skip</td><td>0</td><td>Number of returned items to skip from the beginning. Default is 0.</td></tr>
+<tr><td>count</td><td>10</td><td>Maximum number of items to return per call. Default is 20.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get subscription packages | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"a129a14c-8290-4a38-a9b3-740373ecf5e6"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2018-05-17T17:57:49.646033046Z"</span>,
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"7d6eb650-2e27-11e8-93ef-dd9abf020151"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Otters"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Oregon City Otters boys curling team\n\n"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"0b987d709cbb2b9bccef857bc5630c3e"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"\u0001\t"</span>,
+                <span class="hljs-string">"Cascadia Curling - Silver"</span>,
+                <span class="hljs-string">"Cascadia Curling - Gold"</span>
+            ]
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"5a0e8710-376b-11e8-a5b7-83983f3c2ccc"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Bobcats"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Bremerton Bobcats girls curling team\n\n"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"0b987d709cbb2b9bccef857bc5630c3e"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"Cascadia Curling - Silver"</span>,
+                <span class="hljs-string">"Cascadia Curling - Gold"</span>,
+                <span class="hljs-string">"       "</span>
+            ]
+        },
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"5c6f0c50-376b-11e8-a5b7-83983f3c2ccc"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Orcas"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Olympia Orcas girls curling team\n\n"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"0b987d709cbb2b9bccef857bc5630c3e"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"Cascadia Curling - Silver"</span>,
+                <span class="hljs-string">"Cascadia Curling - Gold"</span>,
+                <span class="hljs-string">"       "</span>
+            ]
+        }
+    ],
+    <span class="hljs-string">"metadata"</span>: {
+        <span class="hljs-string">"count"</span>: <span class="hljs-number">3</span>,
+        <span class="hljs-string">"skip"</span>: <span class="hljs-number">2</span>,
+        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">22</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="list-packages-with-custom-data-1"></a><a href="#list-packages-with-custom-data-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List packages with custom data</h3>
+<p>Lists all packages with the specified custom data.</p>
+<p>All query parameters are optional unless otherwise noted.</p>
+<p><br></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v2/packages
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>customData.Sport</td><td>Basketball</td><td>Required.  Custom data being requested.</td></tr>
+<tr><td>include</td><td>products,billingplans,entitlements</td><td>List of associated items to include: <em>products, billingplans, entitlements</em>.</td></tr>
+<tr><td>skip</td><td>0</td><td>Number of returned items to skip from the beginning. Default is 0.</td></tr>
+<tr><td>count</td><td>20</td><td>Maximum number of items to return per call. Default is 20.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get package by custom data | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"356212e0-9144-4f5f-b407-a8898835f8da"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2018-05-17T17:07:22.021637228Z"</span>,
+    <span class="hljs-string">"packages"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"sn74mnaawdpt1wqnsh1x"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Chile Oro"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"Chile Oro"</span>,
+            <span class="hljs-string">"bypassEntitlementCheck"</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">"assetIDs"</span>: [
+                <span class="hljs-string">"t65mjh715wmekjj42iz1"</span>
+            ],
+            <span class="hljs-string">"billingPlanIDs"</span>: [
+                <span class="hljs-string">"48drivy04dq26c3o8d9w"</span>
+            ],
+            <span class="hljs-string">"customData"</span>: {
+                <span class="hljs-string">"League"</span>: <span class="hljs-string">"NBA"</span>,
+                <span class="hljs-string">"Sport"</span>: <span class="hljs-string">"Basketball"</span>
+            }
+        }
+    ],
+    <span class="hljs-string">"metadata"</span>: {
+        <span class="hljs-string">"count"</span>: <span class="hljs-number">20</span>,
+        <span class="hljs-string">"skip"</span>: <span class="hljs-number">0</span>,
+        <span class="hljs-string">"totalCount"</span>: <span class="hljs-number">1</span>
+    }
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="request-entitlement-token"></a><a href="#request-entitlement-token" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request entitlement token</h3>
+<p>Allows an application to request a CDN or DRM token to playback a video asset. The requested token type is returned if the user is entitled to the asset.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-11"></a><a href="#body-parameters-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetID</td><td></td><td>string</td><td>required</td><td>Asset ID requested</td></tr>
+<tr><td>playbackUrl</td><td></td><td>string</td><td>required</td><td>Playback URL for this asset ID</td></tr>
+<tr><td>deviceID</td><td></td><td>string</td><td>required</td><td>Device ID for presentation (defaults to the caller's IP address)</td></tr>
+<tr><td><code>capabilities</code></td><td></td><td>object</td><td>optional</td><td>An optional parameter for reporting device capabilities that might affect video playback</td></tr>
+<tr><td>widevineSecurityLevel</td><td><code>capabilities</code></td><td>string</td><td>optional</td><td>The level of the Widevine DRM implementation on the device. Valid values are <strong>L1</strong> and <strong>L3</strong>.</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE:</strong>
+If the device ID is provided, it must match the device query parameter of the API calls for
+<a href="https://docs.dtc.istreamplanet.net/#b29f2916-8c89-4316-91fc-e2f565114b61">Track stream concurrency and progress</a>  and
+<a href="https://docs.dtc.istreamplanet.net/#54bd1329-4dfd-4a36-a9f9-08dcd68806c1">Stream stop</a>.</p>
+</blockquote>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: POST
+Type: RAW
+URL: {{OEMServer}}/oem/v2/entitlement
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>tokentype</td><td>turner-akamai</td><td>Type of CDN or DRM token required.  Currently supported values are:</td></tr>
+</tbody>
+</table>
+<ul>
+<li><strong>turner-akamai</strong>  (Akamai CDN for Turner Broadcasting)</li>
+<li><strong>none</strong> (entitlement check with no CDN or DRM protection)</li>
+</ul>
+<p>Values to be supported in an upcoming release:</p>
+<ul>
+<li><strong>akamai</strong> (Akamai CDN)</li>
+<li><strong>isp-atlas</strong> (Atlas DRM) |</li>
+</ul>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"assetID"</span>: <span class="hljs-string">"{{asset1ID}}"</span>,
+    <span class="hljs-string">"playbackUrl"</span>: <span class="hljs-string">"http://www.some.akamai.com/dir/dir2/dir3/dir4/master.m3u8"</span>,
+    <span class="hljs-string">"deviceID"</span>: <span class="hljs-string">"postman"</span>,
+    <span class="hljs-string">"capabilities"</span>: {
+        <span class="hljs-string">"widevineSecurityLevel"</span>: <span class="hljs-string">"L3"</span>
+    }
+}
+</code></pre>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Request Entitlement Token | Code: 201</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"74f8e59e-0ef8-4cc5-a741-128c56cdeb15"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2017-12-01T20:48:20.148472263Z"</span>,
+    <span class="hljs-string">"entitled"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-string">"assetID"</span>: <span class="hljs-string">"f329c36a-d280-11e7-883c-37316ed34246"</span>,
+    <span class="hljs-string">"entitlementToken"</span>: <span class="hljs-string">"{{entitlementToken}}"</span>,
+    <span class="hljs-string">"tokenType"</span>: <span class="hljs-string">"turner-akamai"</span>
+}
+</code></pre>
+<p><br/></p>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-entitlement-details"></a><a href="#retrieve-entitlement-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve entitlement details</h3>
+<p>Identifies if the user is entitled to an asset and, if so, why.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-16"></a><a href="#path-parameters-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetID</td><td>string</td><td>required</td><td>Asset ID that you want entitlement information for.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OEMServer}}/oem/v2/entitlement/asset/{{assetID}}/details/
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td></td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<hr>
+<p><a href="api-entitlements">Back to top of Entitlements</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-content"><span class="arrow-prev">← </span><span>Content</span></a><a class="docs-next button" href="/docs/test-output"><span class="function-name-prevnext">epgManifest v1.0</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#entitlements---v1">Entitlements - v1</a><ul class="toc-headings"><li><a href="#add-a-package">Add a package</a></li><li><a href="#add-a-free-package">Add a free package</a></li><li><a href="#update-a-package">Update a package</a></li><li><a href="#retrieve-package-information">Retrieve package information</a></li><li><a href="#list-all-packages">List all packages</a></li><li><a href="#list-all-subscription-packages">List all subscription packages</a></li><li><a href="#list-packages-for-billing-plans">List packages for billing plans</a></li><li><a href="#list-packages-with-custom-data">List packages with custom data</a></li><li><a href="#list-user-packages-and-entitlements-for-assets-admin">List user packages and entitlements for assets (admin)</a></li><li><a href="#delete-a-package">Delete a package</a></li><li><a href="#grant-an-entitlement">Grant an entitlement</a></li><li><a href="#update-entitlements-with-token">Update entitlements with token</a></li><li><a href="#update-a-user-entitlement-admin">Update a user entitlement (admin)</a></li><li><a href="#list-all-entitlements">List all entitlements</a></li><li><a href="#list-all-entitlements-for-a-user-admin">List all entitlements for a user (admin)</a></li><li><a href="#grant-asset-entitlements-for-a-user-admin">Grant asset entitlements for a user (admin)</a></li><li><a href="#list-entitlements-for-user-and-assets">List entitlements for user and assets</a></li><li><a href="#list-entitlements-for-user-and-package-admin">List entitlements for user and package (admin)</a></li><li><a href="#request-an-entitlement-token-admin">Request an entitlement token (admin)</a></li><li><a href="#delete-an-entitlement-admin">Delete an entitlement (admin)</a></li><li><a href="#add-assets-to-packages">Add assets to packages</a></li><li><a href="#remove-assets-from-packages">Remove assets from packages</a></li></ul></li><li><a href="#package-graphs---v1">Package Graphs - v1</a><ul class="toc-headings"><li><a href="#add-a-child-package">Add a child package</a></li><li><a href="#get-all-parent-packages">Get all parent packages</a></li><li><a href="#get-all-child-packages">Get all child packages</a></li><li><a href="#remove-a-child-package">Remove a child package</a></li></ul></li><li><a href="#entitlements---v2">Entitlements - v2</a><ul class="toc-headings"><li><a href="#retrieve-package">Retrieve package</a></li><li><a href="#retrieve-packages-for-billing-plans">Retrieve packages for billing plans</a></li><li><a href="#list-packages">List packages</a></li><li><a href="#list-subscription-packages">List subscription packages</a></li><li><a href="#list-packages-with-custom-data-1">List packages with custom data</a></li><li><a href="#request-entitlement-token">Request entitlement token</a></li><li><a href="#retrieve-entitlement-details">Retrieve entitlement details</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/iSPgrey.png" alt="iStreamPlanet Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 iStreamPlanet</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0550daa76db9bf70605ab43620282f25',
+                indexName: 'orbis',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"hitsPerPage":10}
+              });
+            </script></body></html>

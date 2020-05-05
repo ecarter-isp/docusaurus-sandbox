@@ -1,0 +1,675 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Application · iStreamPlanet Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The _application_ service endpoints are used to create and manage client application configurations."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Application · iStreamPlanet Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/"/><meta property="og:description" content="The _application_ service endpoints are used to create and manage client application configurations."/><meta property="og:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/iSPblack.png" alt="iStreamPlanet Docs"/><h2 class="headerTitleWithLogo">iStreamPlanet Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/guide-portal-admin" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/docs/api-entitlements" target="_self">APIs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="https://isp.orbis-portal.stage.dtc.istreamplanet.net" target="_self">Portal</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>APIs</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Portal Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/guide-portal-admin">Administration</a></li><li class="navListItem"><a class="navItem" href="/docs/guide-content-curation">Content Curation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">APIs<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api-accounts">Accounts</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api-application">Application</a></li><li class="navListItem"><a class="navItem" href="/docs/api-billing">Billing</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content-reporting">Content Reporting</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content">Content</a></li><li class="navListItem"><a class="navItem" href="/docs/api-entitlements">Entitlements</a></li><li class="navListItem"><a class="navItem" href="/docs/test-output">epgManifest v1.0</a></li><li class="navListItem"><a class="navItem" href="/docs/api-experience">Experience</a></li><li class="navListItem"><a class="navItem" href="/docs/api-geography">Geography</a></li><li class="navListItem"><a class="navItem" href="/docs/api-sports">Sports</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">White Papers<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/paper-e-search">Elastic Search in Orbis</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc4">A White Paper</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc5">YAWP - Yet Another White Paper</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Extras<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/xtra-err-msgs">Error Messages</a></li><li class="navListItem"><a class="navItem" href="/docs/xtra-glossary">Glossary</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Application</h1></header><article><div><span><p>The <em>application</em> service endpoints are used to create and manage client application configurations.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="application---v1"></a><a href="#application---v1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Application - v1</h2>
+<h3><a class="anchor" aria-hidden="true" id="create-application-configuration"></a><a href="#create-application-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create application configuration</h3>
+<p>Creates a new application configuration.</p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: POST
+Type: RAW
+URL: {{AppServer}}/app/v1/configs
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Accept</td><td>application/json</td><td></td></tr>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"application"</span>: <span class="hljs-string">"test"</span>,
+    <span class="hljs-string">"settings"</span>: {
+        <span class="hljs-string">"title"</span>: <span class="hljs-string">"App Title"</span>,
+        <span class="hljs-string">"status"</span>: <span class="hljs-string">"active"</span>,
+        <span class="hljs-string">"bounds"</span>: {
+            <span class="hljs-string">"top"</span>: <span class="hljs-number">5</span>,
+            <span class="hljs-string">"bottom"</span>: <span class="hljs-number">-5</span>,
+            <span class="hljs-string">"left"</span>: <span class="hljs-number">2.5</span>,
+            <span class="hljs-string">"right"</span>: <span class="hljs-number">-2.5</span>
+        }
+    },
+    <span class="hljs-string">"s3bucket"</span>: <span class="hljs-string">"sloekito-epg-dev-1"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="update-application-configuration"></a><a href="#update-application-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update application configuration</h3>
+<p>Updates the specified application configuration.</p>
+<p><br/></p>
+<h5><a class="anchor" aria-hidden="true" id="error-responses"></a><a href="#error-responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h5>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to update or write the specified application configuration.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: No matching application configuration found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: RAW
+URL: {{AppServer}}/app/v1/configs/{{applicationName}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Accept</td><td>application/json</td><td></td></tr>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"application"</span>: <span class="hljs-string">"sparksport"</span>,
+    <span class="hljs-string">"settings"</span>: {
+        <span class="hljs-string">"featureFlags"</span>: {
+            <span class="hljs-string">"deviceLocationEnabledAndroid"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">"deviceLocationEnabledIOS"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">"ppvEnabledWeb"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">"billingCopy"</span>: {
+                <span class="hljs-string">"learnMore"</span>: <span class="hljs-string">""</span>,
+                <span class="hljs-string">"purchaseStepSubDetails"</span>: <span class="hljs-string">""</span>
+            }
+        },
+        <span class="hljs-string">"highVolumeEvents"</span>: [
+            {
+                <span class="hljs-string">"eventDescription"</span>: <span class="hljs-string">"WRC Germany 2017"</span>,
+                <span class="hljs-string">"headline"</span>: <span class="hljs-string">"Are you here to watch this match?-Second"</span>,
+                <span class="hljs-string">"matchId"</span>: <span class="hljs-string">"b3c240ca-b90e-49ac-8651-54effee17ddf"</span>,
+                <span class="hljs-string">"pictureIds"</span>: {
+                    <span class="hljs-string">"16x9"</span>: <span class="hljs-string">"d94116ea-deca-4ebe-a884-54c29320d8f6.jpg"</span>
+                },
+                <span class="hljs-string">"redirectEndTime"</span>: <span class="hljs-string">"2019-09-12T00:00:00.000Z"</span>,
+                <span class="hljs-string">"redirectStartTime"</span>: <span class="hljs-string">"2019-09-05T00:00:00.000Z"</span>,
+                <span class="hljs-string">"timeDescription"</span>: <span class="hljs-string">"Fri 06 Sep - 12:00am-12:00AM NZT"</span>
+            }
+        ],
+        <span class="hljs-string">"leagueLogos"</span>: [
+            {
+                <span class="hljs-string">"cardLogo"</span>: <span class="hljs-string">"cd06d27a-48b0-4807-b9c4-48f89d063cdb.png"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"FIH"</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"b826b141-6b29-4da1-a8aa-1dc1c1c93b06"</span>
+            },
+            {
+                <span class="hljs-string">"cardLogo"</span>: <span class="hljs-string">"7105dba8-7f7b-475f-95f0-f757601e7650.png"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"FormulaOne"</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"cc170b3f-1e6a-4af4-93dd-6c5c733af4d7"</span>
+            },
+            {
+                <span class="hljs-string">"cardLogo"</span>: <span class="hljs-string">"385b0345-47a8-4267-ad8d-62087c8b9b39.png"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"FormulaTwo"</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"4f37ce19-485d-48e9-adde-13e5899ee370"</span>
+            },
+            {
+                <span class="hljs-string">"cardLogo"</span>: <span class="hljs-string">"ae90510b-32d3-482e-a058-f34f344d2588.png"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"World Rally Championship"</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"06cc4645-de74-44bf-82a7-a23a69cbae1a"</span>
+            },
+            {
+                <span class="hljs-string">"cardLogo"</span>: <span class="hljs-string">"c68317e6-9df0-44cc-9a1e-526177c6d34b.png"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"One Championship"</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"2f78eea8-cc6c-4da6-8ddb-c27f96a2bc05"</span>
+            },
+            {
+                <span class="hljs-string">"cardLogo"</span>: <span class="hljs-string">"77ce72a0-5651-4432-b7b6-025234bcf9d3.jpg"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"UFC"</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"9173cb5c-a1a7-4fd4-b15b-d6defcb779b6"</span>
+            }
+        ],
+        <span class="hljs-string">"packageId"</span>: <span class="hljs-string">"c4757270-2a37-11e9-a2ff-bd8ac90b5375"</span>,
+        <span class="hljs-string">"pageInformation"</span>: {
+            <span class="hljs-string">"AUTHENTICATED_HOME"</span>: {
+                <span class="hljs-string">"BANNER_V4_SECTION_ID"</span>: <span class="hljs-string">"Authenticated_BANNERS"</span>,
+                <span class="hljs-string">"FREEMIUM_RAILS_V3_PAGE_ID"</span>: <span class="hljs-string">"FREEMIUM"</span>,
+                <span class="hljs-string">"RAILS_V3_PAGE_ID"</span>: <span class="hljs-string">"HOME"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"Prepend What's On and Append Sports and Channel rails on client"</span>
+            },
+            <span class="hljs-string">"LOGIN"</span>: {
+                <span class="hljs-string">"BANNER_V4_SECTION_ID"</span>: <span class="hljs-string">"Authenticated_BANNERS"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"this wont be Authenticated_BANNERS once we setup login banners"</span>
+            },
+            <span class="hljs-string">"PPV"</span>: {
+                <span class="hljs-string">"PPV_SECTION_ID"</span>: <span class="hljs-string">"PPV"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"PPV_SECTION_ID indicates which section to fetch PPV events from."</span>,
+                <span class="hljs-string">"comment2"</span>: <span class="hljs-string">"Don't include it (or change name to xPPV_SECTION_ID) to completely hide the PPV tab in the apps"</span>
+            },
+            <span class="hljs-string">"SPORT_EPCR"</span>: {
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"Heineken Champions Cup"</span>,
+                <span class="hljs-string">"comment2"</span>: <span class="hljs-string">"rememember to fallback to SPORT_generic if fields are missing"</span>
+            },
+            <span class="hljs-string">"SPORT_EPL"</span>: {
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"Premier League"</span>,
+                <span class="hljs-string">"comment2"</span>: <span class="hljs-string">"rememember to fallback to SPORT_generic if fields are missing"</span>
+            },
+            <span class="hljs-string">"SPORT_FIH_Pro_League"</span>: {
+                <span class="hljs-string">"BANNER_V4_SECTION_ID"</span>: <span class="hljs-string">"Hockey_BANNERS"</span>,
+                <span class="hljs-string">"RAILS_V3_PAGE_ID"</span>: <span class="hljs-string">"HOCKEY"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"FIH Pro League"</span>
+            },
+            <span class="hljs-string">"SPORT_FORMULA_ONE"</span>: {
+                <span class="hljs-string">"BANNER_V4_SECTION_ID"</span>: <span class="hljs-string">"Motorsport_BANNERS"</span>,
+                <span class="hljs-string">"RAILS_V3_PAGE_ID"</span>: <span class="hljs-string">"MOTORSPORT"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"Formula One"</span>,
+                <span class="hljs-string">"comment2"</span>: <span class="hljs-string">"rememember to fallback to SPORT_generic if fields are missing"</span>
+            },
+            <span class="hljs-string">"SPORT_NBA"</span>: {
+                <span class="hljs-string">"BANNER_V4_SECTION_ID"</span>: <span class="hljs-string">"NBA_BANNERS"</span>,
+                <span class="hljs-string">"RAILS_V3_PAGE_ID"</span>: <span class="hljs-string">"NBA"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"NBA"</span>,
+                <span class="hljs-string">"comment2"</span>: <span class="hljs-string">"rememember to fallback to SPORT_generic if fields are missing"</span>
+            },
+            <span class="hljs-string">"SPORT_One_Championship"</span>: {
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"One Championship"</span>,
+                <span class="hljs-string">"comment2"</span>: <span class="hljs-string">"rememember to fallback to SPORT_generic if fields are missing"</span>
+            },
+            <span class="hljs-string">"SPORT_RWC2019"</span>: {
+                <span class="hljs-string">"BANNER_V4_SECTION_ID"</span>: <span class="hljs-string">"RWC2019"</span>,
+                <span class="hljs-string">"RAILS_V3_PAGE_ID"</span>: <span class="hljs-string">"RUGBYWORLDCUP"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"Rugby World Cup 2019"</span>
+            },
+            <span class="hljs-string">"SPORT_WRC"</span>: {
+                <span class="hljs-string">"BANNER_V4_SECTION_ID"</span>: <span class="hljs-string">"Motorsport_BANNERS"</span>,
+                <span class="hljs-string">"RAILS_V3_PAGE_ID"</span>: <span class="hljs-string">"MOTORSPORT"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"FIA World Rally Championship"</span>,
+                <span class="hljs-string">"comment2"</span>: <span class="hljs-string">"rememember to fallback to SPORT_generic if fields are missing"</span>
+            },
+            <span class="hljs-string">"SPORT_generic"</span>: {
+                <span class="hljs-string">"BANNER_V4_SECTION_ID"</span>: <span class="hljs-string">"Authenticated_BANNERS"</span>,
+                <span class="hljs-string">"RAILS_V3_PAGE_ID"</span>: <span class="hljs-string">"TEST"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"fallback to SPORT_generic if Sport or Sport keys are missing"</span>,
+                <span class="hljs-string">"comment2"</span>: <span class="hljs-string">"Prepend What's On and Append Sports rail on client"</span>
+            },
+            <span class="hljs-string">"UNAUTHENTICATED_HOME"</span>: {
+                <span class="hljs-string">"BANNER_V4_SECTION_ID"</span>: <span class="hljs-string">"Authenticated_BANNERS"</span>,
+                <span class="hljs-string">"RAILS_V3_PAGE_ID"</span>: <span class="hljs-string">"HOME"</span>,
+                <span class="hljs-string">"comment"</span>: <span class="hljs-string">"Prepend What's On and Append Sports and Channel rails on client"</span>,
+                <span class="hljs-string">"comment2"</span>: <span class="hljs-string">"this wont be Authenticated_BANNERS once we setup login banners"</span>
+            }
+        },
+        <span class="hljs-string">"playerConfig"</span>: {
+            <span class="hljs-string">"android"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">3500000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"chromecast"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">10000000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"freeview"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">10000000</span>,
+                    <span class="hljs-string">"defaultMin"</span>: <span class="hljs-number">1400000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"freeview_puck"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">10000000</span>,
+                    <span class="hljs-string">"defaultMin"</span>: <span class="hljs-number">1400000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"freeview_stb"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">4500000</span>,
+                    <span class="hljs-string">"defaultMin"</span>: <span class="hljs-number">1400000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"iOS"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">3500000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"lg"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">4500000</span>,
+                    <span class="hljs-string">"defaultMin"</span>: <span class="hljs-number">1400000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"maxBitrate"</span>: <span class="hljs-number">3500000</span>,
+            <span class="hljs-string">"panasonic"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">10000000</span>,
+                    <span class="hljs-string">"defaultMin"</span>: <span class="hljs-number">1400000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"samsung"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">10000000</span>,
+                    <span class="hljs-string">"defaultMin"</span>: <span class="hljs-number">1400000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"sony_android"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">4500000</span>,
+                    <span class="hljs-string">"defaultMin"</span>: <span class="hljs-number">1400000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"web"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">10000000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            },
+            <span class="hljs-string">"xbox"</span>: {
+                <span class="hljs-string">"bitrate"</span>: {
+                    <span class="hljs-string">"defaultMax"</span>: <span class="hljs-number">10000000</span>
+                },
+                <span class="hljs-string">"playerStalledFailoverTimeoutSec"</span>: <span class="hljs-number">30</span>
+            }
+        },
+        <span class="hljs-string">"purchaseConfig"</span>: {
+            <span class="hljs-string">"vouchersEnabled"</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">"walletEnabled"</span>: <span class="hljs-literal">true</span>
+        },
+        <span class="hljs-string">"purchaseOptions"</span>: {
+            <span class="hljs-string">"rwc2019"</span>: {
+                <span class="hljs-string">"billingPlanId"</span>: <span class="hljs-string">"SparkSport_PPV_RWC_Full_Tournament"</span>,
+                <span class="hljs-string">"packageId"</span>: <span class="hljs-string">"6bca1c50-5a72-11e9-8fa2-3b4d6f712866"</span>
+            },
+            <span class="hljs-string">"trialSubscription"</span>: {
+                <span class="hljs-string">"billingPlanId"</span>: <span class="hljs-string">"SparkSport_TEST_1Day_Pass_01"</span>,
+                <span class="hljs-string">"entitlementPeriodDays"</span>: <span class="hljs-number">0</span>,
+                <span class="hljs-string">"packageId"</span>: <span class="hljs-string">"c4757270-2a37-11e9-a2ff-bd8ac90b5375"</span>
+            },
+            <span class="hljs-string">"winBackSubscription"</span>: {
+                <span class="hljs-string">"billingPlanId"</span>: <span class="hljs-string">"SparkSport_0dFree_1mRecur"</span>,
+                <span class="hljs-string">"packageId"</span>: <span class="hljs-string">"c4757270-2a37-11e9-a2ff-bd8ac90b5375"</span>
+            }
+        },
+        <span class="hljs-string">"sports"</span>: [
+            {
+                <span class="hljs-string">"id"</span>: <span class="hljs-string">"SPORT_RWC2019"</span>,
+                <span class="hljs-string">"images"</span>: {
+                    <span class="hljs-string">"channelLogo"</span>: <span class="hljs-string">"0a3229fb-3c0d-481f-9362-818b46e47cdf.png"</span>,
+                    <span class="hljs-string">"headerLogo"</span>: <span class="hljs-string">"0a3229fb-3c0d-481f-9362-818b46e47cdf.png"</span>
+                },
+                <span class="hljs-string">"isHidden"</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"132395b5-087e-480a-9cdd-d8119c4fcc2d"</span>,
+                <span class="hljs-string">"logoBackgroundColorHex"</span>: <span class="hljs-string">"#FFFFFF"</span>,
+                <span class="hljs-string">"name"</span>: <span class="hljs-string">"RWC2019"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"4637bda3-df0b-4aed-bbd9-cd70e596b443"</span>
+            },
+            {
+                <span class="hljs-string">"id"</span>: <span class="hljs-string">"SPORT_FIH_Pro_League"</span>,
+                <span class="hljs-string">"images"</span>: {
+                    <span class="hljs-string">"channelLogo"</span>: <span class="hljs-string">"6724e0f3-0dac-4a9c-8ccc-03d906d6ee27.png"</span>,
+                    <span class="hljs-string">"headerLogo"</span>: <span class="hljs-string">"6724e0f3-0dac-4a9c-8ccc-03d906d6ee27.png"</span>
+                },
+                <span class="hljs-string">"isHidden"</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-string">"logoBackgroundColorHex"</span>: <span class="hljs-string">"#000000"</span>,
+                <span class="hljs-string">"name"</span>: <span class="hljs-string">"Field Hockey"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"7e2bf924-3433-4fec-ba70-95f986a98687"</span>
+            },
+            {
+                <span class="hljs-string">"id"</span>: <span class="hljs-string">"SPORT_FORMULA_ONE"</span>,
+                <span class="hljs-string">"images"</span>: {
+                    <span class="hljs-string">"channelLogo"</span>: <span class="hljs-string">"726c142e-fafe-409a-ba25-f7430c31675e.png"</span>,
+                    <span class="hljs-string">"headerLogo"</span>: <span class="hljs-string">"726c142e-fafe-409a-ba25-f7430c31675e.png"</span>
+                },
+                <span class="hljs-string">"isHidden"</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-string">"logoBackgroundColorHex"</span>: <span class="hljs-string">"#E10600"</span>,
+                <span class="hljs-string">"name"</span>: <span class="hljs-string">"Formula One"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"3601e817-a576-4c9d-a2f2-1f05f423427e"</span>
+            },
+            {
+                <span class="hljs-string">"id"</span>: <span class="hljs-string">"SPORT_WRC"</span>,
+                <span class="hljs-string">"images"</span>: {
+                    <span class="hljs-string">"channelLogo"</span>: <span class="hljs-string">"6fad4bca-6ed0-4221-88be-466988ecbf3a.png"</span>,
+                    <span class="hljs-string">"headerLogo"</span>: <span class="hljs-string">"6fad4bca-6ed0-4221-88be-466988ecbf3a.png"</span>
+                },
+                <span class="hljs-string">"isHidden"</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-string">"logoBackgroundColorHex"</span>: <span class="hljs-string">"#E10600"</span>,
+                <span class="hljs-string">"name"</span>: <span class="hljs-string">"FIA World Rally Championship"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"3601e817-a576-4c9d-a2f2-1f05f423427e"</span>
+            },
+            {
+                <span class="hljs-string">"id"</span>: <span class="hljs-string">"SPORT_NBA"</span>,
+                <span class="hljs-string">"images"</span>: {
+                    <span class="hljs-string">"channelLogo"</span>: <span class="hljs-string">"094bc37a-e0f8-49e8-98e8-e9df914a51e4.png"</span>,
+                    <span class="hljs-string">"headerLogo"</span>: <span class="hljs-string">"094bc37a-e0f8-49e8-98e8-e9df914a51e4.png"</span>
+                },
+                <span class="hljs-string">"isHidden"</span>: <span class="hljs-literal">false</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-string">"logoBackgroundColorHex"</span>: <span class="hljs-string">"#17408B"</span>,
+                <span class="hljs-string">"name"</span>: <span class="hljs-string">"NBA"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"0441658c-d816-4b37-b9b6-c333ab5d058c"</span>
+            },
+            {
+                <span class="hljs-string">"id"</span>: <span class="hljs-string">"SPORT_EPCR"</span>,
+                <span class="hljs-string">"images"</span>: {
+                    <span class="hljs-string">"channelLogo"</span>: <span class="hljs-string">"67f473e0-0e1b-4181-842a-969e2560328a.png"</span>,
+                    <span class="hljs-string">"headerLogo"</span>: <span class="hljs-string">"67f473e0-0e1b-4181-842a-969e2560328a.png"</span>
+                },
+                <span class="hljs-string">"isHidden"</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-string">"logoBackgroundColorHex"</span>: <span class="hljs-string">"#1e1d3f"</span>,
+                <span class="hljs-string">"name"</span>: <span class="hljs-string">"Heineken Champions Cup"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"e3403874-0486-4520-bafd-8b460474fb92"</span>
+            },
+            {
+                <span class="hljs-string">"id"</span>: <span class="hljs-string">"SPORT_One_Championship"</span>,
+                <span class="hljs-string">"images"</span>: {
+                    <span class="hljs-string">"channelLogo"</span>: <span class="hljs-string">"34a0a0b2-021a-432c-924d-2dd94b83e503.png"</span>,
+                    <span class="hljs-string">"headerLogo"</span>: <span class="hljs-string">"34a0a0b2-021a-432c-924d-2dd94b83e503.png"</span>
+                },
+                <span class="hljs-string">"isHidden"</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-string">"logoBackgroundColorHex"</span>: <span class="hljs-string">"#000000"</span>,
+                <span class="hljs-string">"name"</span>: <span class="hljs-string">"One Championship"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"471f1a06-3670-4f13-a02c-e7edb84ff2a0"</span>
+            },
+            {
+                <span class="hljs-string">"id"</span>: <span class="hljs-string">"SPORT_EPL"</span>,
+                <span class="hljs-string">"images"</span>: {
+                    <span class="hljs-string">"channelLogo"</span>: <span class="hljs-string">"279b793b-4b84-4f04-96af-ba372305ec99.png"</span>,
+                    <span class="hljs-string">"headerLogo"</span>: <span class="hljs-string">"279b793b-4b84-4f04-96af-ba372305ec99.png"</span>
+                },
+                <span class="hljs-string">"isHidden"</span>: <span class="hljs-literal">true</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"c3c39f64-ed87-41df-aa2f-70a849749b9e"</span>,
+                <span class="hljs-string">"logoBackgroundColorHex"</span>: <span class="hljs-string">"#000000"</span>,
+                <span class="hljs-string">"name"</span>: <span class="hljs-string">"Premier League"</span>,
+                <span class="hljs-string">"sportId"</span>: <span class="hljs-string">"ea3c8187-0f9f-4f75-b947-cc5762765546"</span>
+            }
+        ],
+        <span class="hljs-string">"tournaments"</span>: [
+            {
+                <span class="hljs-string">"description"</span>: <span class="hljs-string">"Rugby World Cup 2019"</span>,
+                <span class="hljs-string">"id"</span>: <span class="hljs-string">"rwc2019"</span>,
+                <span class="hljs-string">"leagueId"</span>: <span class="hljs-string">"132395b5-087e-480a-9cdd-d8119c4fcc2d"</span>,
+                <span class="hljs-string">"pictureIds"</span>: {
+                    <span class="hljs-string">"banner"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-string">"phoneBanner"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-string">"tabletBanner"</span>: <span class="hljs-string">""</span>,
+                    <span class="hljs-string">"webBanner"</span>: <span class="hljs-string">""</span>
+                },
+                <span class="hljs-string">"tournamentEndTime"</span>: <span class="hljs-string">"2020-03-01T00:00:00.000Z"</span>,
+                <span class="hljs-string">"tournamentId"</span>: <span class="hljs-literal">null</span>,
+                <span class="hljs-string">"tournamentStartTime"</span>: <span class="hljs-string">"2019-08-15T00:00:00.000Z"</span>,
+                <span class="hljs-string">"tournamentTeams"</span>: [
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Argentina"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"ff5ddb35-ebce-4986-93da-58ea38beb004.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"6addd73e-d9bd-4dac-a8cc-fbfb3969272f"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Australia"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"4611738c-0a1a-4233-ad39-9ed94f351ab5.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"4c7c0048-6a29-4614-b2f0-91ff6c6583cf"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Canada"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"35c31fe7-675f-4036-b5d7-43f7e50469e4.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"f9f30ae4-0e47-491a-b153-1d0127c89a29"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"England"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"652a871f-035d-4c4a-ab73-f2028889d9b2.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"b11402f9-d684-45ed-95be-7a723da4ccd4"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Fiji"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"78dc2748-f5b5-4437-a3c0-4505729635a9.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"cca72e17-1344-4edf-9cce-f0e3b2f82237"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"France"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"2b26493e-7489-45c4-8c97-ef8b3c008370.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"f0aae43e-bc38-47f8-bbe2-3f3b2ef8b8c9"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Georgia"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"b1ef49dc-3b78-467c-9ddc-442b33029263.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"3bba9644-26f5-49d0-82c6-cae61ea8d2f5"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Ireland"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"72521dfb-28a4-4148-a2f0-bef43a446c32.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"d0856d08-2a89-46bd-aca6-dda59e983182"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Italy"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"2385b490-1f85-4614-9de6-d59a5ccf013d.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"36441aa8-294a-42cb-a361-2ea0b7cc79eb"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Japan"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"4a0ba112-df95-41d4-bd09-a580c85c0d4c.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"97220542-e1a1-4c24-95de-8b4aac511bbb"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Namibia"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"4f10f67c-615c-4965-8e04-7fca5dc18d95.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"e75268c3-7742-4d1f-8fea-5b7ec2cdfab0"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"New Zealand"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"ee9438cd-fae7-4510-ab43-2023e7a8973b.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"6b0a9cfe-ad5c-4905-97c6-03c8c728e776"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Russia"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"a626b826-3410-40e8-97d9-4dc84e7ae65d.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"9af44b53-68dc-4160-a414-4166c123692b"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Samoa"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"2e2cfdb9-7fb1-4979-ae44-5339732afb0c.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"afbc39b3-9f32-46e3-b369-15e6fce993b4"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Scotland"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"77a5141a-fcb4-43e7-9eca-da665f354c19.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"e11fa2c4-9661-4cb4-8671-8b8ad7390621"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"South Africa"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"5f1e54b0-c9c2-47b9-a846-0de4bc8f80da.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"40997ca8-0d01-4f5f-8d6a-ce6e17e7f54f"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Tonga"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"39b9c925-8632-4219-bd15-7604f717c284.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"874ed7ce-eda2-4891-8fb7-5ba13ac51914"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"United States"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"6fc8dcf8-e519-43a1-9b90-653ce78ff403.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"c9a0d950-37e6-4c1e-b178-7c3304ecbc88"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Uruguay"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"4884614d-5de0-4468-b5d5-d8776e708bc3.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"445ff236-f43e-4e46-aa21-6c2b8d2bb1f0"</span>
+                    },
+                    {
+                        <span class="hljs-string">"name"</span>: <span class="hljs-string">"Wales"</span>,
+                        <span class="hljs-string">"pictureId"</span>: <span class="hljs-string">"66384cf7-de25-4cae-9443-125389679a39.png"</span>,
+                        <span class="hljs-string">"teamId"</span>: <span class="hljs-string">"a50f5b4a-29bf-466a-85de-53c8382ccea0"</span>
+                    }
+                ]
+            }
+        ],
+        <span class="hljs-string">"trialSubscriptionInfo"</span>: {
+            <span class="hljs-string">"billingPlanId"</span>: <span class="hljs-string">"SparkSport_TEST_1Day_Pass_01"</span>,
+            <span class="hljs-string">"entitlementPeriodDays"</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">"packageId"</span>: <span class="hljs-string">"c4757270-2a37-11e9-a2ff-bd8ac90b5375"</span>
+        }
+    },
+    <span class="hljs-string">"s3bucket"</span>: <span class="hljs-string">"orbis-spark-appconfig-stage"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-application-configuration"></a><a href="#retrieve-application-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve application configuration</h3>
+<p>Returns the specified application configuration by application name.</p>
+<p><br/></p>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters"></a><a href="#path-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>applicationName</td><td>string</td><td>required</td><td>ID for the desired application configuration.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{AppServer}}/app/v1/configs/{{applicationName}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="list-all-application-configurations"></a><a href="#list-all-application-configurations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List all application configurations</h3>
+<p>Returns a list of all application configurations.</p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{AppServer}}/app/v1/configs
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="delete-application-configuration"></a><a href="#delete-application-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete application configuration</h3>
+<p>Deletes the specified application configuration.</p>
+<p><br/></p>
+<h5><a class="anchor" aria-hidden="true" id="error-responses-1"></a><a href="#error-responses-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h5>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to delete the specified application configuration.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: No matching application configuration found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: DELETE
+Type: RAW
+URL: {{AppServer}}/app/v1/configs/{{applicationName}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Accept</td><td>application/json</td><td></td></tr>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<hr>
+<p><a href="#application">Back to top</a></p>
+<blockquote>
+<p>Made with ♥ by <a href="https://github.com/thedevsaddam">thedevsaddam</a> | Generated at: 2020-04-08 15:58:08 by <a href="https://github.com/thedevsaddam/docgen">docgen</a></p>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-accounts"><span class="arrow-prev">← </span><span>Accounts</span></a><a class="docs-next button" href="/docs/api-billing"><span>Billing</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#application---v1">Application - v1</a><ul class="toc-headings"><li><a href="#create-application-configuration">Create application configuration</a></li><li><a href="#update-application-configuration">Update application configuration</a></li><li><a href="#retrieve-application-configuration">Retrieve application configuration</a></li><li><a href="#list-all-application-configurations">List all application configurations</a></li><li><a href="#delete-application-configuration">Delete application configuration</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/iSPgrey.png" alt="iStreamPlanet Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 iStreamPlanet</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0550daa76db9bf70605ab43620282f25',
+                indexName: 'orbis',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"hitsPerPage":10}
+              });
+            </script></body></html>

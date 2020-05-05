@@ -1,13 +1,30 @@
 {
   "docs": {
-    "Docusaurus": ["doc1", "doc9"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "API Documentation": ["orbis-api-docs"],
-    "First Category": ["doc4", "doc5"],
-    "Sample APIs": ["api-doc1", "api-doc2"]
+    "Portal Guides": [
+      "guide-portal-admin",
+      "guide-content-curation"
+    ],
+    "APIs": [
+      "api-accounts",		
+      "api-application",	
+      "api-billing",			
+      "api-content-reporting",	
+      "api-content",			
+      "api-entitlements",
+      "test-output",
+      "api-experience",		
+      "api-geography", 
+      "api-sports"
+    ],
+    "White Papers": [
+      "paper-e-search", 
+      "paper-doc4", 
+      "paper-doc5"
+    ],
+    "Extras": [
+      "xtra-err-msgs",
+      "xtra-glossary"
+    ]
   }
 }
 

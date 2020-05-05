@@ -1,0 +1,616 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Experience · iStreamPlanet Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The *experience* endpoints allow applications to store and manage information that is specific to each subscriber&#x27;s video content interactions. "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Experience · iStreamPlanet Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/"/><meta property="og:description" content="The *experience* endpoints allow applications to store and manage information that is specific to each subscriber&#x27;s video content interactions. "/><meta property="og:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/iSPblack.png" alt="iStreamPlanet Docs"/><h2 class="headerTitleWithLogo">iStreamPlanet Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/guide-portal-admin" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/docs/api-entitlements" target="_self">APIs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="https://isp.orbis-portal.stage.dtc.istreamplanet.net" target="_self">Portal</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>APIs</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Portal Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/guide-portal-admin">Administration</a></li><li class="navListItem"><a class="navItem" href="/docs/guide-content-curation">Content Curation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">APIs<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api-accounts">Accounts</a></li><li class="navListItem"><a class="navItem" href="/docs/api-application">Application</a></li><li class="navListItem"><a class="navItem" href="/docs/api-billing">Billing</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content-reporting">Content Reporting</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content">Content</a></li><li class="navListItem"><a class="navItem" href="/docs/api-entitlements">Entitlements</a></li><li class="navListItem"><a class="navItem" href="/docs/test-output">epgManifest v1.0</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api-experience">Experience</a></li><li class="navListItem"><a class="navItem" href="/docs/api-geography">Geography</a></li><li class="navListItem"><a class="navItem" href="/docs/api-sports">Sports</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">White Papers<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/paper-e-search">Elastic Search in Orbis</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc4">A White Paper</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc5">YAWP - Yet Another White Paper</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Extras<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/xtra-err-msgs">Error Messages</a></li><li class="navListItem"><a class="navItem" href="/docs/xtra-glossary">Glossary</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Experience</h1></header><article><div><span><p>The <em>experience</em> endpoints allow applications to store and manage information that is specific to each subscriber's video content interactions.
+These endpoints handle the subscriber's watchlist, content progress markers, and system limitations set by the tenant's streaming policies.</p>
+<hr>
+<h2><a class="anchor" aria-hidden="true" id="managing-streaming-policies"></a><a href="#managing-streaming-policies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Managing Streaming Policies</h2>
+<h3><a class="anchor" aria-hidden="true" id="get-tenant-streaming-policies"></a><a href="#get-tenant-streaming-policies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get tenant streaming policies</h3>
+<p>Returns the streaming policies for the specified tenant.  A value of 0 indicates that a policy is not being enforced.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters"></a><a href="#path-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>tenant</td><td>string</td><td>required</td><td>Name of the tenant whose streaming policies will be retrieved.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses"></a><a href="#error-responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error Code</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>401</strong></td><td>1000, 1001, 1002</td><td><em>Unauthorized</em>: Authentication token missing, invalid, or expired</td></tr>
+<tr><td><strong>403</strong></td><td>1003</td><td><em>Forbidden</em>: Cannot read the requested resource</td></tr>
+<tr><td><strong>404</strong></td><td>1040</td><td><em>Not found</em>: Requested resource ID missing, deleted, or incorrect</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OXMServer}}/oxm/v1/streampolicy/{{tenant}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get tenant streaming policies | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"maxPerUser"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-string">"maxPerAsset"</span>: <span class="hljs-number">2</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="set-tenant-streaming-policies"></a><a href="#set-tenant-streaming-policies" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set tenant streaming policies</h3>
+<p>Sets the streaming policies for the specified tenant.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-1"></a><a href="#path-parameters-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>tenant</td><td>string</td><td>required</td><td>Name of the tenant whose streaming policies will be set.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters"></a><a href="#body-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>maxPerUser</td><td>integer</td><td>required</td><td>Number of concurrent streams allowed for a single user.</td></tr>
+<tr><td>maxPerAsset</td><td>integer</td><td>required</td><td>Number of concurrent streams allowed for a specific asset.</td></tr>
+<tr><td>maxDevices</td><td>integer</td><td>required</td><td>Number of concurrent devices allowed for a single user.</td></tr>
+</tbody>
+</table>
+<p><br></p>
+<p><strong>Important:</strong> <em>maxPerAsset</em> must be less than or equal to <em>maxPerUser</em>.</p>
+<p>A value of 0 will result in the policy not being enforced.</p>
+<p><br></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-1"></a><a href="#error-responses-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error Code</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>400</strong></td><td>1103, 1104, 1105</td><td><em>Bad request</em>: Request body malformed.</td></tr>
+<tr><td><strong>401</strong></td><td>1000, 1001, 1002</td><td><em>Unauthorized</em>: Authentication token missing, invalid, or expired.</td></tr>
+<tr><td><strong>403</strong></td><td>1004</td><td><em>Forbidden</em>: Cannot update the requested resource.</td></tr>
+<tr><td><strong>404</strong></td><td>1040</td><td><em>Not found</em>: Requested resource ID missing, deleted, or incorrect.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: RAW
+URL: {{OXMServer}}/oxm/v1/streampolicy/{{tenant}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+<tr><td>Content-Type</td><td>application/json</td><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Body:</em></strong></p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"maxPerUser"</span>: <span class="hljs-number">5</span>,
+    <span class="hljs-string">"maxPerAsset"</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-string">"maxDevices"</span>: <span class="hljs-number">0</span>
+}
+</code></pre>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Set tenant streaming policies | Code: 200</p>
+<h3><a class="anchor" aria-hidden="true" id="list-stream-progress-history"></a><a href="#list-stream-progress-history" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List stream progress history</h3>
+<p>Lists all &quot;in progress&quot; streams for a user. Any previously deleted streams are not returned.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="response-object"></a><a href="#response-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Object</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>tenantID</td><td>string</td><td>Name of the tenant.</td></tr>
+<tr><td>userID</td><td>string</td><td>Unique ID for the user.</td></tr>
+<tr><td>assetID</td><td>string</td><td>Unique ID for each asset.</td></tr>
+<tr><td>progress</td><td>integer</td><td>Number of seconds viewed for each asset.</td></tr>
+<tr><td>timestamp</td><td>string</td><td>Date and time when this request was executed.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OXMServer}}/oxm/v1/streams/<span class="hljs-built_in">history</span>
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get Stream Progress History | Code: 200</p>
+<pre><code class="hljs css language-js">[
+    {
+        <span class="hljs-string">"tenantId"</span>: <span class="hljs-string">"istreamplanet"</span>,
+        <span class="hljs-string">"userId"</span>: <span class="hljs-string">"2468517b-3ec5-4d8a-a6b9-e6b1653df163"</span>,
+        <span class="hljs-string">"assetId"</span>: <span class="hljs-string">"af8280e5-d52a-4dfb-aecc-09945d06e969"</span>,
+        <span class="hljs-string">"progress"</span>: <span class="hljs-number">666</span>,
+        <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2019-04-25T19:06:21.577870309Z"</span>
+    }
+]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="delete-stream-progress"></a><a href="#delete-stream-progress" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete stream progress</h3>
+<p>Deletes the user's stream progress value for the specified asset.</p>
+<p>Call this endpoint after the user has successfully finished viewing an asset to ensure that the stream will start from the beginning when viewed again in the future.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-2"></a><a href="#path-parameters-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetID</td><td>string</td><td>required</td><td>ID of the video asset to be reset to position zero.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-2"></a><a href="#error-responses-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to delete the target stream marker.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: Target stream marker not found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: DELETE
+Type: FORMDATA
+URL: {{OXMServer}}/oxm/v1/streams/{{assetID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Delete Stream Progress | Code: 204</p>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-stream-progress"></a><a href="#retrieve-stream-progress" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve stream progress</h3>
+<p>Returns the most recent progress value for the specified asset.</p>
+<p>Call this endpoint before playing a previously viewed stream to ensure that it begins at the user's last viewed position.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-3"></a><a href="#path-parameters-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetID</td><td>string</td><td>required</td><td>ID of the target asset to be played starting at the last viewed position.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OXMServer}}/oxm/v1/streams/{{assetID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get stream progress | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"tenantId"</span>: <span class="hljs-string">"istreamplanet"</span>,
+    <span class="hljs-string">"userId"</span>: <span class="hljs-string">"2468517b-3ec5-4d8a-a6b9-e6b1653df163"</span>,
+    <span class="hljs-string">"assetId"</span>: <span class="hljs-string">"af8280e5-d52a-4dfb-aecc-09945d06e969"</span>,
+    <span class="hljs-string">"progress"</span>: <span class="hljs-number">123</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-number">1526327019067</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-stream-counts"></a><a href="#retrieve-stream-counts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve stream counts</h3>
+<p>Returns the number of concurrent streams in use by the Subscriber for the listed asset.</p>
+<p>Optionally returns the number of streams in use on each device.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="response-object-1"></a><a href="#response-object-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Object</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>assetID</em> <strong>:</strong> <em>streamCounts</em></td><td>map (<em>string : number</em>)</td><td><em>&lt; streaming-asset-ID &gt; <strong>:</strong> &lt; number-of-streams &gt;</em> <br><br>Or, if <strong>include=device</strong> is used, <br><br><em>&lt; streaming-asset-ID &gt;</em> <strong>:</strong> {<em>deviceID</em> <strong>:</strong> <em>number</em>, <em>deviceID</em> <strong>:</strong> <em>number</em>, ...}</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OXMServer}}/oxm/v1/streams/counts
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>include</td><td>device</td><td>Optional.  Currently, the only valid value is &quot;<strong>device</strong>&quot;. Returns detailed device information.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get stream counts | Code: 200</p>
+<pre><code class="hljs css language-js">{<span class="hljs-string">"af8280e5-d52a-4dfb-aecc-09945d06e969"</span>:<span class="hljs-number">1</span>}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="stream-stop"></a><a href="#stream-stop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stream stop</h3>
+<p>Specifies that the stream is no longer being viewed and returns the final progress value.</p>
+<p>Stream concurrency is removed from Redis. When the progress value is provided, the stream progress is also recorded.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-4"></a><a href="#path-parameters-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetID</td><td>string</td><td>required</td><td>ID of the stream that the user was watching.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: FORMDATA
+URL: {{OXMServer}}/oxm/v1/streams/{{assetID}}/stopped
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>device</td><td><string></td><td>Optional. Device name or ID. If not provided, the device IP address is used. When provided, it must match the <strong>deviceID</strong> specified in the body of the <a href="https://docs.dtc.istreamplanet.net/#70bc1097-ed46-4efe-8892-118145f9662d">Request an entitlement token</a> call.</td></tr>
+<tr><td>progress</td><td><integer></td><td>Optional. Progress  in seconds from the beginning of the stream. If not provided, no progress value will be stored in the database.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Stream Stop | Code: 204</p>
+<h3><a class="anchor" aria-hidden="true" id="track-stream-concurrency-and-progress"></a><a href="#track-stream-concurrency-and-progress" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Track stream concurrency and progress</h3>
+<p>Notifies the system that a user is watching a stream.</p>
+<p>This is the main endpoint used to track both stream concurrency (how many concurrent streams the user is viewing) and, optionally, the user's progress through the stream. The client application should call this endpoint at no more than two minute intervals during the entire time the stream is viewed, including times when the stream is paused.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-5"></a><a href="#path-parameters-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetID</td><td>string</td><td>required</td><td>ID of the stream that the user is watching.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: FORMDATA
+URL: {{OXMServer}}/oxm/v1/streams/{{assetID}}/streaming
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>device</td><td><string></td><td>Optional. Device name or ID. If not provided, the device IP address is used. When provided, it must match the <strong>deviceID</strong> specified in the body of the <a href="https://docs.dtc.istreamplanet.net/#70bc1097-ed46-4efe-8892-118145f9662d">Request entitlement token</a> call.</td></tr>
+<tr><td>progress</td><td><integer></td><td>Optional. Progress value in seconds from the beginning of the stream. If not provided, no progress value will be stored in the database.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Track stream concurrency and progress | Code: 204</p>
+<h2><a class="anchor" aria-hidden="true" id="managing-watchlists"></a><a href="#managing-watchlists" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Managing Watchlists</h2>
+<h3><a class="anchor" aria-hidden="true" id="remove-an-asset-from-the-watchlist"></a><a href="#remove-an-asset-from-the-watchlist" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Remove an asset from the watchlist</h3>
+<p>Removes the specified asset ID from the subscriber's watchlist.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-6"></a><a href="#path-parameters-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetID</td><td>string</td><td>required</td><td>ID of the asset to be removed from the subscriber's watchlist.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="error-responses-3"></a><a href="#error-responses-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error Responses</h4>
+<table>
+<thead>
+<tr><th>HTTP Code</th><th>Error</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>403</td><td>1004</td><td><em>Forbidden</em>: Caller not authorized to delete the target stream marker.</td></tr>
+<tr><td>404</td><td>1040</td><td><em>Not Found</em>: Target stream marker not found.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: DELETE
+Type: FORMDATA
+URL: {{OXMServer}}/oxm/v1/towatch/{{assetID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Delete asset from &quot;to watch&quot; list | Code: 200</p>
+<h3><a class="anchor" aria-hidden="true" id="add-an-asset-to-the-watchlist"></a><a href="#add-an-asset-to-the-watchlist" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add an asset to the watchlist</h3>
+<p>Adds the specified the asset ID to the subscriber's watch list.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="path-parameters-7"></a><a href="#path-parameters-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h4>
+<table>
+<thead>
+<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>assetID</td><td>string</td><td>required</td><td>ID of the asset to be added from the user's watchlist.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: PUT
+Type: FORMDATA
+URL: {{OXMServer}}/oxm/v1/towatch/{{assetID}}
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Add asset to &quot;to watch&quot; list | Code: 200</p>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-the-watchlist"></a><a href="#retrieve-the-watchlist" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve the watchlist</h3>
+<p>Returns the list of asset IDs in the subscriber's &quot;to watch&quot; list.</p>
+<p><br/></p>
+<h4><a class="anchor" aria-hidden="true" id="body-parameters-1"></a><a href="#body-parameters-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>requestID</td><td>string</td><td>Unique log ID for this request.</td></tr>
+<tr><td>timestamp</td><td>string</td><td>Date and time when this call was executed.</td></tr>
+<tr><td>assetIDs</td><td>string list</td><td>List of requested asset IDs that have existing metadata.</td></tr>
+<tr><td>assetIDsNotFound</td><td>string list</td><td>List of requested asset IDs that have no metadata.</td></tr>
+<tr><td>assets</td><td>string</td><td>Descriptive metadata for the requested asset IDs.</td></tr>
+<tr><td><code>count</code></td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
+</tbody>
+</table>
+<p><br/></p>
+<p><strong>Count Values</strong>:</p>
+<ul>
+<li><em>acquired</em>:   number of asset IDs acquired from OCM v2; see the <em>assetIDs</em> list.</li>
+<li><em>notFound</em>:   number of asset IDs for which there is no metadata; see the <em>assetIDsNotFound</em> list.</li>
+<li><em>returned</em>:   number of asset metadata objects returned. (The value of <em>returned</em> should be <em>acquired</em> - <em>unwanted</em>.)</li>
+<li><em>unwanted</em>:   number of asset metadata objects returned from OCM v2 which were not requested. <br/>
+(This value should always be zero; non-zero values would generate an error in OCM v2.)</li>
+</ul>
+<p><br></p>
+<p><strong><em>Endpoint:</em></strong></p>
+<pre><code class="hljs css language-bash">Method: GET
+Type: 
+URL: {{OXMServer}}/oxm/v1/towatch
+</code></pre>
+<p><strong><em>Headers:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
+</tbody>
+</table>
+<p><strong><em>Query params:</em></strong></p>
+<table>
+<thead>
+<tr><th>Key</th><th>Value</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>full</td><td>true</td><td><em>Optional boolean</em>.  If set to <strong>true</strong>, returns all metadata for the watchlist entries. This parameter only works for assets stored in the OCM v2 schema. Assets stored in OCM v1 return no metadata and display as &quot;not found&quot;.</td></tr>
+<tr><td></td></tr>
+</tbody>
+</table>
+<p><strong><em>Responses:</em></strong></p>
+<p>Status: Get &quot;to watch&quot; list with full parameter | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"1200ac02-4c21-4835-8edf-462dd335b302"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2018-05-23T17:55:39.590328174Z"</span>,
+    <span class="hljs-string">"assetIDs"</span>: [
+        <span class="hljs-string">"c56f185963ea17987c910834e0a575a6"</span>
+    ],
+    <span class="hljs-string">"assetIDsNotFound"</span>: [
+        <span class="hljs-string">"6h7xnvckinxxsl9lh5n2"</span>,
+        <span class="hljs-string">"a68d40370913aa5c56515d52c3b0d42c"</span>,
+        <span class="hljs-string">"f682beefab2e52912a3c492f716ee90d"</span>,
+        <span class="hljs-string">"test1234"</span>
+    ],
+    <span class="hljs-string">"assets"</span>: [
+        {
+            <span class="hljs-string">"id"</span>: <span class="hljs-string">"c56f185963ea17987c910834e0a575a6"</span>,
+            <span class="hljs-string">"name"</span>: <span class="hljs-string">"Barrio Chino II"</span>,
+            <span class="hljs-string">"shortName"</span>: <span class="hljs-string">"BarrioChin"</span>,
+            <span class="hljs-string">"description"</span>: <span class="hljs-string">"El detective Jake Gittes, sin saberlo, se convierte en cómplice de un crimen de pasión premeditado."</span>,
+            <span class="hljs-string">"shortDescription"</span>: <span class="hljs-string">"Un detective investiga un crimen de pasión premeditado."</span>,
+            <span class="hljs-string">"resourceType"</span>: <span class="hljs-string">"movie"</span>,
+            <span class="hljs-string">"releaseYear"</span>: <span class="hljs-number">1990</span>,
+            <span class="hljs-string">"language"</span>: <span class="hljs-string">"es"</span>,
+            <span class="hljs-string">"pictureID"</span>: <span class="hljs-string">"3a81d257ce1768dd7f4cc3c0a10c82f1"</span>,
+            <span class="hljs-string">"pictures"</span>: {
+                <span class="hljs-string">"16x9"</span>: <span class="hljs-string">"3a81d257ce1768dd7f4cc3c0a10c82f1"</span>,
+                <span class="hljs-string">"2x3"</span>: <span class="hljs-string">"9bbb6bb34c0c99c9fb149584c2b22878"</span>,
+                <span class="hljs-string">"3x4"</span>: <span class="hljs-string">"204f341541e8004f558580bf6230b379"</span>,
+                <span class="hljs-string">"4x3"</span>: <span class="hljs-string">"a2080da7011719a696fbd71e23289de5"</span>
+            },
+            <span class="hljs-string">"genres"</span>: [
+                <span class="hljs-string">"Mystery"</span>
+            ],
+            <span class="hljs-string">"genreIDs"</span>: [
+                <span class="hljs-string">"d775f75f857ae6a6c2b33e487686da54"</span>
+            ]
+        }
+    ],
+    <span class="hljs-string">"count"</span>: {
+        <span class="hljs-string">"acquired"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">"notFound"</span>: <span class="hljs-number">4</span>,
+        <span class="hljs-string">"returned"</span>: <span class="hljs-number">1</span>,
+        <span class="hljs-string">"unwanted"</span>: <span class="hljs-number">0</span>
+    }
+}
+</code></pre>
+<p>Status: Get &quot;to watch&quot; list | Code: 200</p>
+<pre><code class="hljs css language-js">{
+    <span class="hljs-string">"requestID"</span>: <span class="hljs-string">"386c37d8-da8a-46b2-bca3-09009081e31b"</span>,
+    <span class="hljs-string">"timestamp"</span>: <span class="hljs-string">"2018-05-14T19:39:05.228675074Z"</span>,
+    <span class="hljs-string">"assetIDs"</span>: [
+        <span class="hljs-string">"07832utleyahe1dpbubg"</span>
+    ],
+    <span class="hljs-string">"count"</span>: {
+        <span class="hljs-string">"returned"</span>: <span class="hljs-number">1</span>
+    }
+}
+</code></pre>
+<hr>
+<p><a href="api-experience">Back to top</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/test-output"><span class="arrow-prev">← </span><span class="function-name-prevnext">epgManifest v1.0</span></a><a class="docs-next button" href="/docs/api-geography"><span>Geography</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#managing-streaming-policies">Managing Streaming Policies</a><ul class="toc-headings"><li><a href="#get-tenant-streaming-policies">Get tenant streaming policies</a></li><li><a href="#set-tenant-streaming-policies">Set tenant streaming policies</a></li><li><a href="#list-stream-progress-history">List stream progress history</a></li><li><a href="#delete-stream-progress">Delete stream progress</a></li><li><a href="#retrieve-stream-progress">Retrieve stream progress</a></li><li><a href="#retrieve-stream-counts">Retrieve stream counts</a></li><li><a href="#stream-stop">Stream stop</a></li><li><a href="#track-stream-concurrency-and-progress">Track stream concurrency and progress</a></li></ul></li><li><a href="#managing-watchlists">Managing Watchlists</a><ul class="toc-headings"><li><a href="#remove-an-asset-from-the-watchlist">Remove an asset from the watchlist</a></li><li><a href="#add-an-asset-to-the-watchlist">Add an asset to the watchlist</a></li><li><a href="#retrieve-the-watchlist">Retrieve the watchlist</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/iSPgrey.png" alt="iStreamPlanet Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 iStreamPlanet</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0550daa76db9bf70605ab43620282f25',
+                indexName: 'orbis',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"hitsPerPage":10}
+              });
+            </script></body></html>

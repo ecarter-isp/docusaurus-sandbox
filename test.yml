@@ -1,0 +1,362 @@
+{
+  "mediaId": "a08b957cfa9ff6b93219f98799c1b093b5c3c389",
+  "lastUpdate": 1538280003516,
+  "network": "TCM",
+  "type": "vod",
+  "airingIds": ["RADS1008161800026775"],
+  "media":
+    {
+      "desktop":
+        {
+          "multidrm":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "fairplay":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "primetime":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "widevine":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "bulkaes":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_de.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+        },
+      "phone":
+        {
+          "multidrm":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "fairplay":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "primetime":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "widevine":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "bulkaes":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ph.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+        },
+      "tablet":
+        {
+          "multidrm":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "fairplay":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "primetime":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "widevine":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "bulkaes":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_ta.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+        },
+      "tv":
+        {
+          "multidrm":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "fairplay":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "primetime":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "widevine":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+          "bulkaes":
+            {
+              "secureUrl": "https://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "url": "http://tve.cdn.turner.com/tcm/dd11d0b2698c5f768ffc3f7ad5495fff/master_bk_tv.m3u8",
+              "assetId": "dd11d0b2698c5f768ffc3f7ad5495fff",
+              "adType": "c4",
+              "playlistProtection": "spe",
+              "contentSegments":
+                [{ "segmentIdx": 0, "start": 0, "duration": 658.7581 }],
+              "totalRuntime": 658.7581,
+              "captions":
+                [
+                  { "type": "608", "location": "cc1", "language": "eng" },
+                  { "type": "708", "location": "svc1", "language": "eng" },
+                ],
+              "isAVMUX": true,
+            },
+        },
+    },
+}

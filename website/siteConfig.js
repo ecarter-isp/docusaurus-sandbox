@@ -21,12 +21,13 @@ const users = [
 ];
 
 const siteConfig = {
-  title: 'Test Site', // Title for your website.
-  tagline: 'A website for testing',
+  title: 'iStreamPlanet Docs', // Title for your website.
+  tagline: '... testing iSP Documentation ...',
   //url: 'https://your-docusaurus-test-site.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
+  //  url: 'https://ecarter-isp.github.io', // Replace USERNAME with your GitHub username.
+  url: 'https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin', // orbis-api-docs??? Replace USERNAME with your GitHub username. 
 
-  url: 'https://ecarter-isp.github.io', // Replace USERNAME with your GitHub username.
   //baseUrl: '/docusaurus-sandbox/', // The name of your GitHub project.
   projectName: 'docusaurus-sandbox',  // The name of your GitHub project. Same as above.
   organizationName: 'ecarter-isp', // Your GitHub username.
@@ -42,26 +43,46 @@ const siteConfig = {
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
+
+  algolia: {
+  //  apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+  //  indexName: 'docsearch',
+    apiKey: '0550daa76db9bf70605ab43620282f25',
+    indexName: 'orbis',
+    algoliaOptions: {
+      hitsPerPage: 10,
+    // See https://www.algolia.com/doc/api-reference/api-parameters/
+    } // Optional, if provided by Algolia
+  },
+
+
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
+ 
+    {doc:  'guide-portal-admin', label: 'Guides'}, // DO NOT CHANGE THIS NAME YET
+    {doc:  'api-entitlements', label: 'APIs'},
     {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    { search: true },
+    {href: 'https://isp.orbis-portal.stage.dtc.istreamplanet.net', label: 'Portal'},
+  //  {href: 'https://istreamplanet.com', label: 'About iSP'},
+  //  {blog: true, label: 'Blog'},
+  //   
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/favicon.ico',
-  footerIcon: 'img/favicon.ico',
+  headerIcon: 'img/iSPblack.png',
+  footerIcon: 'img/iSPgrey.png',
   favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#508076',
+    primaryColor: '#508076', 
     secondaryColor: '#385952',
+  //  primaryColor:   '#508076', // Green 
+  //  secondaryColor: '#F04E23', // Orange
   },
 
   /* Custom fonts for website */
@@ -79,7 +100,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} iStreamPlanet`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -100,7 +121,7 @@ const siteConfig = {
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
-  // docsSideNavCollapsible: true,
+  docsSideNavCollapsible: true,
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
