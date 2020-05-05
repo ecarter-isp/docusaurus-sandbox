@@ -1,0 +1,763 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Administration · iStreamPlanet Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This Administration Guide describes how to use the Portal "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Administration · iStreamPlanet Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/"/><meta property="og:description" content="This Administration Guide describes how to use the Portal "/><meta property="og:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/iSPblack.png" alt="iStreamPlanet Docs"/><h2 class="headerTitleWithLogo">iStreamPlanet Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive siteNavItemActive"><a href="/docs/guide-portal-admin" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/docs/api-entitlements" target="_self">APIs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="https://isp.orbis-portal.stage.dtc.istreamplanet.net" target="_self">Portal</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Portal Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Portal Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/docs/guide-portal-admin">Administration</a></li><li class="navListItem"><a class="navItem" href="/docs/guide-content-curation">Content Curation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">APIs<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api-accounts">Accounts</a></li><li class="navListItem"><a class="navItem" href="/docs/api-application">Application</a></li><li class="navListItem"><a class="navItem" href="/docs/api-billing">Billing</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content-reporting">Content Reporting</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content">Content</a></li><li class="navListItem"><a class="navItem" href="/docs/api-entitlements">Entitlements</a></li><li class="navListItem"><a class="navItem" href="/docs/test-output">epgManifest v1.0</a></li><li class="navListItem"><a class="navItem" href="/docs/api-experience">Experience</a></li><li class="navListItem"><a class="navItem" href="/docs/api-geography">Geography</a></li><li class="navListItem"><a class="navItem" href="/docs/api-sports">Sports</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">White Papers<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/paper-e-search">Elastic Search in Orbis</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc4">A White Paper</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc5">YAWP - Yet Another White Paper</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Extras<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/xtra-err-msgs">Error Messages</a></li><li class="navListItem"><a class="navItem" href="/docs/xtra-glossary">Glossary</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Administration</h1></header><article><div><span><p>This Administration Guide describes how to use the Portal
+to manage accounts, billing plans, video content, DRM entitlements,
+and system policies.</p>
+<h2><a class="anchor" aria-hidden="true" id="accounts"></a><a href="#accounts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ACCOUNTS</h2>
+<p>The ACCOUNTS section allows administrators to manage and configure user
+accounts and roles.</p>
+<h3><a class="anchor" aria-hidden="true" id="users"></a><a href="#users" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Users</h3>
+<p>Use the <strong>Users</strong> menu to view the list of all administrator and user (fan)
+accounts in your installation.
+User accounts are typically added by fans though your client application.</p>
+<h4><a class="anchor" aria-hidden="true" id="sorting-and-searching-accounts"></a><a href="#sorting-and-searching-accounts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sorting and searching accounts:</h4>
+<p>To sort the account list, select the desired column title--username, email
+address, first name, or last name.
+The search field filters the listing based on data in all four columns.</p>
+<p>NOTE:</p>
+<blockquote>
+<p>In search fields, case is ignored but accented character glyphs are respected and must match exactly: B = b, ó != o, ñ ≠ n.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="deleting-accounts"></a><a href="#deleting-accounts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deleting accounts:</h4>
+<p>. Select the checkbox (☐) at the beginning of the row for any accounts that you wish to delete.
+. Select the red delete button.
+. Select [CONTINUE] at the bottom of the Delete Account dialog box.</p>
+<h4><a class="anchor" aria-hidden="true" id="updating-account-details"></a><a href="#updating-account-details" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating account details:</h4>
+<p>. Select the text for the account that you wish to update.
+. On the Account tab, select any field and enter the updated information.
+. Select [SAVE] at the bottom of the page.</p>
+<h3><a class="anchor" aria-hidden="true" id="section-a"></a><a href="#section-a" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section A</h3>
+<h3><a class="anchor" aria-hidden="true" id="section-b"></a><a href="#section-b" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Section B</h3>
+<p><a href="guide-portal-admin">Back to top of Administration</a></p>
+<!--
+<p>// Is regex searching available for geeky admins?
+// ; i.e., ó != o, ñ ≠ n, etc.
+// * [<em>] Matches only look at the beginning of a word.
+// * [</em>] Some pages require at least three characters to be entered.
+--&gt;</p>
+<!-- DO NOT CHANGE orbis-portal-admin NAME YET
+<h1><a class="anchor" aria-hidden="true" id="orbis-api-documentation"></a><a href="#orbis-api-documentation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Orbis API Documentation</h1>
+<p>// * EPC: terminology usage
+// &quot;administrative&quot; == adjective
+// &quot;adminstration&quot;  == general noun<br>
+// &quot;administrator&quot;  == person</p>
+<p>--&gt;</p>
+<!-- image::Users-UserAccounts.jpg[details screen, role="text-left", width="80%", scaledwidth="75%"] -->
+<!--
+// To update details for an account&colon;
+<ul>
+<li></li>
+</ul>
+<p>image::Users-Account.jpg[details screen, role=&quot;text-left&quot;, width=&quot;80%&quot;, scaledwidth=&quot;75%&quot;]</p>
+<p>////
+{
+[[package]]package::
+A defined collection of one or more video assets.<br>
+Although it is not required, a package is usually
+associated with a &lt;&lt;doc-glossary.adoc#billing_plan,billing plan&gt;&gt;.</p>
+<p>Viewing the list of user accounts</p>
+<p>searching
+sorting by: first name, last name, email address, account type, status
+(active/disabled), registered(???), verified, last login
+Basic information: billing address, email, preferences, etc.
+Detailed subscription/billing/payment/support history (this might only
+be a reference)
+Inviting new users
+User accounts cannot be directly created.  Admins can only extend invitations
+(via email); users must then register and verify, etc.
+Adding user names to accounts (such as for families)?
+Will user names be associated with email accounts?
+Updating account information:
+Email Account:
+Viewing/Editing basic info: username* (default = same as email address),
+first name, last name, email address*, phone numbers
+Generate a new password</p>
+<p>Device Registration and Login</p>
+<p>Manage User Watch Lists
+Payment Info: Payment method, Billing address
+Billing Details: credits available, payment history, associated subscription plans
+applying credit: amount, currency, and notes
+issuing a refund: amount, currency, and notes
+Viewing History
+Recurring Subscription plan
+Web purchase
+applying credit: amount, currency, and notes
+issuing a refund: amount, currency, and notes
+iTunes purchase
+applying credit: amount, currency, and notes
+refunds must be requested by the user directly from Apple
+preferences, etc.
+Social Account
+Viewing basic info: first name, last name, profile URL, email address
+Disconnecting from a social account (if user also has a regular fan (email) account)
+Deactivating and Deleting accounts
+Cascade: delete associated entitlements, etc.</p>
+<p>}
+////</p>
+<p>// === Administrators
+// TODO: Suggest using &quot;Members&quot; instead of using &quot;Users&quot;</p>
+<p>Creating administrator accounts:::
+Only SuperAdmins can create new administrator accounts.</p>
+<p>// image::Admins-AdminAccounts.jpg[details screen, role=&quot;text-left&quot;, width=&quot;80%&quot;,scaledwidth=&quot;50%&quot;]</p>
+<p>Update roles and permissions for an account:::
+Select the text for the (administrator) account that you wish to update.</p>
+<p>Remove roles from an account:::
+. Select the menu:Users[] menu.
+. Select the text of the account that you wish to update.
+. Select the <em>Roles</em> tab.
+. On the Roles tab, select the checkbox (☐) at the beginning of the row
+for any roles that you wish to remove.
+. Select the red Remove Roles button (⛔).
+. On the Remove Roles dialog box, select btn:[CONTINUE].</p>
+<p>Assign additional roles to an account:::
+. On the Roles tab, select btn:[ASSIGN ROLES].
+. On the Assign Roles dialog box, select the plus sign (+) at the left of any
+roles that you wish to add.
+. Select btn:[ASSIGN] at the bottom of the dialog box.</p>
+<ul>
+<li></li>
+</ul>
+<p>// image::Admins-Roles.jpg[details screen,role=&quot;text-left&quot;, width=&quot;80%&quot;,scaledwidth=&quot;50%&quot;]</p>
+<p>// * The Permissions tab displays all current permissions for the selected administrator.
+// +
+// image::Admins-Permissions.jpg[details screen, role=&quot;text-left&quot;, width=&quot;80%&quot;,scaledwidth=&quot;50%&quot;]</p>
+<p>Demoting accounts:::
+If needed, administrator accounts can be demoted to basic user accounts.
+Demotion removes all administrative privileges from the account.
+. Select the checkbox at the beginning of the row for any accounts that you wish to demote.
+. Select the red demote button.
+. Select btn:[DEMOTE] at the bottom of the Demote Administrator dialog box.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::Admins-DemoteUser.jpg[details screen, role=&quot;text-left&quot;, width=&quot;80%&quot;,scaledwidth=&quot;50%&quot;]</p>
+<p>SuperAdmins can restore administrative account privileges.</p>
+<p>////
+{
+Administrator Accounts
+(Suggestion: use the term member rather than user within the UI to refer to
+Admins and members of Roles to avoid confusion with fans.)</p>
+<p>Inviting new Admins via email
+By default, new Admins should belong to an existing group with read only permissions
+Adding/Removing Roles
+Setting Groups
+By default, permissions for new groups should be read only; create, update,
+delete permissions must be explicitly granted
+Viewing Permissions
+Roles
+The Administrators Guide describes how to use the platform  Portal to manage
+accounts, billing plans, video content, and entitlements.</p>
+<p>By default, Portal administrator accounts may be assigned to the following roles:</p>
+<p>(See: Roles, Permissions &amp; Authorizing Resources)
+Administrators
+Defines all admin types and permissions for your installation
+Content Editors
+Asset and category permissions
+Customer Service
+Account permissions: user details read/write, delete users, read and cancel
+subscriptions, refund.
+All entitlement permissions
+Package Managers
+Entitlement permissions on all packages
+Pricing Managers
+Billing plan permissions</p>
+<p>User Managers
+OAM user details read/write, delete users, read policies
+searching and sorting by name, description, number of members
+Members (Users): searching, viewing, and sorting group members by first name,
+last name, and email address
+add/remove members
+Permissions – Roles with Descriptions (Add/Remove view and edit permissions)
+Manage roles
+Add sites
+Export users (members)
+View full secret key
+View partial secret key
+Edit site settlings
+Providers configuration and permissions
+Schema editor (!!!)
+Restrictions
+Signals
+Edit policies and templates
+UI Builder - Edit Layout / CSS /JS
+Edit schema (!!!)
+Identity sync permissions
+comments setup and settings
+Moderation management
+Gamification settings
+Enable/Disable client-side access
+Identities, Syndication, and Usage</p>
+<p>Reports
+Settings (affects all accounts, User and Admin, universally!)
+concurrent streaming limits
+email verification,
+email template, login attempts, lockout time, token TTL, two-factor
+authentication, Password Requirements (strength)
+RESET PASSWORD
+require email verification
+email template
+password reset page URL
+NEW USER REGISTRATION
+email template
+password reset page URL</p>
+<p>}
+////</p>
+<p>=== Roles
+Select menu:Roles[] to view and manage the list of all current administrative
+roles in your installation.</p>
+<p>image::Roles-RoleList.jpg[a the account details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>////
+{
+.Sorting Roles ?
+You can sort the listing by username, email address, first name, or last name
+by electing on the desired column title.
+The search field filters the listing based on data in all four columns.
+}
+////</p>
+<p>Creating a new role:::
+. On the Roles page, select btn:[ADD NEW] at the top of the page.
+. On the Create New Role dialog box, enter a name and description.
+. Select btn:[CREATE] at the bottom of the dialog box.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::Roles-CreateNewRole.jpg[a the account details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>////
+{
+==== Updating a Role
+.Updating Account Details
+To update details for an account:</p>
+<p>. Select the text for the account that you wish to update.
+. On the Account tab, select any field and enter the updated information.
+. Select  btn:[SAVE] at the bottom of the page.
+}
+////</p>
+<p>Deleting roles:::
+. Select the checkbox (☐) at the beginning of the row for any roles
+that you wish to delete.
+. Select the red delete button.
+. Select btn:[CONTINUE] at the bottom of the Delete Role dialog box.</p>
+<ul>
+<li></li>
+</ul>
+<p><em>NOTE:</em>
+The core platform roles cannot be deleted.</p>
+<p>////
+{
+=== Permissions
+Permissions determine which abilities are available to administrators your within
+your installation.</p>
+<p>=== Settings
+}
+////</p>
+<p>// ============================================================================== //
+== STORE
+The STORE section allows administrators to manage products, billing plans,
+asset packages, and other store details.</p>
+<p>=== Products
+Products connect billing plans with asset packages.
+Select menu:Products[] to view and manage the list of products defined in your
+installation.</p>
+<p>Creating a product:::
+. Select menu:Products[] from the left menu column to view the current list of products.
+. On the Product List page, select btn:[ADD NEW].
+. Define the new product:
+..  Enter a new name, short description, and long description in the appropriate fields.
+..  Enter a store product ID for at least one payment method.
+..  Optionally, add key-value pairs to include any custom data for the product.
+..  Under PRICING, select the desired currency and enter the price amounts to
+be sent to each payment processor.
+..  Select an existing Asset Package to add.
+..  Select an existing Billing Plan to add.
+//.. Select the PRODUCTS tab.
+//.. Select the packages that you
+. Select btn:[SAVE].</p>
+<p>Deleting/removing products:::
+. On the Product List page, select the checkbox (☐) at the beginning of
+the row for any products that you wish to delete.
+. Select the red delete button.
+. Select btn:[CONTINUE] at the bottom of the Delete Products dialog box.</p>
+<p>////
+{
+==== Custom Attributes
+...
+}
+////</p>
+<p>=== Billing Plans
+Billing Plans associate a price with a recurring (or non-recurring) billing
+schedule.
+Select menu:Billing_Plans[] to view and manage the list of billing plans
+defined in your installation.</p>
+<p>Creating a billing plan:::
+. Select menu:Billing_Plans[] on the left side to view the billing plans list.
+. On the Billing Plans page, select btn:[ADD NEW] at the top of the page.
+. Define the new billing plan on the DETAILS tab:
+..  Enter a new name in the BILLING PLAN ID field.
+..  Enter a DESCRIPTION for the new billing plan.
+..  Under PRICING, select the desired currency and enter the price amounts to be
+sent to each payment processor.
+..  Select the BILLING TYPE frequency.
+//..    Select the PRODUCTS tab.
+//.. Select the packages that you
+. Select btn:[SAVE].</p>
+<p>////
+{
+=== Billing Plans</p>
+<p>==== Creating a Billing Plan</p>
+<p>===== Details
+The Details tab...</p>
+<p>===== Products
+...</p>
+<p>==== Updating a Billing Plan
+}
+////</p>
+<p>Deleting billing plans:::
+. Select the checkbox (☐) at the beginning of the row for any billing
+plans that you wish to delete.
+. Select the red delete button.
+. Select btn:[CONTINUE] at the bottom of the Delete Billing Plans dialog box.</p>
+<p>=== Asset Packages
+You can group your video assets in the CMS into packages and then designate these
+packages as free or available for purchase.
+Select menu:Asset_Packages[] to view and manage the list of asset packages
+defined in your installation.</p>
+<p>Creating an asset package:::
+. On the Asset Packages page, select btn:[ADD NEW] at the top of the page.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::AssetPackages-AssetPackages.jpg[details screen,width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<ul>
+<li></li>
+</ul>
+<p>. On the Details tab:
+.. Enter a name and description.
+.. Select the blue btn:[+] Whitelist Regions button to add desired regions.
+.. Select the checkbox if this will be a free package.
+.. Select the Assets tab.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::AssetPackages-Details.jpg[details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<ul>
+<li></li>
+</ul>
+<p>. On the Assets tab:
+.. Select btn:[ADD NEW] in the middle of the page.
+.. Select assets from the Add Assets list. ...
+.. Select btn:[ADD].
+.. Select the Products tab.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::AssetPackages-AddRegions.jpg[details screen,width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<ul>
+<li></li>
+</ul>
+<p>. On the Products tab:
+.. Select products from the list based on name, package ID, or billing plan ID. ...
+.. Select the Custom Attributes tab.
+. On the Custom Attributes tab:</p>
+<ul>
+<li></li>
+</ul>
+<p>Enter product details such as league, sport, SKU ID, descriptions, etc.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::AssetPackages-CustomAttributes.jpg[details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<ul>
+<li></li>
+</ul>
+<p>. Select btn:[SAVE] at the bottom of the page.</p>
+<ul>
+<li></li>
+</ul>
+<p>The new asset package will now appear in the list.</p>
+<p>// image::AssetPackages-New.jpg[a the account details screen,width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>Deleting asset packages:::
+. Select the checkbox (☐) at the beginning of the row for any asset
+packages that you wish to delete.
+. Select the red delete button.
+. Select btn:[CONTINUE] at the bottom of the Delete Asset Packages dialog box.</p>
+<p>////
+{
+==== Assets
+...
+}
+////</p>
+<p>// ============================================================================== //
+== CONTENT
+The CONTENT section allows administrators to modify descriptive
+information for your video assets.</p>
+<p>=== Channels
+The menu:Channels[] page allows administrators to view and manage platform content and descriptions.
+//Select menu:Channels[] to view, search, filter, and manage the contents and descriptions of the
+//channels available in your installation.</p>
+<p>image::Channels-Channels.jpg[details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>Applying blackout restrictions to live linear channels:::
+// !!!: Needs updating</p>
+<p>. Select the menu:Channels[] menu item.
+. Select the row of the desired channel.
+. Select the blue btn:[+] button to add blackout regions.
+. Select the checkboxes (<em>☐</em>) at the beginning of the row for any
+regions that you wish to restrict from viewing this channel.
+. Select the btn:[ADD] button. The new blackout regions will now be listed for the channel.
+. Select the btn:[SAVE] button to finish setting the blackout regions.
+// img</p>
+<p>Updating descriptions for live linear channels:::
+//DONE: as of 18-Nov-2018
+In this release, you can change the channel name, change the short name, and add blackout regions.
+All other fields are currently read-only.
+. Select the menu:Channels[]  menu item.
+. Select the row of the desired channel.
+. Optionally, select the <em>NAME</em> field and enter a new channel name.
+. Optionally, select the <em>SHORT NAME</em> field and enter a new short name.
+. Scroll down on the page to view any remaining description fields.
+. Select the btn:[SAVE] button to finish updating the channel descriptions.
+// img</p>
+<p>//column sorting available</p>
+<p>////
+{
+==== Details
+The Details tab...</p>
+<p>==== Programs
+...
+}
+////</p>
+<p>=== Schedule
+The menu:Schedule[] page allows administrators to search, view, and manage<br>
+electronic program guide (EPG) entries that are available within your installation.</p>
+<p>image::Schedule-Programs.jpg[details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>Viewing programs for a live linear channel:::
+. Select the menu:Schedule[] menu item.
+. Optionally, select a desired start date and start time for the program schedule
+by typing or selecting a date and time from calendar field.
+. Select a channel from the <em>Channel</em> field to filter the Program list.</p>
+<ul>
+<li></li>
+</ul>
+<p>You may need to clear any channels that you have previously selected during your session.
+(Channel filter selections persist for the current login session, unless manually changed or cleared.)
+. Optionally, select one or more program types from the <em>Type</em> field to filter the Program list.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::Schedule-Viewing.jpg[details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]
+// todo: add call-outs for steps to screenshot above</p>
+<p>Applying blackout restrictions to scheduled programs:::
+. Select the menu:Schedule[] menu item.
+. Select the scheduled program that you want to restrict.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::sched-1.png[the initial program schedule, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]
+. Select the blue btn:[+] to add blackout regions.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::sched-3.png[the initial program schedule, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]
+. Select the checkboxes (☐) at the beginning of the row for any regions that you wish to
+restrict from viewing the program.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::sched-4.png[the initial program schedule, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]
+. Select the btn:[ADD] button. The new blackout regions will now be listed for the program.
+. Select the btn:[SAVE] button to finish setting the blackout regions.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::sched-6.png[the initial program schedule, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>// Updating program details:
+// Select the row of the desired program.</p>
+<p>=== VOD Catalog
+The menu:VOD_Catalog[] page allows administrators to search, view, and manage
+video on demand (VOD) content available within your installation.</p>
+<p>Playing the video content to confirm access to the correct asset:::
+. Scroll down to the Playback Assets section .
+. Click the play icon (▶) to the left of the DASH PRIMARY URL field.
+. Click the play icon (▶) that appears in the popup media window.</p>
+<p>//!!! add some screen shots/ gifs</p>
+<p>Updating descriptions for VOD content:::
+In this release, you can change the program name, short name, general description,
+and short description for VOD entries.
+All other fields are currently read-only.
+// ?... and add blackout regions. ?
+. Select the menu:VOD_Catalog[] menu item.
+. Select the <em>Search</em> field and enter a character string that you want to find in the VOD Catalog.
+. Optionally, select one or more program types to filter the VOD Catalog list.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::VOD-Update.jpg[details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<ul>
+<li></li>
+</ul>
+<p>. Select the row of the desired VOD program.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::VOD-Catalog.jpg[details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<ul>
+<li></li>
+</ul>
+<p>. To change a name or description, select the desired field and enter the new name or description.</p>
+<ul>
+<li></li>
+</ul>
+<p>Scroll down on the page to view any remaining description fields.</p>
+<ul>
+<li></li>
+</ul>
+<p>. Select the SAVE button to finish updating the show descriptions.</p>
+<ul>
+<li></li>
+</ul>
+<p>image::VOD-save.png[VOD save, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>// !! we will need to add info on how to update</p>
+<p>For Episodes, you can:</p>
+<ul>
+<li>Select the <em>VIEW SHOW DETAILS</em> link.
+** Select the <em>Details</em> tab to view the general show description.
+** Select the <em>Episodes</em> tab to view the list the episodes that are available for each season.</li>
+<li>Select the ** Season # ** field to filter the list on one or more seasons.</li>
+<li>Select one of the listed episodes to view or update the detailed description for that specific episode.</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<p>image::VOD-episodes.png[VOD save, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>For Shows, you can:</p>
+<ul>
+<li>Select the <em>Episodes</em> tab to list the episodes that are available for each season.</li>
+<li>Select the ** Season # ** field to filter the list on one or more seasons.</li>
+<li>Select one of the listed episodes to view or update the detailed description for that specific episode.</li>
+</ul>
+<p>// content descriptions for video on demand (VOD programs).
+// ...</p>
+<p>// To search the VOD Catalog:
+// ...</p>
+<p>// To update a program description:
+// ...</p>
+<p>// === Details
+// The Details tab contains a general description of the entire series.
+// ...</p>
+<p>// === Episodes
+// The Episodes tab lists individual episodes for each show in a series.
+// ...</p>
+<p>=== Live Content
+The menu:Live_Content[] page allows administrators to view and manage
+live sports competitions and other live events accessible from your application.
+//!!! add some screen shots/ gifs
+//!!! complete this section</p>
+<p>// To view scheduled Live Content entries:</p>
+<p>// To add new Live Content:</p>
+<p>// * Team Competitions</p>
+<p>// * Other Sports Competions</p>
+<p>// * Non-sports Live Events</p>
+<p>// To update existing Live Content:</p>
+<p>// To delete Live Content entries:</p>
+<p>// Playing the video content to confirm access to the correct asset:::
+// . Scroll down to the Playback Assets section .
+// . Click the play icon (▶) to the left of the DASH PRIMARY URL field.
+// . Click the play icon (▶) that appears in the popup media window.</p>
+<p>//!!! add some screen shots/ gifs</p>
+<p>// ============================================================================== //
+== PROMOTION
+The PROMOTION section allows for the creation and customization of promotional objects for the platform,
+such as carousels, menus, sliders, and other user interface collections.</p>
+<p>// TODO: Get more examples on how to use collections  (top 3 to 5 uses?)</p>
+<p>=== Collections
+The Collections page allows content curators to create, update, and delete collections
+of items that represent video assets.  The items in a collection typically share some
+similarity such as genre, release dates, director, etc. can be deployed as carousels, menus, buttons,</p>
+<p>// video-on-demand (VOD) initially</p>
+<p>image::Collections-list.jpg[the Collections list screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>// !!!: Finish:
+// !!!: Create, Read, Update++, Revert, Publish, Delete</p>
+<p>// ============================================================================== //</p>
+<p>=== Banners
+The Banners page allows content curators to create, update, and delete items that
+appear in Collections. A banner is a &quot;card&quot; that represents and links to a video asset.
+Banner items may be configured to appear as links, buttons, images, or any combination of these
+elements.</p>
+<p>// !!!! Need to add Layouts, Banners (Cards!), Collections, &amp; Pages to the Glossary</p>
+<p>// !!!! image::Banners-list.jpg[the Banners list screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>// !!!: Finish:
+// !!!: Create, Read, Update++, Revert, Publish, Delete</p>
+<p>// ============================================================================== //
+== CONFIGURATION
+The CONFIGURATION section allows administrators to customize global settings and
+attributes for the platform.</p>
+<p>////
+=== General Settings
+General Settings ...
+Select menu:General_Settings[] to view and adjust ... in your installation.
+}
+////</p>
+<p>=== Regions
+The Regions page allows administrators to create, update, and delete recognized
+geographic regions.</p>
+<p>image::Regions-Regions.jpg[a the account details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]</p>
+<p>Creating a new region:::
+. Select the menu:Regions[] menu item.
+. On the Regions page, select btn:[ADD NEW] to choose a region based on either Locations
+or Coordinates.</p>
+<ul>
+<li>For <em>Coordinates</em>, enter the name, latitude, longitude, radius value, and radius unit
+(kilometers or miles).</li>
+<li>For <em>Locations</em>, enter the country, subregions, cities, and/or postal codes.</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<p>image::Regions-Coordinates.jpg[a the account details screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]
+. Select btn:[SAVE].</p>
+<p>////
+{
+// To create a new region:::
+. On the Create New Region dialog box, enter a name and description.
+}
+////</p>
+<p>Updating a region:::
+. Select the menu:Regions[] menu item.
+. Select the text of the region that you want to update.
+. Optionally, change the name of the region.
+. Optionally, select the btn:[ADD LOCATION] button to add additional named
+locations defined by country, state/province/region, city, and postal code.
+. Select the btn:[ADD] button. The new location(s) will be listed for the current region.
+. Select the btn:[SAVE] button. Locations for the redefined region are now displayed.</p>
+<p>Deleting regions:::
+. Select the checkbox (☐) at the beginning of the row for any regions that you wish to delete.
+. Select the red delete button.
+. Select btn:[CONTINUE] at the bottom of the Delete Regions dialog box.</p>
+<p>// ------------------------------------------------------------------------------------ //</p>
+<p>=== Providers
+The Providers page allows administrators to add and manage content providers, service providers, and their associated<br>
+whitelist regions.</p>
+<p>// !!!: finish!
+////
+Adding a new content provider:::
+. Select the row of the content provider whose regions you wish to modify.
+. Select the blue btn:[+] Whitelist Regions button to add desired regions.
+. On the Add Regions dialog, select the checkboxes for the regions that you want to add.
+. Optionally, select the btn:[ADD LOCATION] button to add additional named
+locations defined by country, state/province/region, city, and postal code.
+. Select the btn:[ADD] button. The new location(s) will be listed for the current region.
+. Select the btn:[SAVE] button. Locations for the redefined region are now displayed.
+////</p>
+<p>Adding a whitelist region:::
+. Select the row of the content provider whose regions you wish to modify.
+. Select the blue btn:[+] Whitelist Regions button to add desired regions.
+. On the Add Regions dialog, select the checkboxes for the regions that you want to add.
+. Optionally, select the btn:[ADD LOCATION] button to add additional named
+locations defined by country, state/province/region, city, and postal code.
+. Select the btn:[ADD] button. The new location(s) will be listed for the current region.
+. Select the btn:[SAVE] button. Locations for the redefined region are now displayed.</p>
+<p>Deleting whitelist regions:::
+. Select the row of the content provider whose regions you wish to modify.
+. Select the trashcan button next to the region that you wish to delete.
+. Select btn:[SAVE] at the bottom of the page to confirm and save your deletion.</p>
+<p>// !!!: TBD!</p>
+<p>=== Custom Attributes
+The Custom Attributes page lists attributes defined for this specific tenant installation.</p>
+<p>Select menu:Custom_Attributes[] to view the list of attributes that have been added to your installation.</p>
+<p>image::Custom-Attributes.jpg[The Custom Attributes screen, width=&quot;80%&quot;, scaledwidth=&quot;50%&quot;]
+////
+=== Content Providers
+Content Providers ...
+Select menu:Content_Providers[] to view and adjust ... in your installation.</p>
+<p>//
+== Administrator Profile
+...</p>
+<p>=== Account
+...</p>
+<p>=== Payment Info
+...</p>
+<p>=== Billing Details
+...</p>
+<p>=== Metrics and Analytics ?</p>
+<p>=== System Issues ?</p>
+<p>// epc:</p>
+<p>EPC: heading hierarchy guidance...
+Gerund: Managing/Working with Asset Packages        {with plural}
+Command: Update an Asset Package                {with singular}
+Process: Workflow for Credit Card HOA Processing
+infinitive: To update an asset package:     {use only when necessary}</p>
+<p>////</p>
+<p>--&gt;</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/docs/guide-content-curation"><span>Content Curation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#accounts">ACCOUNTS</a><ul class="toc-headings"><li><a href="#users">Users</a></li><li><a href="#section-a">Section A</a></li><li><a href="#section-b">Section B</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/iSPgrey.png" alt="iStreamPlanet Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 iStreamPlanet</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0550daa76db9bf70605ab43620282f25',
+                indexName: 'orbis',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"hitsPerPage":10}
+              });
+            </script></body></html>
