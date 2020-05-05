@@ -12,7 +12,7 @@ The _sports_ endpoints allow applications to create and manage sports-related en
 ## Games
 
 
-### 1. Create game
+### Create game
 
 Creates a game entry.
 
@@ -325,7 +325,7 @@ Status: Create game | Code: 0
 
 
 
-### 2. Update game
+### Update game
 
 Updates information for the specified game.
 
@@ -645,7 +645,7 @@ Status: Update game | Code: 0
 
 
 
-### 3. Retrieve game
+### Retrieve game
 
 Retrieves the specified game.
 
@@ -808,7 +808,7 @@ Status: Get game | Code: 0
 
 
 
-### 4. List games
+### List games
 
 Lists all games sorted by start time that match the specified sport, league, team, and other query parameters.
 
@@ -975,7 +975,7 @@ Status: List games | Code: 0
 
 
 
-### 5. Delete game
+### Delete game
 
 Deletes the specified game.
 
@@ -1020,7 +1020,7 @@ URL: {{SportsServer}}/sports/v1/games/{{gameID}}
 
 
 
-### 1. Create league
+### Create league
 
 Creates a sports league.
 
@@ -1132,7 +1132,7 @@ Status: Create league | Code: 0
 
 
 
-### 2. Update league
+### Update league
 
 Updates information for the specified league.
 
@@ -1252,7 +1252,7 @@ Status: Update league | Code: 0
 
 
 
-### 3. Retrieve league
+### Retrieve league
 
 Retrieves content for the specified league.
 
@@ -1342,7 +1342,7 @@ Status: Get league | Code: 0
 
 
 
-### 4. List leagues
+### List leagues
 
 Lists all leagues that match the query specification sorted by name.
 
@@ -1430,7 +1430,7 @@ Status: List leagues | Code: 0
 
 
 
-### 5. Delete league
+### Delete league
 
 Deletes the specified league.
 
@@ -1475,7 +1475,7 @@ URL: {{SportsServer}}/sports/v1/leagues/{{leagueID}}
 
 
 
-### 1. Create player
+### Create player
 
 Creates a player.
 
@@ -1613,7 +1613,7 @@ Status: Create player | Code: 0
 
 
 
-### 2. Update player
+### Update player
 
 Updates information for the specified player.
 
@@ -1759,7 +1759,7 @@ Status: Update player | Code: 0
 
 
 
-### 3. Retrieve player
+### Retrieve player
 
 Retrieves the specified player.
 
@@ -1852,7 +1852,7 @@ Status: Get player | Code: 0
 
 
 
-### 4. List players
+### List players
 
 Lists all players that match the query specification sorted by player name.
 
@@ -1897,7 +1897,7 @@ URL: {{SportsServer}}/sports/v1/players/
 
 
 
-### 5. Delete player
+### Delete player
 
 Deletes the specified player.
 
@@ -1942,7 +1942,7 @@ URL: {{SportsServer}}/sports/v1/players/{{playerID}}
 
 
 
-### 1. Create score
+### Create score
 
 Creates a game score.
 
@@ -2054,7 +2054,7 @@ Status: Create score | Code: 0
 
 
 
-### 2. Update score
+### Update score
 
 Updates information for the specified game score.
 
@@ -2174,7 +2174,7 @@ Status: Update score | Code: 0
 
 
 
-### 3. Retrieve score
+### Retrieve score
 
 Retrieves the specified game score.
 
@@ -2253,7 +2253,7 @@ Status: Get score | Code: 0
 
 
 
-### 4. List scores
+### List scores
 
 Lists all scores for the specified game. If no GameID is specified, scores are listed without any particular context.
 
@@ -2335,7 +2335,7 @@ Status: List scores | Code: 0
 
 
 
-### 5. Delete score
+### Delete score
 
 Deletes the specified score.
 
@@ -2379,7 +2379,7 @@ URL: {{SportsServer}}/sports/v1/scores/{{scoreID}}
 
 ## Sport Types
 
-### 1. Create sport
+### Create sport
 
 Creates a sport.
 
@@ -2488,7 +2488,7 @@ Status: Create sport | Code: 0
 
 
 
-### 2. Update sport
+### Update sport
 
 Updates information for the specified sport.
 
@@ -2605,7 +2605,7 @@ Status: Update sport | Code: 0
 
 
 
-### 3. Retrieve sport
+### Retrieve sport
 
 Retrieves information for the specified sport.
 
@@ -2693,7 +2693,7 @@ Status: Get sport | Code: 0
 
 
 
-### 4. List sports
+### List sports
 
 Lists all sports that match the query specification sorted by name.
 
@@ -2776,7 +2776,7 @@ Status: List sports | Code: 0
 
 
 
-### 5. Delete sport
+### Delete sport
 
 Deletes the specified sport.
 
@@ -2819,7 +2819,7 @@ URL: {{SportsServer}}/sports/v1/sports/{{sportID}}
 
 ## Teams
 
-### 1. Create team
+### Create team
 
 Creates a sports team.
 
@@ -2962,7 +2962,7 @@ Status: Create team | Code: 0
 
 
 
-### 2. Update team
+### Update team
 
 Updates information for the specified team.
 
@@ -3090,7 +3090,7 @@ Status: Update team | Code: 0
 
 
 
-### 3. Retrieve team
+### Retrieve team
 
 Retrieves content for the specified team.
 
@@ -3178,7 +3178,7 @@ Status: Get team | Code: 0
 
 
 
-### 4. List teams
+### List teams
 
 Lists all teams matching the query specification.
 
@@ -3222,7 +3222,7 @@ URL: {{SportsServer}}/sports/v1/teams
 
 
 
-### 5. Delete team
+### Delete team
 
 Deletes the specified team.
 

@@ -2142,7 +2142,7 @@ Status: Get recommendations | Code: 200
 
 
 
-### 1. Creates or updates an asset marker
+### Creates or updates an asset marker
 
 
 In the body custom_markers are supposed to be exactly the text of the markers file you would like to receive but escaped to a string like the example.
@@ -2231,7 +2231,7 @@ Status: User searches published assets by multiple ids (logical OR) | Code: 200
 
 
 
-### 2. Delete custom asset markers
+### Delete custom asset markers
 
 
 Deletes custom markers for the specified published asset IDs.
@@ -2288,7 +2288,7 @@ Status: User searches published assets by multiple ids (logical OR) | Code: 200
 
 
 
-### 3. Retrieve asset markers
+### Retrieve asset markers
 
 
 Retrieves both custom markers and internal VOD markers for the published asset specified in the query.
@@ -2359,7 +2359,7 @@ Status: Retrieve asset markers | Code: 200
 
 
 
-### 1. Create asset
+### Create asset
 
 
 Creates an asset resource.
@@ -2560,7 +2560,7 @@ Status: Create asset | Code: 200
 
 
 
-### 2. Update asset
+### Update asset
 
 
 Updates the specified asset resource.
@@ -2705,7 +2705,7 @@ URL: {{OCMServer}}/ocm/v2/assets/{{assetID}}
 
 
 
-### 3. Retrieve an asset
+### Retrieve an asset
 
 
 Returns descriptive metadata associated with the specified video asset.
@@ -2821,7 +2821,7 @@ Status: Retrieve a single asset | Code: 200
 
 
 
-### 4. Retrieve an asset by provider asset  ID
+### Retrieve an asset by provider asset  ID
 
 
 <!-- Retrieve an asset -->
@@ -2951,7 +2951,7 @@ Status: Retrieve a single asset | Code: 200
 
 
 
-### 5. Delete asset
+### Delete asset
 
 
 Deletes the specified asset.
@@ -2998,7 +2998,7 @@ URL: {{OCMServer}}/ocm/v2/assets/{{assetID}}
 
 
 
-### 6. Patch asset
+### Patch asset
 
 
 Patches the specified asset resource.
@@ -3248,7 +3248,7 @@ Status: Example 3 | Code: 200
 
 
 
-### 1. Create banner
+### Create banner
 
 
 Creates a content banner "card" for use in collections.
@@ -3353,7 +3353,7 @@ URL: {{OCMServer}}/ocm/v2/banners
 
 
 
-### 2. Update banner
+### Update banner
 
 
 Updates the specified existing banner.
@@ -3462,7 +3462,7 @@ URL: {{OCMServer}}/ocm/v2/banners/{{bannerID}}
 
 
 
-### 3. Retrieve banner
+### Retrieve banner
 
 
 Gets the specified content banner.
@@ -3569,7 +3569,7 @@ Status: Get genre | Code: 200
 
 
 
-### 4. List all banners
+### List all banners
 
 
 Gets the list of available content banners.
@@ -3669,7 +3669,7 @@ Status: Get genre | Code: 200
 
 
 
-### 5. Delete banner
+### Delete banner
 
 
 Deletes the specified existing banner.
@@ -3730,7 +3730,7 @@ URL: {{OCMServer}}/ocm/v2/banners/{{bannerID}}
 
 
 
-### 6. Patch banner
+### Patch banner
 
 
 Patches the specified banner resource.
@@ -3864,7 +3864,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Retrieve entity resource information
+### Retrieve entity resource information
 
 
 Returns descriptive information about the specified resource.
@@ -3989,7 +3989,7 @@ Status: Returns information about any type of resource, including show, season, 
 
 
 
-### 2. List Entities
+### List Entities
 
 
 Returns descriptive metadata about the specified resources.
@@ -4137,7 +4137,7 @@ Status: Returns information about any type of resource, including show, season, 
 
 
 
-### 3. Link entities
+### Link entities
 
 
 Creates a link between the listed entities. The entities may be of any type including shows, seasons, episodes, vod/movies, teams, etc.
@@ -4281,7 +4281,7 @@ Status: Returns information about any type of resource, including show, season, 
 
 
 
-### 1. Create EPG competition
+### Create EPG competition
 
 
 Creates a scheduled EPG competition entry.
@@ -4398,7 +4398,7 @@ URL: {{OCMServer}}/ocm/v2/epg/competitions
 
 
 
-### 2. Update scheduled competition
+### Update scheduled competition
 
 
 Updates the EPG entry for the specified competition.
@@ -4536,7 +4536,7 @@ URL: {{OCMServer}}/ocm/v2/epg/competitions/{{id}}
 
 
 
-### 3. Retrieve scheduled game from the EPG
+### Retrieve scheduled game from the EPG
 
 
 Retrieves the specified scheduled game from the EPG.
@@ -4699,7 +4699,7 @@ Status: Retrieve scheduled game from the EPG | Code: 200
 
 
 
-### 4. Retrieve scheduled game from the EPG with assets
+### Retrieve scheduled game from the EPG with assets
 
 
 Retrieves the specified scheduled game (assets included) from the EPG.
@@ -4863,7 +4863,7 @@ Status: Retrieve scheduled game from the EPG | Code: 200
 
 
 
-### 5. Delete EPG competition
+### Delete EPG competition
 
 
 Deletes the specified EPG competition. 
@@ -4905,7 +4905,7 @@ URL: {{OCMServer}}/ocm/v2/epg/competitions/{{id}}
 
 
 
-### 6. Patch EPG competition
+### Patch EPG competition
 
 
 Patches the specified EPG competition resource.
@@ -5128,7 +5128,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create EPG episode
+### Create EPG episode
 
 
 Creates a scheduled EPG episode entry.
@@ -5245,7 +5245,7 @@ Status: Create EPG episode | Code: 200
 
 
 
-### 2. Update EPG episode
+### Update EPG episode
 
 
 Updates the specified EPG episode entry.
@@ -5406,7 +5406,7 @@ Status: Retrieve scheduled show episode from the EPG | Code: 200
 
 
 
-### 3. Retrieve scheduled show episode from the EPG
+### Retrieve scheduled show episode from the EPG
 
 
 Retrieves the specified scheduled show from the EPG.
@@ -5497,7 +5497,7 @@ URL: {{OCMServer}}/ocm/v2/epg/episodes/fe11bed15ccb91e66b981c6faf404a44
 
 
 
-### 4. Retrieve scheduled show episode from the EPG with assets
+### Retrieve scheduled show episode from the EPG with assets
 
 
 Retrieves the specified scheduled show (assets included) from the EPG.
@@ -5640,7 +5640,7 @@ Status: Retrieve scheduled show episode from the EPG | Code: 200
 
 
 
-### 5. Delete EPG episode
+### Delete EPG episode
 
 
 Deletes the specified EPG episode. 
@@ -5682,7 +5682,7 @@ URL: {{OCMServer}}/ocm/v2/epg/episodes/{{id}}
 
 
 
-### 6. Patch EPG episode
+### Patch EPG episode
 
 
 Patches the specified EPG episode resource.
@@ -5896,7 +5896,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create EPG event
+### Create EPG event
 
 
 Creates a scheduled EPG event entry.
@@ -5997,7 +5997,7 @@ URL: {{OCMServer}}/ocm/v2/epg/events
 
 
 
-### 2. Update scheduled event
+### Update scheduled event
 
 
 Updates the EPG entry for the specified scheduled event.
@@ -6115,7 +6115,7 @@ Status: Retrieve scheduled event from the EPG | Code: 200
 
 
 
-### 3. Retrieve scheduled event from the EPG
+### Retrieve scheduled event from the EPG
 
 
 Retrieves the specified scheduled event from the EPG.
@@ -6204,7 +6204,7 @@ Status: Retrieve scheduled event from the EPG | Code: 200
 
 
 
-### 4. Retrieve scheduled event from the EPG with assets
+### Retrieve scheduled event from the EPG with assets
 
 
 Retrieves the specified scheduled event (assets included) from the EPG.
@@ -6294,7 +6294,7 @@ Status: Retrieve scheduled event from the EPG | Code: 200
 
 
 
-### 5. Delete EPG event
+### Delete EPG event
 
 
 Deletes the specified EPG event entry. 
@@ -6336,7 +6336,7 @@ URL: {{OCMServer}}/ocm/v2/epg/events/{{id}}
 
 
 
-### 6. Patch EPG event
+### Patch EPG event
 
 
 Patches the specified EPG event resource.
@@ -6521,7 +6521,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create EPG movie
+### Create EPG movie
 
 
 Creates a movie entry in the electronic program guide (EPG) for a station.
@@ -6744,7 +6744,7 @@ Status: Retrieve scheduled movie from the EPG | Code: 200
 
 
 
-### 2. Update EPG movie
+### Update EPG movie
 
 
 Updates descriptive information associated with the specified EPG movie entry.
@@ -6967,7 +6967,7 @@ Status: Retrieve scheduled movie from the EPG | Code: 200
 
 
 
-### 3. Retrieve scheduled movie from the EPG
+### Retrieve scheduled movie from the EPG
 
 
 Returns the descriptive information associated with the specified EPG movie.
@@ -7131,7 +7131,7 @@ Status: Retrieve scheduled movie from the EPG | Code: 200
 
 
 
-### 4. Retrieve scheduled movie from the EPG with assets
+### Retrieve scheduled movie from the EPG with assets
 
 
 Retrieves the specified scheduled movie (assets included) from the EPG.
@@ -7289,7 +7289,7 @@ Status: Retrieve scheduled movie from the EPG | Code: 200
 
 
 
-### 5. Delete EPG movie
+### Delete EPG movie
 
 
 Deletes the specified EPG movie entry. 
@@ -7331,7 +7331,7 @@ URL: {{OCMServer}}/ocm/v2/epg/movies/{{id}}
 
 
 
-### 6. Patch EPG movie
+### Patch EPG movie
 
 
 Patches the specified EPG movie resource.
@@ -7539,7 +7539,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create station
+### Create station
 
 
 Creates an EPG schedule entry.
@@ -7628,7 +7628,7 @@ URL: {{OCMServer}}/ocm/v2/epg/stations/
 
 
 
-### 2. Update station
+### Update station
 
 
 Updates an EPG schedule entry.
@@ -7728,7 +7728,7 @@ URL: {{OCMServer}}/ocm/v2/epg/stations/{{stationID}}
 
 
 
-### 3. Retrieve station
+### Retrieve station
 
 
 Returns information about the specified station.
@@ -7826,7 +7826,7 @@ Status: Returns information about one station | Code: 200
 
 
 
-### 4. List stations
+### List stations
 
 
 Returns a paged list of stations.  
@@ -8189,7 +8189,7 @@ Status: Returns a list of stations | Code: 200
 
 
 
-### 5. Delete station and associated schedules
+### Delete station and associated schedules
 
 
 Deletes the specified station and its associated schedules. 
@@ -8241,7 +8241,7 @@ URL: {{OCMServer}}/ocm/v2/epg/stations/{{stationID}}
 
 
 
-### 6. Patch station
+### Patch station
 
 
 Patches the specified station resource.
@@ -8404,7 +8404,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create EPG team competition
+### Create EPG team competition
 
 
 Creates a team competition entry in the EPG schedule.
@@ -8528,7 +8528,7 @@ URL: {{OCMServer}}/ocm/v2/epg/teamCompetitions
 
 
 
-### 2. Update scheduled team competition
+### Update scheduled team competition
 
 
 Updates the EPG entry for the specified team competition.
@@ -8655,7 +8655,7 @@ URL: {{OCMServer}}/ocm/v2/epg/teamCompetitions/{{id}}
 
 
 
-### 3. Retrieve scheduled team game from the EPG
+### Retrieve scheduled team game from the EPG
 
 
 Retrieves the EPG entry for the specified team competition.
@@ -8820,7 +8820,7 @@ Status: Retrieve scheduled team game from the EPG | Code: 200
 
 
 
-### 4. Delete EPG team competition
+### Delete EPG team competition
 
 
 Deletes the specified EPG team competition. 
@@ -8862,7 +8862,7 @@ URL: {{OCMServer}}/ocm/v2/epg/teamCompetitions/{{id}}
 
 
 
-### 5. Patch EPG team competition
+### Patch EPG team competition
 
 
 Patches the specified EPG team competition resource.
@@ -9084,7 +9084,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. List genres
+### List genres
 
 
 Lists available genres for shows and channels.
@@ -9376,7 +9376,7 @@ Status: List genres | Code: 200
 
 
 
-### 2. Retrieve genre
+### Retrieve genre
 
 
 Returns the specified genre.
@@ -9492,7 +9492,7 @@ Status: Get genre | Code: 200
 
 
 
-### 1. Upload a new image
+### Upload a new image
 
 
 Uploads an image file.
@@ -9562,7 +9562,7 @@ URL: {{OCMServer}}/ocm/v2/images
 
 
 
-### 2. Delete images
+### Delete images
 
 
 Deletes the specified image files.
@@ -9647,7 +9647,7 @@ URL: {{OCMServer}}/ocm/v2/images
 
 
 
-### 1. Create live competition
+### Create live competition
 
 
 Create a live competition (a game that is not scheduled on a channel or available as a VOD).
@@ -9723,7 +9723,7 @@ URL: {{OCMServer}}/ocm/v2/live/competitions
 
 
 
-### 2. Update live competition
+### Update live competition
 
 
 Updates the EPG entry for a live competition (a game that is not scheduled on a channel or available as a VOD).
@@ -9867,7 +9867,7 @@ URL: {{OCMServer}}/ocm/v2/live/competitions/{{id}}
 
 
 
-### 3. Retrieve live competition
+### Retrieve live competition
 
 
 Retrieves the specified live competition (a game that is not scheduled on a channel or available as a VOD).
@@ -10046,7 +10046,7 @@ Status: Retrieve scheduled game from the EPG | Code: 200
 
 
 
-### 4. Delete live competition
+### Delete live competition
 
 
 Removes a live competition (a game that is not scheduled on a channel or available as a VOD) from the CMS.
@@ -10116,7 +10116,7 @@ Status: Retrieve scheduled game from the EPG | Code: 200
 
 
 
-### 5. Patch live competition
+### Patch live competition
 
 
 Patches the specified LIVE competition resource.
@@ -10324,7 +10324,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Retrieve live event
+### Retrieve live event
 
 
 Get a live event (an event that is not scheduled on a channel or available as a VOD).
@@ -10403,7 +10403,7 @@ Status: Retrieve scheduled event from the EPG | Code: 200
 
 
 
-### 2. Create live event
+### Create live event
 
 
 Create a live event (an event that is not scheduled on a channel or available as a VOD).
@@ -10482,7 +10482,7 @@ Status: Retrieve scheduled event from the EPG | Code: 200
 
 
 
-### 3. Update live event
+### Update live event
 
 
 Update a live event (an event that is not scheduled on a channel or available as a VOD).
@@ -10562,7 +10562,7 @@ Status: Retrieve scheduled event from the EPG | Code: 200
 
 
 
-### 4. Delete live event
+### Delete live event
 
 
 Removes a live event (an event that is not scheduled on a channel or available as a VOD) from the CMS.
@@ -10680,7 +10680,7 @@ Status: Retrieve scheduled game from the EPG | Code: 200
 
 
 
-### 5. Patch live event
+### Patch live event
 
 
 Patches the specified LIVE event resource.
@@ -10865,7 +10865,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create live team competition
+### Create live team competition
 
 
 Creates an EPG entry for a live team game (a game that is not scheduled on a channel or available as a VOD).
@@ -10991,7 +10991,7 @@ URL: {{OCMServer}}/ocm/v2/live/teamCompetitions
 
 
 
-### 2. Update live team competition
+### Update live team competition
 
 
 Updates the EPG entry for a live team competition (a game that is not scheduled on a channel or available as a VOD).
@@ -11124,7 +11124,7 @@ URL: {{OCMServer}}/ocm/v2/live/teamCompetitions/{{id}}
 
 
 
-### 3. Retrieve live team competition
+### Retrieve live team competition
 
 
 Retrieves the specified live team game (a game that is not scheduled on a channel or available as a VOD).
@@ -11250,7 +11250,7 @@ Status: Retrieve scheduled team game from the EPG | Code: 200
 
 
 
-### 4. Delete live team competition
+### Delete live team competition
 
 
 Removes a live team competition (a game that is not scheduled on a channel or available as a VOD) from the CMS.
@@ -11370,7 +11370,7 @@ Status: Retrieve scheduled game from the EPG | Code: 200
 
 
 
-### 5. Patch live team competition
+### Patch live team competition
 
 
 Patches the specified LIVE team competition resource.
@@ -11586,7 +11586,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Retrieve page
+### Retrieve page
 
 
 Retrieves the specified carousel page. Each page contains a set of sections. Each section has a set of blocks.<br>
@@ -11629,7 +11629,7 @@ URL: {{OCMServer}}/ocm/v2/pages/{{pageid}}
 
 
 
-### 2. Create/Update page
+### Create/Update page
 
 
 Creates or updates a page to fill the referenced UI. Each page contains a set of sections. Each section has a set of blocks.<br>
@@ -11671,7 +11671,7 @@ URL: {{OCMServer}}/ocm/v2/pages/config
 
 
 
-### 3. Delete page
+### Delete page
 
 
 Deletes a page (and its sections and blocks) in the referenced UI. 
@@ -11716,7 +11716,7 @@ URL: {{OCMServer}}/ocm/v2/pages/config/TestPage
 
 
 
-### 4. Retrieve a section of a page
+### Retrieve a section of a page
 
 
 Retrieves the specified section of a carousel page to fill the referenced UI. Each section may be built by one or more blocks.
@@ -11760,7 +11760,7 @@ URL: {{OCMServer}}/ocm/v2/pages/{{pageid}}/sections/{{sectionid}}
 
 
 
-### 5. Create/Update page section
+### Create/Update page section
 
 
 Creates or updates a section of a page to fill the referenced UI. Each section may be built by one or more blocks.
@@ -11803,7 +11803,7 @@ URL: {{OCMServer}}/ocm/v2/pages/TestPage/sections/config
 
 
 
-### 6. Delete page section
+### Delete page section
 
 
 Deletes a section of a page in the referenced UI. 
@@ -11852,7 +11852,7 @@ URL: {{OCMServer}}/ocm/v2/pages/TestPage/sections/config/TestSectionOne
 
 
 
-### 1. Publish a resource
+### Publish a resource
 
 
 Publishes a resource by specifying the date range during which it is available.
@@ -11911,7 +11911,7 @@ URL: {{OCMServer}}/ocm/v2/publish/{{id}}
 
 
 
-### 2. Unpublish a resource
+### Unpublish a resource
 
 
 Unpublishes the specified video resource, making it immediately unavailable to users.
@@ -11950,7 +11950,7 @@ URL: {{OCMServer}}/ocm/v2/unpublish/{{id}}
 
 
 
-### 3. Apply draft to resource
+### Apply draft to resource
 
 
 Applies any draft changes to the specified resource. This action updates the resource and makes the changes visible to users.
@@ -11997,7 +11997,7 @@ URL: {{OCMServer}}/ocm/v2/publish/{{id}}
 
 
 
-### 1. List scheduled content
+### List scheduled content
 
 
 Returns a list of scheduled content as specified by the query parameters.  The events are grouped by stationID and sorted by startTime in ascending order.
@@ -12625,7 +12625,7 @@ Status: Returns a list of scheduled content | Code: 200
 
 
 
-### 2. Black out programs
+### Black out programs
 
 
 Excludes targeted regions from viewing the specified EPG programs.
@@ -12690,7 +12690,7 @@ Status: Create EPG episode | Code: 200
 
 
 
-### 3. Audit scheduled content
+### Audit scheduled content
 
 
 Returns a list of all missing scheduled content. The results are grouped by station and sorted by station name in ascending order.
@@ -13306,7 +13306,7 @@ Status: Returns a list of scheduled content | Code: 200
 
 
 
-### 4. Audit scheduled content for one station
+### Audit scheduled content for one station
 
 
 Returns a list of missing scheduled content for the specified station.
@@ -13930,7 +13930,7 @@ Status: Returns a list of scheduled content | Code: 200
 
 
 
-### 1. List matching content
+### List matching content
 
 
 Returns any resources matching the provided query string.
@@ -15036,7 +15036,7 @@ Status: Returns a list of matching content | Code: 200
 
 
 
-### 2. List matching stations
+### List matching stations
 
 
 Returns any station resources matching the provided query string.
@@ -15225,7 +15225,7 @@ Status: Returns a list of matching stations | Code: 200
 
 
 
-### 3. List resources by matching genreIDs
+### List resources by matching genreIDs
 
 
 Returns any resources that match all of the specified genreIDs. All query parameters are optional unless otherwise indicated.
@@ -15401,7 +15401,7 @@ Status: Resources matching genreIDs in Portuguese | Code: 200
 
 
 
-### 1. Create a season
+### Create a season
 
 
 Creates a new season for the specified show ID.
@@ -15824,7 +15824,7 @@ Status: Get a single season | Code: 200
 
 
 
-### 2. Update a season
+### Update a season
 
 
 Updates the specified existing season entry for a show.
@@ -16248,7 +16248,7 @@ Status: Get a single season | Code: 200
 
 
 
-### 3. Retrieve a season
+### Retrieve a season
 
 
 Returns information for the specified season.
@@ -16386,7 +16386,7 @@ Status: Get a single season | Code: 200
 
 
 
-### 4. Patch a season
+### Patch a season
 
 
 Patches the specified EPG competition resource.
@@ -16536,7 +16536,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Get serviceProviders list
+### Get serviceProviders list
 
 
 
@@ -16613,7 +16613,7 @@ Status: Retrieve team game from the on-demand catalog | Code: 200
 
 
 
-### 2. Get serviceProviders by ID *
+### Get serviceProviders by ID *
 
 
 
@@ -16635,7 +16635,7 @@ URL: {{OCMServer}}/ocm/v2/serviceProviders/{{id}}
 
 
 
-### 3. Create serviceProviders
+### Create serviceProviders
 
 
 
@@ -16674,7 +16674,7 @@ URL: {{OCMServer}}/ocm/v2/serviceProviders/
 
 
 
-### 4. Delete serviceProviders
+### Delete serviceProviders
 
 
 Deletes the serviceProviders for the specified IDs. 
@@ -16715,7 +16715,7 @@ URL: {{OCMServer}}/ocm/v2/serviceProviders/{{id}}
 
 
 
-### 5. Update serviceProviders by ID *
+### Update serviceProviders by ID *
 
 
 
@@ -16755,7 +16755,7 @@ URL: {{OCMServer}}/ocm/v2/serviceProviders/{{id}}
 
 
 
-### 6. Patch service provider
+### Patch service provider
 
 
 Patches the specified service provider resource.
@@ -16857,7 +16857,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 7. Get serviceProviderCategories list
+### Get serviceProviderCategories list
 
 
 
@@ -16934,7 +16934,7 @@ Status: Retrieve team game from the on-demand catalog | Code: 200
 
 
 
-### 8. Get serviceProviderCategories by ID
+### Get serviceProviderCategories by ID
 
 
 
@@ -16956,7 +16956,7 @@ URL: {{OCMServer}}/ocm/v2/serviceProviderCategories/19bd58e742d96b72ac6c36a3e909
 
 
 
-### 9. Create serviceProviderCategories
+### Create serviceProviderCategories
 
 
 
@@ -16995,7 +16995,7 @@ URL: {{OCMServer}}/ocm/v2/serviceProviderCategories/
 
 
 
-### 10. Update serviceProviderCategories by ID
+### Update serviceProviderCategories by ID
 
 
 
@@ -17035,7 +17035,7 @@ URL: {{OCMServer}}/ocm/v2/serviceProviderCategories/c8f4eedefecb5edcab9516665242
 
 
 
-### 11. Delete serviceProviderCategories
+### Delete serviceProviderCategories
 
 
 Deletes the serviceProviderCategories for the specified IDs. 
@@ -17076,7 +17076,7 @@ URL: {{OCMServer}}/ocm/v2/serviceProviderCategories/19bd58e742d96b72ac6c36a3e909
 
 
 
-### 12. Patch service provider category
+### Patch service provider category
 
 
 Patches the specified service provider category resource.
@@ -17178,7 +17178,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 13. Retrieve whitelisted resources
+### Retrieve whitelisted resources
 
 
 Retrieves the list of existing resources with defined whitelisted regions.
@@ -17232,7 +17232,7 @@ URL: {{OCMServer}}/ocm/v2/whitelisted
 
 
 
-### 14. Create new whitelisted resource
+### Create new whitelisted resource
 
 
 Creates a new whitelisted resource for the specified regions.
@@ -17314,7 +17314,7 @@ URL: {{OCMServer}}/ocm/v2/whitelisted
 
 
 
-### 15. Update whitelisted resource
+### Update whitelisted resource
 
 
 Updates the specified whitelisted resource with the indicated regions and service provider IDs.
@@ -17523,7 +17523,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create a show
+### Create a show
 
 
 Creates a new EPG show entry.
@@ -17685,7 +17685,7 @@ Status: Get a single show | Code: 200
 
 
 
-### 2. Update a show
+### Update a show
 
 
 Updates the specified EPG show entry.
@@ -17846,7 +17846,7 @@ Status: Get a single show | Code: 200
 
 
 
-### 3. Retrieve a show
+### Retrieve a show
 
 
 Returns information for the specified show.
@@ -18026,7 +18026,7 @@ Status: Get a single show | Code: 200
 
 
 
-### 4. Patch a show
+### Patch a show
 
 
 Patches the specified show resource.
@@ -18238,7 +18238,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. List all custom attributes
+### List all custom attributes
 
 
 Lists all provisioned custom attributes for CMS resources in the tenant's environment.
@@ -18327,7 +18327,7 @@ Status: Retrieve the customAttributes validation schema | Code: 200
 
 
 
-### 1. List VOD movies and episodes to update
+### List VOD movies and episodes to update
 
 
 Returns all VOD/episode and VOD/movie resources that need metadata updates.
@@ -18467,7 +18467,7 @@ URL: {{OCMServer}}/ocm/v2/vod/
 
 
 
-### 1. Create VOD Competition
+### Create VOD Competition
 
 
 Creates a game competition entry in the on-demand catalog.
@@ -18538,7 +18538,7 @@ URL: {{OCMServer}}/ocm/v2/vod/competitions
 
 
 
-### 2. Update VOD Competition
+### Update VOD Competition
 
 
 Updates a game competition entry in the on-demand catalog.
@@ -18627,7 +18627,7 @@ URL: {{OCMServer}}/ocm/v2/vod/competitions/{{competitionID}}
 
 
 
-### 3. Retrieve game from the on-demand catalog
+### Retrieve game from the on-demand catalog
 
 
 Retrieves the specified game from the on-demand catalog.
@@ -18732,7 +18732,7 @@ Status: Retrieve game from the on-demand catalog | Code: 200
 
 
 
-### 4. Delete VOD competition
+### Delete VOD competition
 
 
 Deletes the specified VOD competition.
@@ -18773,7 +18773,7 @@ URL: {{OCMServer}}/ocm/v2/vod/competitions/{{competitionID}}
 
 
 
-### 5. Patch VOD competition
+### Patch VOD competition
 
 
 Patches the specified VOD competition resource.
@@ -18983,7 +18983,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create VOD episode
+### Create VOD episode
 
 
 Creates a show episode entry in the on-demand catalog.
@@ -19109,7 +19109,7 @@ Status: Create vod episode | Code: 200
 
 
 
-### 2. Update VOD episode
+### Update VOD episode
 
 
 Updates a show episode description in the on-demand catalog.
@@ -19246,7 +19246,7 @@ Status: Update vod episode | Code: 200
 
 
 
-### 3. Retrieve show episode from the on-demand catalog
+### Retrieve show episode from the on-demand catalog
 
 
 Retrieves the specified episode from the on-demand catalog.
@@ -19414,7 +19414,7 @@ Status: Retrieve show episode from the on-demand catalog | Code: 200
 
 
 
-### 4. Delete VOD episode
+### Delete VOD episode
 
 
 Deletes the specified VOD episode. 
@@ -19456,7 +19456,7 @@ URL: {{OCMServer}}/ocm/v2/vod/episodes/892116d03352a1b85a5cdbc21f932b4e
 
 
 
-### 5. Patch VOD episode
+### Patch VOD episode
 
 
 Patches the specified VOD episode resource.
@@ -19682,7 +19682,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create VOD event
+### Create VOD event
 
 
 Creates an event entry in the on-demand catalog.
@@ -19768,7 +19768,7 @@ URL: {{OCMServer}}/ocm/v2/vod/events
 
 
 
-### 2. Update VOD event
+### Update VOD event
 
 
 Updates an event description in the on-demand catalog.
@@ -19858,7 +19858,7 @@ URL: {{OCMServer}}/ocm/v2/vod/events/{{eventID}}
 
 
 
-### 3. Retrieve event from the on-demand catalog
+### Retrieve event from the on-demand catalog
 
 
 Retrieves the specified event from the on-demand catalog.
@@ -19897,7 +19897,7 @@ URL: {{OCMServer}}/ocm/v2/vod/events/00f0c2a2-36bd-411a-b8ba-f324e156e9cb
 
 
 
-### 4. Delete VOD event
+### Delete VOD event
 
 
 Deletes the specified VOD event. 
@@ -19940,7 +19940,7 @@ URL: {{OCMServer}}/ocm/v2/vod/events/{{eventID}}
 
 
 
-### 5. Patch VOD event
+### Patch VOD event
 
 
 Patches the specified VOD event resource.
@@ -20114,7 +20114,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create VOD movie
+### Create VOD movie
 
 
 Creates a movie entry in the on-demand catalog.
@@ -20284,7 +20284,7 @@ URL: {{OCMServer}}/ocm/v2/vod/movies
 
 
 
-### 2. Update VOD movie
+### Update VOD movie
 
 
 Updates the specified content associated with the target movie from the on-demand catalog.
@@ -20457,7 +20457,7 @@ URL: {{OCMServer}}/ocm/v2/vod/movies/{{id}}
 
 
 
-### 3. Retrieve movie from the on-demand catalog
+### Retrieve movie from the on-demand catalog
 
 
 Returns the information associated with the specified movie from the on-demand catalog.
@@ -20662,7 +20662,7 @@ Status: Retrieve movie from the on-demand catalog | Code: 200
 
 
 
-### 4. Delete VOD movie
+### Delete VOD movie
 
 
 Deletes the specified VOD movie. 
@@ -20703,7 +20703,7 @@ URL: {{OCMServer}}/ocm/v2/vod/movies/{{movieID}}
 
 
 
-### 5. Patch VOD movie
+### Patch VOD movie
 
 
 Patches the specified VOD movie resource.
@@ -20921,7 +20921,7 @@ Status: Example 1 | Code: 200
 
 
 
-### 1. Create VOD Team Competition
+### Create VOD Team Competition
 
 
 Creates a schedule entry for a VOD team competition.
@@ -21048,7 +21048,7 @@ URL: {{OCMServer}}/ocm/v2/vod/teamCompetitions
 
 
 
-### 2. Update VOD Team Competition
+### Update VOD Team Competition
 
 
 Updates a schedule entry for a VOD team competition.
@@ -21134,7 +21134,7 @@ URL: {{OCMServer}}/ocm/v2/vod/teamCompetitions/{{teamCompetitionID}}
 
 
 
-### 3. Retrieve team game from the on-demand catalog
+### Retrieve team game from the on-demand catalog
 
 
 Retrieves the specified team game from the on-demand catalog.
@@ -21199,7 +21199,7 @@ Status: Retrieve team game from the on-demand catalog | Code: 200
 
 
 
-### 4. Delete VOD team competition
+### Delete VOD team competition
 
 
 Deletes the specified VOD team competition. 
@@ -21240,7 +21240,7 @@ URL: {{OCMServer}}/ocm/v2/vod/teamCompetitions/62c3acf6-773b-4c1b-b114-f0310f2d1
 
 
 
-### 5. Patch VOD team competition
+### Patch VOD team competition
 
 
 Patches the specified VOD team competition resource.
