@@ -17090,11 +17090,7 @@ Top level object fields must either be completely specified or null, if allowed,
 
 <br>
 
-<!--
-The body of a PATCH API request is a JSON merge patch document. A JSON merge patch document specifies changes to be made to a target resource using a syntax that closely resembles the resource being modified. 
 
-A JSON merge patch document consists of a subset of any of the the top level fields. Top level object fields must be completely specified, or null if allowed, see examples.
--->
 
 ##### Path Parameters
 
@@ -17319,7 +17315,7 @@ URL: {{OCMServer}}/ocm/v2/whitelisted
 
 Updates the specified whitelisted resource with the indicated regions and service provider IDs.
 
-<!--	Original hardcoded endpoint: {{OCMServer}}/ocm/v2/whitelisted/deaa15d4de635c3a57776bc133cc37b8	-->
+
 
 <br/>
 
@@ -17419,11 +17415,6 @@ Top level object fields must either be completely specified or null, if allowed,
 
 <br>
 
-<!--
-The body of a PATCH API request is a JSON merge patch document. A JSON merge patch document specifies changes to be made to a target resource using a syntax that closely resembles the resource being modified. 
-
-A JSON merge patch document consists of a subset of any of the the top level fields. Top level object fields must be completely specified, or null if allowed, see examples.
--->
 
 ##### Path Parameters
 
@@ -18040,11 +18031,6 @@ Top level object fields must either be completely specified or null, if allowed,
 
 <br>
 
-<!--
-The body of a PATCH API request is a JSON merge patch document. A JSON merge patch document specifies changes to be made to a target resource using a syntax that closely resembles the resource being modified. 
-
-A JSON merge patch document consists of a subset of any of the the top level fields. Top level object fields must be completely specified, or null if allowed, see examples.
--->
 
 ##### Path Parameters
 |Label		|Type		|Required	|Description|
@@ -18250,13 +18236,6 @@ When reading a resource, GET calls display custom attribute values in the custom
 Tenants must submit a ticket to add new custom attribute fields.
 
 
-<!-- The following feature has not been implemented and is currently not in plan:
-
-		This same section can be added to the body of PUT/POST calls to modify custom attribute values for a resource. However, if the custom attribute schema specifies **"additionalProperties": false**, you cannot add fields that the schema does not already specify.
-
-<!--
-All query parameters are optional unless otherwise noted.
--->
 
 <br>
 
@@ -18787,11 +18766,6 @@ Top level object fields must either be completely specified or null, if allowed,
 
 <br>
 
-<!--
-The body of a PATCH API request is a JSON merge patch document. A JSON merge patch document specifies changes to be made to a target resource using a syntax that closely resembles the resource being modified. 
-
-A JSON merge patch document consists of a subset of any of the the top level fields. Top level object fields must be completely specified, or null if allowed, see examples.
--->
 
 ##### Path Parameters
 |Label		|Type		|Required	|Description|
@@ -19116,7 +19090,6 @@ Updates a show episode description in the on-demand catalog.
 
 <br/>
 
-<!-- This should be a PUT not a POST -->
 
 ##### Response object
 | Name  | Parent |  Type  | Description |  
@@ -19251,65 +19224,6 @@ Status: Update vod episode | Code: 200
 
 Retrieves the specified episode from the on-demand catalog.
 
-<!--
-
-#### Response object
-
-The Notes column describes default and possible values, valid ranges, and fields that are *nullable* ( &oslash; ), or *required* ( *&#640;* ). All fields are optional unless otherwise indicated.
-
-<br/>
-
-| Field  | Parent |  Type  | Description | Notes 
-|------:|--------|--------|-------------|-------
-| requestID |    | string | Generated log ID for this request.    | *&#640;*  | 
-| timestamp |    | string | Generated log timestamp for this request.  | *&#640;* |  
-||||||
-| *`metadata`* |   |  |  |   |  
-| count | metadata |number  | Current screen.  |*&#640;*, min=1, max = 100   
-| totalCount| metadata |number | Total number of screens.  |*&#640;*, min=1, max = 20
-| offset | metadata | number | Number of lines from the top of the screen. |*&#640;*, min=1, max = 20
-||||||
-| *`assets`* |   |   |      |  |
-| id | assets  |string | Unique ID for each season.  |  |
-| resourceType | assets   | string | *"assets"*  | |
-| pictureID | assets  | string | ID for the standard image |  | 
-| duration | assets  | number |   |  |
-| live | assets  | boolean | Is this a live event?  | May be false or true. |
-| environment | assets  | string |   |  |
-| liveURLs | assets  | string |   |  &oslash;; |
-| *`vodURLs`*| assets | | URLs for live feeds. |  | 
-| *`dash`* | vodURLs | |Sources using the [DASH](https://www.wikiwand.com/en/Dynamic_Adaptive_Streaming_over_HTTP) protocol. | |
-| primary | dash | string | Primary URL for the DASH source.   |  | 
-| *`hls`* | vodURLs |  | Sources using the [HLS](https://www.wikiwand.com/en/HTTP_Live_Streaming) protocol.| | 
-| primary | hls | string | Primary URL for the HLS source.   |  |
-||||||
-| *`vod/episodes`* |   |   |      |  |
-| id | vod/episodes  |string | Unique ID for each asset.  |  |
-| resourceType | vod/episodes | enum string | *"vod/episodes"*   | |
-| startTime | vod/episodes | string | A timestamp.  |  |
-| endTime | vod/episodes | string | A timestamp.  |  |
-| name | vod/episodes | string | Full name.  |  |
-| shortName | vod/episodes | string |   |  |
-| description | vod/episodes  | string | Full description.  |  |
-| shortDescription | vod/episodes | string |   |  |
-| genreIDs | vod/episodes  | string list | | |
-| language | vod/episodes  | string | Two-letter code for the spoken language.  |  |
-| ratings  | vod/episodes  | string | Content ratings by boards and associations.  | &oslash; |
-| ratingAdvisories | vod/episodes  | string list | A list of content advisories.  | Such as "Adult Situations", "Language", or "Violence" |
-| regionIDs | vod/episodes  | string list | | |
-| season | vod/episodes  | number |   |  |
-| episode | vod/episodes  | number |   | |
-| duration | vod/episodes  | number |   |  |
-| assetIDs | vod/episodes  | string | | |
-| pictureID | vod/episodes  | string | ID for the standard image |  | 
-||||||
-| *`pictures`* | vod/episodes|  |   |  |
-| 2x3  | pictures | string | ID for a 2x3 image. |  | 
-| 3x4  | pictures | string | ID for a 3x4 image.  |  | 
-| 4x3  | pictures | string | ID for a 4x3 image.  |  | 
-| 16x9 | pictures | string | ID for a 16x9 image.  |  |
-
--->
 
 
 ***Endpoint:***
@@ -22599,11 +22513,7 @@ Top level object fields must either be completely specified or null, if allowed,
 
 <br>
 
-<!--
-The body of a PATCH API request is a JSON merge patch document. A JSON merge patch document specifies changes to be made to a target resource using a syntax that closely resembles the resource being modified. 
 
-A JSON merge patch document consists of a subset of any of the the top level fields. Top level object fields must be completely specified, or null if allowed, see examples.
--->
 
 ##### Path Parameters
 |Label		|Type		|Required	|Description|
@@ -22673,4 +22583,3 @@ Status: Example 1 | Code: 200
 
 ---
 [Back to top](#content)
-> Made with &#9829; by [thedevsaddam](https://github.com/thedevsaddam) | Generated at: 2020-04-08 15:59:28 by [docgen](https://github.com/thedevsaddam/docgen)

@@ -58,7 +58,7 @@
 These endpoints allow applications to support in-app mobile purchases as well as credit card transactions via PCI-compliant secure web forms.</p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="billing---v1"></a><a href="#billing---v1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Billing - v1</h2>
-<h3><a class="anchor" aria-hidden="true" id="1-finalize-web-session"></a><a href="#1-finalize-web-session" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Finalize web session</h3>
+<h3><a class="anchor" aria-hidden="true" id="finalize-web-session"></a><a href="#finalize-web-session" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Finalize web session</h3>
 <p>Finalizes the web session and commits the data submitted by the web client to the payment processor.</p>
 <p><br/></p>
 <h5><a class="anchor" aria-hidden="true" id="path-parameters"></a><a href="#path-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
@@ -84,7 +84,7 @@ URL: {{OBMServer}}/obm/v1/user/websessions/{{WebSessionID}}
 <tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
 </tbody>
 </table>
-<h3><a class="anchor" aria-hidden="true" id="2-list-billing-plans"></a><a href="#2-list-billing-plans" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. List billing plans</h3>
+<h3><a class="anchor" aria-hidden="true" id="list-billing-plans"></a><a href="#list-billing-plans" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List billing plans</h3>
 <p>Lists all known billing plans for the calling user.</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: GET
@@ -100,12 +100,8 @@ URL: {{OBMServer}}/obm/v1/user/billingplans
 <tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
 </tbody>
 </table>
-<h3><a class="anchor" aria-hidden="true" id="3-retrieve-a-billing-plan"></a><a href="#3-retrieve-a-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Retrieve a billing plan</h3>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-a-billing-plan"></a><a href="#retrieve-a-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve a billing plan</h3>
 <p>Retrieves the specified billing plan.</p>
-<!-- 
-<p>Add the billingPlanID path parameter description</p>
-<p>Add error msgs</p>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: GET
 Type: 
@@ -120,7 +116,7 @@ URL: {{OBMServer}}/obm/v1/user/billingplans/{{billingPlanID}}
 <tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
 </tbody>
 </table>
-<h3><a class="anchor" aria-hidden="true" id="4-get-a-product"></a><a href="#4-get-a-product" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Get a product</h3>
+<h3><a class="anchor" aria-hidden="true" id="get-a-product"></a><a href="#get-a-product" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get a product</h3>
 <p>Returns the specified product.</p>
 <p><br/></p>
 <h5><a class="anchor" aria-hidden="true" id="path-parameters-1"></a><a href="#path-parameters-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
@@ -147,7 +143,7 @@ URL: {{OBMServer}}/obm/v1/products/{{productID}}
 <tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
 </tbody>
 </table>
-<h3><a class="anchor" aria-hidden="true" id="5-list-products"></a><a href="#5-list-products" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. List products</h3>
+<h3><a class="anchor" aria-hidden="true" id="list-products"></a><a href="#list-products" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List products</h3>
 <p>Returns a list of all products. Optionally returns only those products matching the specified query parameters.</p>
 <p>To get the one product (if any) for a package and billing plan, specify both the <em>package</em> and <em>billingplan</em> parameters.</p>
 <p><br/></p>
@@ -837,7 +833,7 @@ URL: {{OBMServer}}/obm/v1/products
     ]
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="6-list-user-subscriptions"></a><a href="#6-list-user-subscriptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>6. List user subscriptions</h3>
+<h3><a class="anchor" aria-hidden="true" id="list-user-subscriptions"></a><a href="#list-user-subscriptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List user subscriptions</h3>
 <p>Returns a list of subscriptions associated with the calling user.  Optionally includes the related packages in the response.</p>
 <p><br/></p>
 <h5><a class="anchor" aria-hidden="true" id="path-parameters-2"></a><a href="#path-parameters-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
@@ -881,33 +877,6 @@ URL: {{OBMServer}}/obm/v1/products
 </tbody>
 </table>
 <p><br></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-3"></a><a href="#path-parameters-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
-<table>
-<thead>
-<tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>userid</td><td>string</td><td>required</td><td>ID for the user whose subscriptions you wish to retrieve.</td></tr>
-</tbody>
-</table>
-<p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="response-body-description"></a><a href="#response-body-description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/></p>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: GET
 Type: 
@@ -931,11 +900,11 @@ URL: {{OBMServer}}/obm/v1/user/accounts/subscriptions
 <tr><td>include</td><td>packages</td><td>Optional. Returns all packages related to the user's subscriptions. If used, value must be set to <em>packages</em>.</td></tr>
 </tbody>
 </table>
-<h3><a class="anchor" aria-hidden="true" id="7-list-user-subscriptions-admin"></a><a href="#7-list-user-subscriptions-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>7. List user subscriptions (admin)</h3>
+<h3><a class="anchor" aria-hidden="true" id="list-user-subscriptions-admin"></a><a href="#list-user-subscriptions-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List user subscriptions (admin)</h3>
 <p>Retrieves subscriptions for the specified user. Requires administrative privileges.</p>
 <p>Optionally includes the related packages in the response.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-4"></a><a href="#path-parameters-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-3"></a><a href="#path-parameters-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -945,23 +914,6 @@ URL: {{OBMServer}}/obm/v1/user/accounts/subscriptions
 </tbody>
 </table>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-1"></a><a href="#response-body-description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/></p>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: GET
 Type: 
@@ -985,11 +937,11 @@ URL: {{OBMServer}}/obm/v1/admin/accounts/{{userid}}/subscriptions
 <tr><td>include</td><td>packages</td><td>Optional. Returns all packages related to the user's subscriptions.  If used, value must be set to <em>packages</em>.</td></tr>
 </tbody>
 </table>
-<h3><a class="anchor" aria-hidden="true" id="8-cancel-subscription"></a><a href="#8-cancel-subscription" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>8. Cancel subscription</h3>
+<h3><a class="anchor" aria-hidden="true" id="cancel-subscription"></a><a href="#cancel-subscription" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cancel subscription</h3>
 <p>Cancels the subscription for the specified product. A successful call stops future charges for the logged in user.</p>
 <p>When <strong>disentitleImmediately</strong> is set to <em>true</em>, entitlements granted by the subscription are immediately revoked. Otherwise, the user remains entitled until what would have been the next billing date.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-5"></a><a href="#path-parameters-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-4"></a><a href="#path-parameters-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -1009,23 +961,6 @@ URL: {{OBMServer}}/obm/v1/admin/accounts/{{userid}}/subscriptions
 </tbody>
 </table>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-2"></a><a href="#response-body-description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/>
---&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: PUT
 Type: RAW
@@ -1055,11 +990,11 @@ URL: {{OBMServer}}/obm/v1/user/accounts/subscriptions/{{productID}}
   <span class="hljs-string">"disentitleImmediately"</span>: <span class="hljs-literal">false</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="9-cancel-subscription-admin"></a><a href="#9-cancel-subscription-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>9. Cancel subscription (admin)</h3>
-<p>Cancels the specifed user's subscription to the target product. A successful call stops future charges for the specified user. Requires administrative privileges.</p>
+<h3><a class="anchor" aria-hidden="true" id="cancel-subscription-admin"></a><a href="#cancel-subscription-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cancel subscription (admin)</h3>
+<p>Cancels the specified user's subscription to the target product. A successful call stops future charges for the specified user. Requires administrative privileges.</p>
 <p>When <strong>disentitleImmediately</strong> is set as <em>true</em>, entitlements granted by the subscription are immediately revoked. Otherwise, the user remains entitled until what would have been the next billing date.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-6"></a><a href="#path-parameters-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-5"></a><a href="#path-parameters-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -1080,24 +1015,6 @@ URL: {{OBMServer}}/obm/v1/user/accounts/subscriptions/{{productID}}
 </tbody>
 </table>
 <p><br/></p>
-<!--
-<p><br></p>
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-3"></a><a href="#response-body-description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/>
---&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: PUT
 Type: RAW
@@ -1127,12 +1044,12 @@ URL: {{OBMServer}}/obm/v1/admin/accounts/{{userid}}/subscriptions/{{productID}}
   <span class="hljs-string">"disentitleImmediately"</span>: <span class="hljs-literal">false</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="10-refund-a-transaction-admin"></a><a href="#10-refund-a-transaction-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10. Refund a transaction (admin)</h3>
+<h3><a class="anchor" aria-hidden="true" id="refund-a-transaction-admin"></a><a href="#refund-a-transaction-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Refund a transaction (admin)</h3>
 <p>Refunds up to 100% of a user's credit card transaction. Optionally revokes the entitlements associated with this transaction. Requires
 administrative privileges.</p>
 <p><strong>Note:</strong> App-store transactions cannot be refunded with this endpoint.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-7"></a><a href="#path-parameters-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-6"></a><a href="#path-parameters-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -1154,19 +1071,6 @@ administrative privileges.</p>
 </tbody>
 </table>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-4"></a><a href="#response-body-description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-</tbody>
-</table>
-<p>EPC: Potential errors this call may generate?</p>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1198,7 +1102,7 @@ URL: {{OBMServer}}/obm/v1/admin/accounts/{{userid}}/transactions/{{storeOrderId}
   <span class="hljs-string">"removeEntitlements"</span>: <span class="hljs-literal">false</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="11-report-a-transaction-refund-admin"></a><a href="#11-report-a-transaction-refund-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>11. Report a transaction refund (admin)</h3>
+<h3><a class="anchor" aria-hidden="true" id="report-a-transaction-refund-admin"></a><a href="#report-a-transaction-refund-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Report a transaction refund (admin)</h3>
 <p>Reports the refund of a transaction performed by a third-party payment processor, then records the refund in Vindicia Cashbox and the subscriber's transaction history. The refund amount is not limited by the original amount of the transaction. Requires administrative privileges.</p>
 <p><br></p>
 <p>Additional options:</p>
@@ -1210,7 +1114,7 @@ URL: {{OBMServer}}/obm/v1/admin/accounts/{{userid}}/transactions/{{storeOrderId}
 <p><br></p>
 <p><strong>Note:</strong> App-store transactions cannot be refunded with this endpoint.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-8"></a><a href="#path-parameters-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-7"></a><a href="#path-parameters-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -1235,19 +1139,6 @@ URL: {{OBMServer}}/obm/v1/admin/accounts/{{userid}}/transactions/{{storeOrderId}
 </tbody>
 </table>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-5"></a><a href="#response-body-description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Field</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-</tbody>
-</table>
-<p>EPC: Potential errors this call may generate?</p>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1280,7 +1171,7 @@ URL: {{OBMServer}}/obm/v1/admin/accounts/{{userid}}/transactions/{{storeOrderId}
   <span class="hljs-string">"note"</span>: <span class="hljs-string">"This refund was processed by an external payment provider."</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="12-retrieve-an-active-subscription-report"></a><a href="#12-retrieve-an-active-subscription-report" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>12. Retrieve an active subscription report</h3>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-an-active-subscription-report"></a><a href="#retrieve-an-active-subscription-report" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve an active subscription report</h3>
 <p>Returns a report listing all active subscriptions.</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: GET
@@ -1296,11 +1187,11 @@ URL: {{OBMServer}}/obm/v1/subscriptions/reports/active
 <tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td></td></tr>
 </tbody>
 </table>
-<h3><a class="anchor" aria-hidden="true" id="13-check-user-subscriptions-admin"></a><a href="#13-check-user-subscriptions-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>13. Check user subscriptions (admin)</h3>
+<h3><a class="anchor" aria-hidden="true" id="check-user-subscriptions-admin"></a><a href="#check-user-subscriptions-admin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Check user subscriptions (admin)</h3>
 <p>Checks the subscriptions for a specified user immediately, ignoring the <em>subscription.NextCheckDate</em>.</p>
 <p>Useful for testing subscription validation. Requires administrative privileges.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-9"></a><a href="#path-parameters-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-8"></a><a href="#path-parameters-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -1324,7 +1215,7 @@ URL: {{OBMServer}}/obm/v1/admin/{{userid}}//subscriptions/check
 <tr><td>Authorization</td><td>Bearer {{sessiontoken}}</td><td>Requires the user's session token to authenticate the request.</td></tr>
 </tbody>
 </table>
-<h3><a class="anchor" aria-hidden="true" id="14-retrieve-a-canceled-subscription-report"></a><a href="#14-retrieve-a-canceled-subscription-report" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>14. Retrieve a canceled subscription report</h3>
+<h3><a class="anchor" aria-hidden="true" id="retrieve-a-canceled-subscription-report"></a><a href="#retrieve-a-canceled-subscription-report" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve a canceled subscription report</h3>
 <p>Returns a report listing all canceled subscriptions.</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: GET
@@ -1341,26 +1232,9 @@ URL: {{OBMServer}}/obm/v1/subscriptions/reports/canceled
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="app-store-integrations"></a><a href="#app-store-integrations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>App Store Integrations</h2>
-<h3><a class="anchor" aria-hidden="true" id="1-record-transaction-from-itunes-in-app-purchase"></a><a href="#1-record-transaction-from-itunes-in-app-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Record Transaction from iTunes in-app purchase</h3>
+<h3><a class="anchor" aria-hidden="true" id="record-transaction-from-itunes-in-app-purchase"></a><a href="#record-transaction-from-itunes-in-app-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Record Transaction from iTunes in-app purchase</h3>
 <p>Takes a receipt generated by iTunes and records it within Orbis. The receipt is validated with both iTunes and Orbis.</p>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-6"></a><a href="#response-body-description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/>
---&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1397,26 +1271,9 @@ URL: {{OBMServer}}/obm/v1/user/accounts/transactions
   <span class="hljs-string">"action"</span>: <span class="hljs-string">"Purchase"</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="2-record-transaction-from-google-in-app-purchase"></a><a href="#2-record-transaction-from-google-in-app-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Record Transaction from Google in-app purchase</h3>
+<h3><a class="anchor" aria-hidden="true" id="record-transaction-from-google-in-app-purchase"></a><a href="#record-transaction-from-google-in-app-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Record Transaction from Google in-app purchase</h3>
 <p>Takes a receipt generated by Google and records it within Orbis. The receipt is validated with both Google and Orbis.</p>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-7"></a><a href="#response-body-description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/>
---&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1453,26 +1310,9 @@ URL: {{OBMServer}}/obm/v1/user/accounts/transactions
   <span class="hljs-string">"action"</span>: <span class="hljs-string">"Purchase"</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="3-record-transaction-from-roku-in-app-purchase"></a><a href="#3-record-transaction-from-roku-in-app-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Record Transaction from Roku in-app purchase</h3>
+<h3><a class="anchor" aria-hidden="true" id="record-transaction-from-roku-in-app-purchase"></a><a href="#record-transaction-from-roku-in-app-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Record Transaction from Roku in-app purchase</h3>
 <p>Takes a receipt generated by Roku and records it within Orbis. The receipt is validated with both Roku and Orbis.</p>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-8"></a><a href="#response-body-description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/>
---&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1509,26 +1349,9 @@ URL: {{OBMServer}}/obm/v1/user/accounts/transactions
   <span class="hljs-string">"action"</span>: <span class="hljs-string">"Purchase"</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="4-record-transaction-from-amazon-in-app-purchase"></a><a href="#4-record-transaction-from-amazon-in-app-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Record Transaction from Amazon in-app purchase</h3>
+<h3><a class="anchor" aria-hidden="true" id="record-transaction-from-amazon-in-app-purchase"></a><a href="#record-transaction-from-amazon-in-app-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Record Transaction from Amazon in-app purchase</h3>
 <p>Takes a receipt generated by Amazon and records it within Orbis. The receipt is validated with both Amazon and Orbis.</p>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-9"></a><a href="#response-body-description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/>
---&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1565,24 +1388,10 @@ URL: {{OBMServer}}/obm/v1/user/accounts/transactions
   <span class="hljs-string">"action"</span>: <span class="hljs-string">"Purchase"</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="5-restore-purchases-from-itunes-receipt"></a><a href="#5-restore-purchases-from-itunes-receipt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Restore purchases from iTunes receipt</h3>
+<h3><a class="anchor" aria-hidden="true" id="restore-purchases-from-itunes-receipt"></a><a href="#restore-purchases-from-itunes-receipt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Restore purchases from iTunes receipt</h3>
 <p>Takes a receipt generated by iTunes and restores purchases within Orbis.</p>
 <p>The receipt is validated with iTunes to get the latest information. Entitlements and valid products that are specified in the receipt--but missing from Orbis--will be added. Transactions for the restored purchases are returned by the request.</p>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-10"></a><a href="#response-body-description-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>transactions</td><td>Transaction list</td><td>The list of transaction for Entitlements that were restored.</td></tr>
-</tbody>
-</table>
-<p><br/>
---&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1618,7 +1427,7 @@ URL: {{OBMServer}}/obm/v1/user/accounts/transactions
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="billing-plan-administration"></a><a href="#billing-plan-administration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Billing Plan Administration</h2>
-<h3><a class="anchor" aria-hidden="true" id="1-create-recurring-billing-plan"></a><a href="#1-create-recurring-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Create recurring billing plan</h3>
+<h3><a class="anchor" aria-hidden="true" id="create-recurring-billing-plan"></a><a href="#create-recurring-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create recurring billing plan</h3>
 <p>Creates a billing plan for a recurring subscription purchase.</p>
 <p>Different prices can be specified for each payment processor.
 The recurrence is specified in the form <em>{frequency}{interval}</em> where <em>{frequency}</em> is an integer, and <em>{interval}</em> is one of the following letters:</p>
@@ -1632,25 +1441,6 @@ The recurrence is specified in the form <em>{frequency}{interval}</em> where <em
 </ul>
 <p>A monthly recurrence would be &quot;<strong>1M</strong>&quot;. A quarterly recurrence would be &quot;<strong>3M</strong>&quot;. Recurrences in seconds, minutes and hours are intended only for testing purposes.</p>
 <p>For example, a monthly recurrence would be specified with <strong>1M</strong>, while a quarterly recurrence would be <strong>3M</strong>. Recurrences in seconds, minutes, and hours are intended for testing purposes only.</p>
-<!--
-#### Body Parameters
-{
-  "id": "{{billingPlanID}}",
-  "description": "Monthly payment plan",
-  "recurrence": "1M",
-  "prices": {
-    "Apple": {
-      "USD": 9.99
-    },
-    "Google": {
-      "USD": 9.99
-    },
-    "Vindicia": {
-      "USD": 7.99
-    }
-  }
-}
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1684,7 +1474,7 @@ URL: {{OBMServer}}/obm/v1/admin/billingplans
     }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="2-create-recurring-billing-plan-with-14-day-trial-period"></a><a href="#2-create-recurring-billing-plan-with-14-day-trial-period" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Create recurring billing plan with 14-day trial period</h3>
+<h3><a class="anchor" aria-hidden="true" id="create-recurring-billing-plan-with-14-day-trial-period"></a><a href="#create-recurring-billing-plan-with-14-day-trial-period" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create recurring billing plan with 14-day trial period</h3>
 <p>Creates a billing plan for a recurring subscription purchase.</p>
 <p>Different prices can be specified for each payment processor.
 The recurrence is specified in the form {<em>frequency</em>}{<em>interval</em>} where <em>frequency</em> is an integer, and <em>interval</em> is one of the following:</p>
@@ -1697,29 +1487,6 @@ The recurrence is specified in the form {<em>frequency</em>}{<em>interval</em>} 
 <li><strong>y</strong>: year</li>
 </ul>
 <p>For example, a monthly recurrence would be specified with <strong>1M</strong>, while a quarterly recurrence would be <strong>3M</strong>. This endpoint sets a 14-day cycle (<strong>14d</strong>) as a trial period. Recurrences in seconds, minutes, and hours are intended for testing purposes only.</p>
-<!--
-<p>Body parameter description:</p>
-<p>{
-&quot;id&quot;: &quot;{{billingPlanID}}&quot;,
-&quot;description&quot;: &quot;Monthly payment plan&quot;,
-&quot;recurrence&quot;: &quot;1M&quot;,
-&quot;prices&quot;: {
-&quot;Apple&quot;: {
-&quot;USD&quot;: 9.99
-},
-&quot;Google&quot;: {
-&quot;USD&quot;: 9.99
-},
-&quot;Vindicia&quot;: {
-&quot;USD&quot;: 7.99
-}
-},
-&quot;trialperiod&quot;:{
-&quot;cycleLength&quot;: &quot;14d&quot;,
-&quot;cycles&quot;: 1
-}
-}</p>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1757,23 +1524,8 @@ URL: {{OBMServer}}/obm/v1/admin/billingplans
     }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="3-create-non-recurring-billing-plan"></a><a href="#3-create-non-recurring-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Create non-recurring billing plan</h3>
+<h3><a class="anchor" aria-hidden="true" id="create-non-recurring-billing-plan"></a><a href="#create-non-recurring-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create non-recurring billing plan</h3>
 <p>Creates a billing plan for a one-time purchase. Different prices can be specified for each payment processor.</p>
-<!--
-<p>Body Parameters:</p>
-<p>{
-&quot;id&quot;: &quot;{{billingPlanID}}&quot;,
-&quot;description&quot;: &quot;Single payment plan&quot;,
-&quot;prices&quot;: {
-&quot;Apple&quot;: {
-&quot;USD&quot;: 0.99
-},
-&quot;Google&quot;: {
-&quot;USD&quot;: 0.99
-},
-&quot;Vindicia&quot;: {
-&quot;USD&quot;: 0.79</p>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1806,10 +1558,10 @@ URL: {{OBMServer}}/obm/v1/admin/billingplans
     }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="4-update-billing-plan"></a><a href="#4-update-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Update billing plan</h3>
+<h3><a class="anchor" aria-hidden="true" id="update-billing-plan"></a><a href="#update-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update billing plan</h3>
 <p>Updates the specified existing billing plan.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-10"></a><a href="#path-parameters-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-9"></a><a href="#path-parameters-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -1819,20 +1571,6 @@ URL: {{OBMServer}}/obm/v1/admin/billingplans
 </tbody>
 </table>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="body-parameters-4"></a><a href="#body-parameters-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
-<p>{
-&quot;id&quot;: &quot;updatedBillingPlan&quot;,
-&quot;description&quot;: &quot;updated Description&quot;,
-&quot;occurrences&quot;: 4,
-&quot;recurrence&quot;: &quot;30d&quot;,
-&quot;prices&quot;: {
-&quot;Vindicia&quot;: {
-&quot;USD&quot;: 99.99
-}
-}
-}
---&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: PUT
 Type: RAW
@@ -1861,10 +1599,10 @@ URL: {{OBMServer}}/obm/v1/admin/billingplans/{{billingPlanID}}
   }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="5-delete-billing-plan"></a><a href="#5-delete-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>5. Delete billing plan</h3>
+<h3><a class="anchor" aria-hidden="true" id="delete-billing-plan"></a><a href="#delete-billing-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete billing plan</h3>
 <p>Deletes the specified existing billing plan.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-11"></a><a href="#path-parameters-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-10"></a><a href="#path-parameters-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -1900,10 +1638,10 @@ URL: {{OBMServer}}/obm/v1/admin/billingplans/{{billingPlanID}}
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="product-administration"></a><a href="#product-administration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product Administration</h2>
-<h3><a class="anchor" aria-hidden="true" id="1-create-a-product"></a><a href="#1-create-a-product" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Create a product</h3>
+<h3><a class="anchor" aria-hidden="true" id="create-a-product"></a><a href="#create-a-product" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a product</h3>
 <p>Creates a product based on a package and billing plan with app store-specific metadata.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="body-parameters-5"></a><a href="#body-parameters-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="body-parameters-4"></a><a href="#body-parameters-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
 <table>
 <thead>
 <tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -1922,40 +1660,6 @@ URL: {{OBMServer}}/obm/v1/admin/billingplans/{{billingPlanID}}
 </tbody>
 </table>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="body-parameters-6"></a><a href="#body-parameters-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
-<p>{
-&quot;packageID&quot;: &quot;d2595580-3935-11e8-b85b-c9864ba6c1ca&quot;,
-&quot;billingPlanID&quot;: &quot;asdf3&quot;,
-&quot;name&quot;: {
-&quot;en&quot;: &quot;DIRECTV GO&quot;,
-&quot;es&quot;: &quot;DIRECTV GO&quot;,
-&quot;pt&quot;: &quot;DIRECTV GO&quot;
-},
-&quot;shortDesc&quot;: {
-&quot;en&quot;: &quot;DIRECTV GO&quot;,
-&quot;es&quot;: &quot;DIRECTV GO&quot;,
-&quot;pt&quot;: &quot;DIRECTV GO&quot;
-},
-&quot;longDesc&quot;: {
-&quot;en&quot;: &quot;TV made for you. Always stay on with DIRECTV GO.&quot;,
-&quot;es&quot;: &quot;Televisión a tu manera. Mantente siempre On con DIRECTV GO.&quot;,
-&quot;pt&quot;: &quot;Televisão do seu jeito. Siga ligado com DIRECTV GO.&quot;
-},
-&quot;storeData&quot;: {
-&quot;Vindicia&quot;: {
-&quot;storeProductID&quot;: &quot;TEST_ORBIS_ENTITLEMENTS_002&quot;,
-&quot;customData&quot;: {
-&quot;country&quot;: &quot;AR&quot;,
-&quot;productType&quot;: &quot;Base&quot;,
-&quot;vindicia_tax_classification&quot;: &quot;VOD&quot;,
-&quot;primaryLanguage&quot;: &quot;ES&quot;,
-&quot;imageFileName&quot;: &quot;DTVGO_Argentina_2.png&quot;
-}
-}
-}
-}</p>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -1991,10 +1695,10 @@ URL: {{OBMServer}}/obm/v1/products
 </code></pre>
 <p><strong><em>Responses:</em></strong></p>
 <p>Status: Create a product | Code: 200</p>
-<h3><a class="anchor" aria-hidden="true" id="2-update-a-product"></a><a href="#2-update-a-product" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Update a product</h3>
+<h3><a class="anchor" aria-hidden="true" id="update-a-product"></a><a href="#update-a-product" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update a product</h3>
 <p>Updates the information associated with the specified product.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-12"></a><a href="#path-parameters-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-11"></a><a href="#path-parameters-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -2005,7 +1709,7 @@ URL: {{OBMServer}}/obm/v1/products
 </table>
 <p><br/></p>
 <p>The Body Parameters you wish to update are the only ones that must be included.</p>
-<h5><a class="anchor" aria-hidden="true" id="body-parameters-7"></a><a href="#body-parameters-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="body-parameters-5"></a><a href="#body-parameters-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
 <table>
 <thead>
 <tr><th>Field</th><th>Parent</th><th>Type</th><th>Description</th></tr>
@@ -2024,42 +1728,6 @@ URL: {{OBMServer}}/obm/v1/products
 </tbody>
 </table>
 <p><br/></p>
-<!--
-{
-  "packageID": "{{packageID}}",
-  "billingPlanID": "{{billingPlanID}}",
-  "name": {
-    "en": "Squamish 2018+",
-    "es": "Squamish 2018 Plus"
-  },
-  "shortDesc": {
-    "en": "Squamish League Pass+",
-    "es": "Squamish Pase de la liga Plus"
-  },
-  "longDesc": {
-    "en": "Squamish League Pass Plus 2018-19",
-    "es": "Squamish Pase de la liga Plus 2018-19"
-  },
-  "storeData": {
-    "Apple": {
-      "storeProductID": "Squamish2018Plus",
-      "customData": {
-        "tier": 4
-        }
-      },
-      "Google": {
-        "storeProductID": "Squamish18G+"
-      },
-      "Vindicia": {
-        "storeProductID": "Squamish 2018 Plus",
-        "customData": {
-            "productType": "Premium"
-        }
-      }
-  },
-  "version": 1
-}
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: PUT
 Type: RAW
@@ -2114,10 +1782,10 @@ URL: {{OBMServer}}/obm/v1/products/{{productID}}
 </code></pre>
 <p><strong><em>Responses:</em></strong></p>
 <p>Status: Update a product | Code: 200</p>
-<h3><a class="anchor" aria-hidden="true" id="3-delete-a-product"></a><a href="#3-delete-a-product" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Delete a product</h3>
+<h3><a class="anchor" aria-hidden="true" id="delete-a-product"></a><a href="#delete-a-product" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete a product</h3>
 <p>Deletes the specified existing product.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="path-parameters-13"></a><a href="#path-parameters-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="path-parameters-12"></a><a href="#path-parameters-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Path Parameters</h5>
 <table>
 <thead>
 <tr><th>Label</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -2153,10 +1821,10 @@ URL: {{OBMServer}}/obm/v1/products/{{productID}}
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="purchase-flow-apis"></a><a href="#purchase-flow-apis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Purchase Flow APIs</h2>
-<h3><a class="anchor" aria-hidden="true" id="1-initialize-websession-for-subscription-purchase"></a><a href="#1-initialize-websession-for-subscription-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Initialize WebSession for subscription purchase</h3>
+<h3><a class="anchor" aria-hidden="true" id="initialize-websession-for-subscription-purchase"></a><a href="#initialize-websession-for-subscription-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialize WebSession for subscription purchase</h3>
 <p>Creates a WebSession so that a web client can submit credit card payment data securely through Vindicia's Hosted Order Automation forms.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="body-parameters-8"></a><a href="#body-parameters-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="body-parameters-6"></a><a href="#body-parameters-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
 <table>
 <thead>
 <tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -2185,31 +1853,6 @@ URL: {{OBMServer}}/obm/v1/products/{{productID}}
 <tr><td>code1</td><td><code>discounts</code></td><td>string</td><td>optional</td><td>Promotional discount code for the specified <em>{{packageID1}}: {{billingPlanID1}}</em>.</td></tr>
 </tbody>
 </table>
-<!--
-<pre><code class="hljs">        &quot;packageID&quot;: &quot;{{packageID1}}&quot;,
-        &quot;billingPlanID&quot;: &quot;{{billingPlanID1}}&quot;,
-        &quot;code&quot;: &quot;{{promoCode}}&quot;
-</code></pre>
-<p>|packageID1     |<code>products</code>|string  |optional   |PackageID1 of a multi-product subscription.|
-|billingPlanID1 |<code>products</code>|string  |optional   |BillingPlanID1 of a multi-product subscription.|
---&gt;</p>
-<p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-11"></a><a href="#response-body-description-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -2274,25 +1917,9 @@ URL: {{OBMServer}}/obm/v1/user/websessions
 <p><strong><em>Responses:</em></strong></p>
 <p>Status: Initialize WebSession for subscription purchase (single product) | Code: 0</p>
 <p>Status: Initialize WebSession for subscription purchase (multi-product) | Code: 0</p>
-<h3><a class="anchor" aria-hidden="true" id="2-initialize-websession-for-one-off-purchase"></a><a href="#2-initialize-websession-for-one-off-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Initialize WebSession for one-off purchase</h3>
+<h3><a class="anchor" aria-hidden="true" id="initialize-websession-for-one-off-purchase"></a><a href="#initialize-websession-for-one-off-purchase" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialize WebSession for one-off purchase</h3>
 <p>Creates a WebSession so that a web client can submit credit card payment data securely through Vindicia's Hosted Order Automation forms.</p>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-12"></a><a href="#response-body-description-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -2336,10 +1963,10 @@ URL: {{OBMServer}}/obm/v1/user/websessions
     }
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="3-perform-a-simulated-transaction"></a><a href="#3-perform-a-simulated-transaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. Perform a simulated transaction</h3>
+<h3><a class="anchor" aria-hidden="true" id="perform-a-simulated-transaction"></a><a href="#perform-a-simulated-transaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Perform a simulated transaction</h3>
 <p>Performs a simulated transaction without processing a payment or making any changes on the server.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="body-parameters-9"></a><a href="#body-parameters-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="body-parameters-7"></a><a href="#body-parameters-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
 <table>
 <thead>
 <tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -2359,23 +1986,6 @@ URL: {{OBMServer}}/obm/v1/user/websessions
 </tbody>
 </table>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-13"></a><a href="#response-body-description-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/></p>
-<p>--&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -2418,12 +2028,12 @@ URL: {{OBMServer}}/obm/v1/user/accounts/transactions
   <span class="hljs-string">"dryRun"</span>: <span class="hljs-literal">true</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="4-perform-a-simulated-transaction-with-discount-code"></a><a href="#4-perform-a-simulated-transaction-with-discount-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. Perform a simulated transaction with discount code</h3>
+<h3><a class="anchor" aria-hidden="true" id="perform-a-simulated-transaction-with-discount-code"></a><a href="#perform-a-simulated-transaction-with-discount-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Perform a simulated transaction with discount code</h3>
 <p>Performs a simulated transaction using a discount code. No payment is processed nor are any changes made on the server.</p>
 <p>The paymentMethodID is optional. If supplied, the address associated with the existing account will be used to calculate taxes.
 The address is optional. If supplied, it will be used to calculate taxes.</p>
 <p><br/></p>
-<h5><a class="anchor" aria-hidden="true" id="body-parameters-10"></a><a href="#body-parameters-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
+<h5><a class="anchor" aria-hidden="true" id="body-parameters-8"></a><a href="#body-parameters-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Body Parameters</h5>
 <table>
 <thead>
 <tr><th>Field</th><th>Parent</th><th>Type</th><th>Required</th><th>Description</th></tr>
@@ -2488,26 +2098,9 @@ URL: {{OBMServer}}/obm/v1/user/accounts/transactions
 }
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="wallet--user-payment-management"></a><a href="#wallet--user-payment-management" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wallet / User Payment Management</h2>
-<h3><a class="anchor" aria-hidden="true" id="1-initialize-websession-for-payment-update"></a><a href="#1-initialize-websession-for-payment-update" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1. Initialize WebSession for payment update</h3>
+<h3><a class="anchor" aria-hidden="true" id="initialize-websession-for-payment-update"></a><a href="#initialize-websession-for-payment-update" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialize WebSession for payment update</h3>
 <p>Creates a WebSession so that the web client can update the user's credit card payment data securely through Vindicia's Hosted Order Automation forms.</p>
 <p><br/></p>
-<!--
-<h5><a class="anchor" aria-hidden="true" id="response-body-description-14"></a><a href="#response-body-description-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response Body Description</h5>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>requestID</td><td>string</td><td>The unique log ID for this request.</td></tr>
-<tr><td>timestamp</td><td>string</td><td>The date and time when this call was executed.</td></tr>
-<tr><td>assetIDs</td><td>string list</td><td>The list of requested asset IDs that have existing metadata.</td></tr>
-<tr><td>assetIDsNotFound</td><td>string list</td><td>The list of requested asset IDs that have no metadata.</td></tr>
-<tr><td>assets</td><td>string</td><td>The metadata for the requested asset IDs.</td></tr>
-<tr><td>count</td><td>object</td><td>Counters for the asset ID search results; see <strong>Count Values</strong> below.</td></tr>
-</tbody>
-</table>
-<p><br/>
---&gt;</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: POST
 Type: RAW
@@ -2550,7 +2143,7 @@ URL: {{OBMServer}}/obm/v1/user/websessions
     <span class="hljs-string">"updateSubscriptions"</span>: <span class="hljs-literal">false</span>
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="2-list-all-saved-cards-for-a-user"></a><a href="#2-list-all-saved-cards-for-a-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. List all saved cards for a user</h3>
+<h3><a class="anchor" aria-hidden="true" id="list-all-saved-cards-for-a-user"></a><a href="#list-all-saved-cards-for-a-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List all saved cards for a user</h3>
 <p>Retrieves all saved credit cards for the current user.</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: GET
@@ -2588,7 +2181,7 @@ URL: {{OBMServer}}/obm/v1/user/accounts/creditcards
     ]
 }
 </code></pre>
-<h3><a class="anchor" aria-hidden="true" id="3-list-all-payment-methods-for-a-user"></a><a href="#3-list-all-payment-methods-for-a-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. List all payment methods for a user</h3>
+<h3><a class="anchor" aria-hidden="true" id="list-all-payment-methods-for-a-user"></a><a href="#list-all-payment-methods-for-a-user" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List all payment methods for a user</h3>
 <p>Retrieves all payment methods for the current user.</p>
 <p><strong><em>Endpoint:</em></strong></p>
 <pre><code class="hljs css language-bash">Method: GET
@@ -2636,10 +2229,7 @@ URL: {{OBMServer}}/obm/v1/user/accounts/paymentmethods
 </code></pre>
 <hr>
 <p><a href="#billing">Back to top</a></p>
-<blockquote>
-<p>Made with ♥ by <a href="https://github.com/thedevsaddam">thedevsaddam</a> | Generated at: 2020-04-08 15:58:27 by <a href="https://github.com/thedevsaddam/docgen">docgen</a></p>
-</blockquote>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-application"><span class="arrow-prev">← </span><span>Application</span></a><a class="docs-next button" href="/docs/api-content-reporting"><span>Content Reporting</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#billing---v1">Billing - v1</a><ul class="toc-headings"><li><a href="#1-finalize-web-session">1. Finalize web session</a></li><li><a href="#2-list-billing-plans">2. List billing plans</a></li><li><a href="#3-retrieve-a-billing-plan">3. Retrieve a billing plan</a></li><li><a href="#4-get-a-product">4. Get a product</a></li><li><a href="#5-list-products">5. List products</a></li><li><a href="#6-list-user-subscriptions">6. List user subscriptions</a></li><li><a href="#7-list-user-subscriptions-admin">7. List user subscriptions (admin)</a></li><li><a href="#8-cancel-subscription">8. Cancel subscription</a></li><li><a href="#9-cancel-subscription-admin">9. Cancel subscription (admin)</a></li><li><a href="#10-refund-a-transaction-admin">10. Refund a transaction (admin)</a></li><li><a href="#11-report-a-transaction-refund-admin">11. Report a transaction refund (admin)</a></li><li><a href="#12-retrieve-an-active-subscription-report">12. Retrieve an active subscription report</a></li><li><a href="#13-check-user-subscriptions-admin">13. Check user subscriptions (admin)</a></li><li><a href="#14-retrieve-a-canceled-subscription-report">14. Retrieve a canceled subscription report</a></li></ul></li><li><a href="#app-store-integrations">App Store Integrations</a><ul class="toc-headings"><li><a href="#1-record-transaction-from-itunes-in-app-purchase">1. Record Transaction from iTunes in-app purchase</a></li><li><a href="#2-record-transaction-from-google-in-app-purchase">2. Record Transaction from Google in-app purchase</a></li><li><a href="#3-record-transaction-from-roku-in-app-purchase">3. Record Transaction from Roku in-app purchase</a></li><li><a href="#4-record-transaction-from-amazon-in-app-purchase">4. Record Transaction from Amazon in-app purchase</a></li><li><a href="#5-restore-purchases-from-itunes-receipt">5. Restore purchases from iTunes receipt</a></li></ul></li><li><a href="#billing-plan-administration">Billing Plan Administration</a><ul class="toc-headings"><li><a href="#1-create-recurring-billing-plan">1. Create recurring billing plan</a></li><li><a href="#2-create-recurring-billing-plan-with-14-day-trial-period">2. Create recurring billing plan with 14-day trial period</a></li><li><a href="#3-create-non-recurring-billing-plan">3. Create non-recurring billing plan</a></li><li><a href="#4-update-billing-plan">4. Update billing plan</a></li><li><a href="#5-delete-billing-plan">5. Delete billing plan</a></li></ul></li><li><a href="#product-administration">Product Administration</a><ul class="toc-headings"><li><a href="#1-create-a-product">1. Create a product</a></li><li><a href="#2-update-a-product">2. Update a product</a></li><li><a href="#3-delete-a-product">3. Delete a product</a></li></ul></li><li><a href="#purchase-flow-apis">Purchase Flow APIs</a><ul class="toc-headings"><li><a href="#1-initialize-websession-for-subscription-purchase">1. Initialize WebSession for subscription purchase</a></li><li><a href="#2-initialize-websession-for-one-off-purchase">2. Initialize WebSession for one-off purchase</a></li><li><a href="#3-perform-a-simulated-transaction">3. Perform a simulated transaction</a></li><li><a href="#4-perform-a-simulated-transaction-with-discount-code">4. Perform a simulated transaction with discount code</a></li></ul></li><li><a href="#wallet--user-payment-management">Wallet / User Payment Management</a><ul class="toc-headings"><li><a href="#1-initialize-websession-for-payment-update">1. Initialize WebSession for payment update</a></li><li><a href="#2-list-all-saved-cards-for-a-user">2. List all saved cards for a user</a></li><li><a href="#3-list-all-payment-methods-for-a-user">3. List all payment methods for a user</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/iSPgrey.png" alt="iStreamPlanet Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 iStreamPlanet</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-application"><span class="arrow-prev">← </span><span>Application</span></a><a class="docs-next button" href="/docs/api-content-reporting"><span>Content Reporting</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#billing---v1">Billing - v1</a><ul class="toc-headings"><li><a href="#finalize-web-session">Finalize web session</a></li><li><a href="#list-billing-plans">List billing plans</a></li><li><a href="#retrieve-a-billing-plan">Retrieve a billing plan</a></li><li><a href="#get-a-product">Get a product</a></li><li><a href="#list-products">List products</a></li><li><a href="#list-user-subscriptions">List user subscriptions</a></li><li><a href="#list-user-subscriptions-admin">List user subscriptions (admin)</a></li><li><a href="#cancel-subscription">Cancel subscription</a></li><li><a href="#cancel-subscription-admin">Cancel subscription (admin)</a></li><li><a href="#refund-a-transaction-admin">Refund a transaction (admin)</a></li><li><a href="#report-a-transaction-refund-admin">Report a transaction refund (admin)</a></li><li><a href="#retrieve-an-active-subscription-report">Retrieve an active subscription report</a></li><li><a href="#check-user-subscriptions-admin">Check user subscriptions (admin)</a></li><li><a href="#retrieve-a-canceled-subscription-report">Retrieve a canceled subscription report</a></li></ul></li><li><a href="#app-store-integrations">App Store Integrations</a><ul class="toc-headings"><li><a href="#record-transaction-from-itunes-in-app-purchase">Record Transaction from iTunes in-app purchase</a></li><li><a href="#record-transaction-from-google-in-app-purchase">Record Transaction from Google in-app purchase</a></li><li><a href="#record-transaction-from-roku-in-app-purchase">Record Transaction from Roku in-app purchase</a></li><li><a href="#record-transaction-from-amazon-in-app-purchase">Record Transaction from Amazon in-app purchase</a></li><li><a href="#restore-purchases-from-itunes-receipt">Restore purchases from iTunes receipt</a></li></ul></li><li><a href="#billing-plan-administration">Billing Plan Administration</a><ul class="toc-headings"><li><a href="#create-recurring-billing-plan">Create recurring billing plan</a></li><li><a href="#create-recurring-billing-plan-with-14-day-trial-period">Create recurring billing plan with 14-day trial period</a></li><li><a href="#create-non-recurring-billing-plan">Create non-recurring billing plan</a></li><li><a href="#update-billing-plan">Update billing plan</a></li><li><a href="#delete-billing-plan">Delete billing plan</a></li></ul></li><li><a href="#product-administration">Product Administration</a><ul class="toc-headings"><li><a href="#create-a-product">Create a product</a></li><li><a href="#update-a-product">Update a product</a></li><li><a href="#delete-a-product">Delete a product</a></li></ul></li><li><a href="#purchase-flow-apis">Purchase Flow APIs</a><ul class="toc-headings"><li><a href="#initialize-websession-for-subscription-purchase">Initialize WebSession for subscription purchase</a></li><li><a href="#initialize-websession-for-one-off-purchase">Initialize WebSession for one-off purchase</a></li><li><a href="#perform-a-simulated-transaction">Perform a simulated transaction</a></li><li><a href="#perform-a-simulated-transaction-with-discount-code">Perform a simulated transaction with discount code</a></li></ul></li><li><a href="#wallet--user-payment-management">Wallet / User Payment Management</a><ul class="toc-headings"><li><a href="#initialize-websession-for-payment-update">Initialize WebSession for payment update</a></li><li><a href="#list-all-saved-cards-for-a-user">List all saved cards for a user</a></li><li><a href="#list-all-payment-methods-for-a-user">List all payment methods for a user</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/iSPgrey.png" alt="iStreamPlanet Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 iStreamPlanet</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
