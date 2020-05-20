@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Orbis Error Codes and Messages · iStreamPlanet Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The following table lists platform error conditions along with their corresponding HTTP codes.  "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Orbis Error Codes and Messages · iStreamPlanet Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/"/><meta property="og:description" content="The following table lists platform error conditions along with their corresponding HTTP codes.  "/><meta property="og:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://orbis-api-doc-test.netlify.com/docs/guide-portal-admin/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/iSPblack.png" alt="iStreamPlanet Docs"/><h2 class="headerTitleWithLogo">iStreamPlanet Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/guide-portal-admin" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/docs/api-entitlements" target="_self">APIs</a></li><li class=""><a href="/help" target="_self">Help</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="https://isp.orbis-portal.stage.dtc.istreamplanet.net" target="_self">Portal</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Guides<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/guide-portal-admin">Administration</a></li><li class="navListItem"><a class="navItem" href="/docs/guide-content-curation">Content Curation</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/guide-err-msgs">Error Messages</a></li><li class="navListItem"><a class="navItem" href="/docs/guide-terms">Terminology</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">APIs<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api-accounts">Accounts</a></li><li class="navListItem"><a class="navItem" href="/docs/api-application">Application</a></li><li class="navListItem"><a class="navItem" href="/docs/api-billing">Billing</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content-reporting">Content Reporting</a></li><li class="navListItem"><a class="navItem" href="/docs/api-content">Content</a></li><li class="navListItem"><a class="navItem" href="/docs/api-entitlements">Entitlements</a></li><li class="navListItem"><a class="navItem" href="/docs/test-output">epgManifest v1.0</a></li><li class="navListItem"><a class="navItem" href="/docs/api-experience">Experience</a></li><li class="navListItem"><a class="navItem" href="/docs/api-geography">Geography</a></li><li class="navListItem"><a class="navItem" href="/docs/api-sports">Sports</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">White Papers<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/paper-e-search">Elastic Search in Orbis</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc4">A White Paper</a></li><li class="navListItem"><a class="navItem" href="/docs/paper-doc5">YAWP - Yet Another White Paper</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Orbis Error Codes and Messages</h1></header><article><div><span><p>The following table lists platform error conditions along with their corresponding HTTP codes.</p>
+<table>
+<thead>
+<tr><th>Orbis Error</th><th>HTTP Code</th><th>Error Description</th></tr>
+</thead>
+<tbody>
+<tr><td>1000</td><td>401</td><td>Authentication token missing</td></tr>
+<tr><td>1001</td><td>401</td><td>Authentication token invalid</td></tr>
+<tr><td>1002</td><td>401</td><td>Authentication token expired</td></tr>
+<tr><td>1003</td><td>403</td><td>Not authorized to read requested resource</td></tr>
+<tr><td>1004</td><td>403</td><td>Not authorized to write to requested resource</td></tr>
+<tr><td>1005</td><td>403</td><td>Not authorized to reset password</td></tr>
+<tr><td>1006</td><td>401</td><td>Invalid APIKey</td></tr>
+<tr><td>1040</td><td>404</td><td>Resource not found</td></tr>
+<tr><td>1041</td><td>404</td><td>Account not found</td></tr>
+<tr><td>1042</td><td>400</td><td>Password mismatch</td></tr>
+<tr><td>1043</td><td>409</td><td>Resource already exists</td></tr>
+<tr><td>1044</td><td>400</td><td>Account not logged in</td></tr>
+<tr><td>1045</td><td>400</td><td>Email cannot be verified</td></tr>
+<tr><td>1046</td><td>400</td><td>Email not verified; cannot send reset password link to account</td></tr>
+<tr><td>1047</td><td>422</td><td>Account ID must be a valid email address</td></tr>
+<tr><td>1048</td><td>422</td><td>New password failed validation</td></tr>
+<tr><td>1050</td><td>400</td><td>Bad data</td></tr>
+<tr><td>1051</td><td>404</td><td>Device not found</td></tr>
+<tr><td>1060</td><td>400</td><td>Incomplete data</td></tr>
+<tr><td>1070</td><td>413</td><td>Request too large</td></tr>
+<tr><td>1100</td><td>500</td><td>Internal server error</td></tr>
+<tr><td>1101</td><td>500</td><td>Database misconfiguration error</td></tr>
+<tr><td>1102</td><td>500</td><td>Error deleting asset</td></tr>
+<tr><td>1103</td><td>400</td><td>Format of request invalid</td></tr>
+<tr><td>1104</td><td>400</td><td>Unsupported category</td></tr>
+<tr><td>1105</td><td>400</td><td>Unsupported category key</td></tr>
+<tr><td>1201</td><td>400</td><td>Receipt validation check failed</td></tr>
+<tr><td>1202</td><td>400</td><td>The receipt shows the purchase/subscription as cancelled</td></tr>
+<tr><td>1401</td><td>400</td><td>Tenant not found</td></tr>
+<tr><td>1402</td><td>400</td><td>Token type not recognized</td></tr>
+<tr><td>1403</td><td>400</td><td>Token type not supported by tenant</td></tr>
+<tr><td>1404</td><td>403</td><td>Account not entitled to play requested stream</td></tr>
+<tr><td>1405</td><td>403</td><td>Account cannot exceed streaming policy limits set by tenant</td></tr>
+<tr><td>1406</td><td>403</td><td>Account cannot update an item to a version that has been superseded</td></tr>
+<tr><td>1407</td><td>403</td><td>Account not currently in whitelisted areas for the requested content</td></tr>
+<tr><td>1408</td><td>403</td><td>Account cannot exceed concurrent device limits set by tenant policy</td></tr>
+<tr><td>1409</td><td>403</td><td>Requested content is blacked out for the account's current location</td></tr>
+</tbody>
+</table>
+<p><a href="guide-err-msgs">Back to top of Error Messages</a></p>
+<!--
+See the 
+[Orbis Error Codes](https://istreamplanet.atlassian.net/wiki/spaces/OD/pages/2215015/Orbis+Error+Codes), 
+based on the errornums.go file.
+--></span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/guide-content-curation"><span class="arrow-prev">← </span><span>Content Curation</span></a><a class="docs-next button" href="/docs/guide-terms"><span>Terminology</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/iSPgrey.png" alt="iStreamPlanet Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="/en/users.html">User Showcase</a><a href="https://stackoverflow.com/questions/tagged/" target="_blank" rel="noreferrer noopener">Stack Overflow</a><a href="https://discordapp.com/">Project Chat</a><a href="https://twitter.com/" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/blog">Blog</a><a href="https://github.com/">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><a href="https://opensource.facebook.com/" target="_blank" rel="noreferrer noopener" class="fbOpenSource"><img src="/img/oss_logo.png" alt="Facebook Open Source" width="170" height="45"/></a><section class="copyright">Copyright © 2020 iStreamPlanet</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '0550daa76db9bf70605ab43620282f25',
+                indexName: 'orbis',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {"hitsPerPage":10}
+              });
+            </script></body></html>

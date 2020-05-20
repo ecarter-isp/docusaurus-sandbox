@@ -1,8 +1,10 @@
 {
   "docs": {
-    "Portal Guides": [
+    "Guides": [
       "guide-portal-admin",
-      "guide-content-curation"
+      "guide-content-curation",
+      "guide-err-msgs",
+      "guide-terms"
     ],
     "APIs": [
       "api-accounts",		
@@ -19,12 +21,7 @@
     "White Papers": [
       "paper-e-search", 
       "paper-doc4", 
-      "paper-doc5"
-    ],
-    "Extras": [
-      "xtra-err-msgs",
-      "xtra-glossary"
+      "paper-doc5"    
     ]
   }
 }
-

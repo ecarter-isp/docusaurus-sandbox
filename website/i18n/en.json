@@ -44,9 +44,16 @@
       "guide-content-curation": {
         "title": "Content Curation"
       },
+      "guide-err-msgs": {
+        "title": "Orbis Error Codes and Messages",
+        "sidebar_label": "Error Messages"
+      },
       "guide-portal-admin": {
         "title": "Administration",
         "sidebar_label": "Administration"
+      },
+      "guide-terms": {
+        "title": "Terminology"
       },
       "paper-doc4": {
         "title": "A White Paper"
@@ -59,13 +66,6 @@
       },
       "test-output": {
         "title": "epgManifest v1.0"
-      },
-      "xtra-err-msgs": {
-        "title": "Orbis Error Codes and Messages",
-        "sidebar_label": "Error Messages"
-      },
-      "xtra-glossary": {
-        "title": "Glossary"
       }
     },
     "links": {
@@ -75,10 +75,9 @@
       "Portal": "Portal"
     },
     "categories": {
-      "Portal Guides": "Portal Guides",
+      "Guides": "Guides",
       "APIs": "APIs",
-      "White Papers": "White Papers",
-      "Extras": "Extras"
+      "White Papers": "White Papers"
     }
   },
   "pages-strings": {
